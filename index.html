@@ -47,659 +47,317 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.0.0"></he
 
         <h1 id="CSS派生选择器"   >
           <a href="#CSS派生选择器" class="heading-link"><i class="fas fa-link"></i></a><a href="#CSS派生选择器" class="headerlink" title="CSS派生选择器"></a>CSS派生选择器</h1>
-      <p>通过依据元素在其位置的上下文关系来定义样式。strong加粗 </p>
-<p>&#96;&#96;&#96;<html></p>
-<body><strong>
-<p><strong>标签hello css</strong></p>
-<ul>
-   <li><strong>li标签：hello css</strong></li>
-</ul>
-</strong></body>
-</html>
-要求只在li strong 标签的文字加样式，其他的不加样式
-用派生选择器 
-css
-  li  strong{
-          color:red;
-          }
-此时就只有li  strong里的文字加了样式
- 如果派生strong{color：blue}时，已经加过样式的li strong 不会覆盖，只有 p  strong更改了样式
+      <p>通过依据元素在其位置的上下文关系来定义样式。strong加粗<br>&lt;<code>html&gt; &lt;</code>body&gt;&lt;<code>strong&gt;     &lt;</code>p&gt;&lt;<code>strong&gt;标签hello css&lt;</code>&#x2F;strong&gt;&lt;<code>/p&gt;     &lt;</code>ul&gt;<br>    &lt;<code>li&gt;&lt;</code>strong&gt;li标签：hello css&lt;<code>/strong&gt;&lt;</code>&#x2F;li&gt;<br>    &lt;<code>/ul&gt;     &lt;</code>&#x2F;strong&gt;&lt;<code>/body&gt; &lt;</code>&#x2F;html&gt;<br>要求只在li strong 标签的文字加样式，其他的不加样式<br>用派生选择器<br>css<br>  li  strong{<br>          color:red;<br>          }<br>此时就只有li  strong里的文字加了样式<br> 如果派生strong{color：blue}时，已经加过样式的li strong 不会覆盖，只有 p  strong更改了样式</p>
 
-<p>CSS id选择器</p>
-<ol>
+        <h1 id="CSS-id选择器"   >
+          <a href="#CSS-id选择器" class="heading-link"><i class="fas fa-link"></i></a><a href="#CSS-id选择器" class="headerlink" title="CSS id选择器"></a>CSS id选择器</h1>
+      <ol>
 <li>ID选择器可以为标有ID的HTML元素指定特定的样式  ID选择器用”#”来定义</li>
 </ol>
 <p>2.ID选择器和派生选择器:目前比较常用的方式ID选择器常常用于建立派生选择器</p>
-<p>&#96;&#96;&#96;<html></p>
-<body>
-  <p  id="pid">hello css<span class="exturl"><a class="exturl__link"    target="_blank" rel="noopener" href="http://www/jikexuanyuan.com" >学院</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-  <div id="divid">这是一个div标签</div>
-</body>
-</html>
+<p>&lt;<code>html&gt; &lt;</code>body&gt;<br>  &lt;<code>p  id=&quot;pid&quot;&gt;hello css&lt;</code>a  href&#x3D;”<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="http://www/jikexuanyuan.com&quot;&gt;%E5%AD%A6%E9%99%A2" >http://www/jikexuanyuan.com&quot;&gt;学院</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>&lt;<code>/a&gt;&lt;</code>&#x2F;p&gt;<br>  &lt;<code>div id=&quot;divid&quot;&gt;这是一个div标签&lt;</code>&#x2F;div&gt;<br>&lt;<code>/body&gt; &lt;</code>&#x2F;html&gt;</p>
+<p>CSS<br>#p a{ color:red}  &lt;&#96;!– id选择器和派生选择器同时用–&gt;<br>#divid{color:blue}</p>
 
-<p>CSS<br>#p a{ color:red}  <!-- id选择器和派生选择器同时用--><br>#divid{color:blue}</p>
-<p>CSS类选择器<br>1.类选择器以一个点显示<br>2.class也可以用作派生选择器</p>
-<p>&#96;&#96;&#96;<html></p>
-<head></head>
-<body>
-<p class="pclass">这是一个class效果 <a href="www.jikexueyuan.com>极客学院</a></p>
-<div class="divclass">hello<p>标签</p></div>
-</body></html>
-
+        <h1 id="CSS类选择器"   >
+          <a href="#CSS类选择器" class="heading-link"><i class="fas fa-link"></i></a><a href="#CSS类选择器" class="headerlink" title="CSS类选择器"></a>CSS类选择器</h1>
+      <p>1.类选择器以一个点显示<br>2.class也可以用作派生选择器</p>
+<p> &lt;<code>html&gt; &lt;</code>head&gt;&lt;<code>/head&gt; &lt;</code>body&gt;<br>&lt;<code>p class=&quot;pclass&quot;&gt;这是一个class效果 &lt;</code>a href&#x3D;”<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="http://www.jikexueyuan.com&gt;极客学院/" >www.jikexueyuan.com&gt;极客学院</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>&lt;<code>/a&gt;&lt;</code>&#x2F;p&gt;<br>&lt;<code>div class=&quot;divclass&quot;&gt;hello&lt;</code>p&gt;标签&lt;<code>/p&gt;&lt;</code>&#x2F;div&gt;<br>&lt;<code>/body&gt;&lt;</code>&#x2F;html&gt;</p>
 <p>CSS样式表<br>.pclass a{ color:red}<br>.divclass p{color:green}  类选择器和派生选择器的结合应用</p>
-<p>CSS属性选择器<br>1.对带有指定属性的HTML元素设置样式<br>2.属性和值选择器</p>
-<p>&#96;&#96;&#96;<html></p>
-<head><meta charset="UTF-8">
-      <title></title>
-      <stype type="test/css">
-      [title]{               <!--如果属性选择器不指定值是多少，那么写任何值都生效-->
-           color:blue;}
-      [title=te]{             <!--如果属性选择器指定值是什么，那么只有写指定的值才会生效，更改值则不生效-->
-           color:red
-           }
-      </stype></head>
-<body>
-<p title="t">属性选择器</p>
-<p title="te">属性和值选择器</p>
-</body>
-</html>
 
-
+        <h1 id="CSS属性选择器"   >
+          <a href="#CSS属性选择器" class="heading-link"><i class="fas fa-link"></i></a><a href="#CSS属性选择器" class="headerlink" title="CSS属性选择器"></a>CSS属性选择器</h1>
+      <p>1.对带有指定属性的HTML元素设置样式<br>2.属性和值选择器</p>
+<p>&lt;<code>html&gt; &lt;</code>head&gt;&lt;<code>meta charset=&quot;UTF-8&quot;&gt;       &lt;</code>title&gt;&lt;<code>/title&gt;       &lt;</code>stype type&#x3D;”test&#x2F;css”&gt;<br>      [title]{               &lt;<code>!--如果属性选择器不指定值是多少，那么写任何值都生效--&gt;            color:blue;&#125;       [title=te]&#123;             &lt;</code>!–如果属性选择器指定值是什么，那么只有写指定的值才会生效，更改值则不生效–&gt;<br>           color:red<br>           }<br>      &lt;<code>/stype&gt;&lt;</code>&#x2F;head&gt;<br>&lt;<code>body&gt; &lt;</code>p title&#x3D;”t”&gt;属性选择器&lt;<code>/p&gt; &lt;</code>p title&#x3D;”te”&gt;属性和值选择器&lt;<code>/p&gt; &lt;</code>&#x2F;body&gt;<br>&lt;&#96;&#x2F;html&gt;</p>
 <p>属性选择器在IE6或者更低的版本是不支持的</p>
-<p>CSS3样式<br>CSS背景<br>1.css允许应用纯色作为背景，也允许使用背景图像创建相当复杂的效果<br>   background-attachment         背景图像是否固定或者随着页面的其余部分滚动<br>   background-color                  设置元素的背景颜色<br>   background-image                 把图片设置为背景<br>   background-position              设置背景图片的起始位置<br>   background-repeat                 设置背景图片是否及如何重复<br>   background-size                     规定背景图片的尺寸<br>   background-origin                  规定背景图片的定位区域<br>   background-clip                      对顶背景的绘制区域</p>
-<p>&#96;&#96;&#96;<html></p>
-<head><meta charset="UTF-8">
-      <title></title>
-      <link  rel="stylesheet" type="test/css" href="style.css">
-<body>
-      <p>测试一下背景是否可以继承</p>
-</body>
-</html>```
-先找一张背景图片
 
-<p>style.css<br>body{<br>    background:gray;}<br> p{  width:150px;<br>     padding:10px; <!--内边距--><br>    background:blue;}</p>
-<!--引入背景图片-->
-<p>body{<br>    background-image:url(“图片名字”); <!--引入背景图片--><br>    background-repeat：no-repeat;<!--背景图片不允许重复--><br>    background-attachment:fixed;<!--背景图片固定不随文字而滚动--><br>    background-size：100px 100px;<!--裁定大小--><br>    }<br>p{    width:200px;                   <!--把图片应用到p标签上--><br>  background-image:url（”图片名字”）}</p>
-<p>CSS文本<br>CSS文本属性可定义文本外观，通过文本属性，可以改变文本的颜色，字符间距，对齐文本，装饰文本，对文本缩进等。<br> color                       文本颜色<br>dlirection                  文本方向<br>line-height                行高<br>letter-spacing            字符间距<br>text-align                   对齐元素中的文本<br>text-decoration           向文本添加修饰<br>text-indent                 缩进元素中文本的首行<br>text-transform             规范元素中的字母的格式<br>unicode-bidi                设置文本方向<br>white-space                 元素中空白的处理方式<br>word-spacing               字间距<br>text-shadow                 向文本添加阴影<br>word-wrap                    规定文本的换行规则</p>
-<p>例如<br><!DOCTYPE html></p>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-    <p>hello 狗哥</p>
-</body>
-</html>
+        <h1 id="CSS3样式"   >
+          <a href="#CSS3样式" class="heading-link"><i class="fas fa-link"></i></a><a href="#CSS3样式" class="headerlink" title="CSS3样式"></a>CSS3样式</h1>
+      
+        <h2 id="CSS背景"   >
+          <a href="#CSS背景" class="heading-link"><i class="fas fa-link"></i></a><a href="#CSS背景" class="headerlink" title="CSS背景"></a>CSS背景</h2>
+      <p>1.css允许应用纯色作为背景，也允许使用背景图像创建相当复杂的效果<br>   background-attachment         背景图像是否固定或者随着页面的其余部分滚动<br>   background-color                  设置元素的背景颜色<br>   background-image                 把图片设置为背景<br>   background-position              设置背景图片的起始位置<br>   background-repeat                 设置背景图片是否及如何重复<br>   background-size                     规定背景图片的尺寸<br>   background-origin                  规定背景图片的定位区域<br>   background-clip                      对顶背景的绘制区域<br>&lt;<code>html&gt; &lt;</code>head&gt;&lt;<code>meta charset=&quot;UTF-8&quot;&gt;       &lt;</code>title&gt;&lt;<code>/title&gt;       &lt;</code>link  rel&#x3D;”stylesheet” type&#x3D;”test&#x2F;css” href&#x3D;”style.css”&gt;<br>&lt;<code>body&gt;       &lt;</code>p&gt;测试一下背景是否可以继承&lt;<code>/p&gt; &lt;</code>&#x2F;body&gt;<br>&lt;&#96;&#x2F;html&gt;<br>先找一张背景图片</p>
+<p>style.css<br>body{<br>    background:gray;}<br> p{  width:150px;<br>     padding:10px; &lt;<code>!--内边距--&gt;     background:blue;&#125; &lt;</code>!–引入背景图片–&gt;<br>body{<br>    background-image:url(“图片名字”); &lt;<code>!--引入背景图片--&gt;     background-repeat：no-repeat;&lt;</code>!–背景图片不允许重复–&gt;<br>    background-attachment:fixed;&lt;<code>!--背景图片固定不随文字而滚动--&gt;     background-size：100px 100px;&lt;</code>!–裁定大小–&gt;<br>    }<br>p{    width:200px;                   &lt;&#96;!–把图片应用到p标签上–&gt;<br>  background-image:url（”图片名字”）}</p>
 
+        <h2 id="CSS文本"   >
+          <a href="#CSS文本" class="heading-link"><i class="fas fa-link"></i></a><a href="#CSS文本" class="headerlink" title="CSS文本"></a>CSS文本</h2>
+      <p>CSS文本属性可定义文本外观，通过文本属性，可以改变文本的颜色，字符间距，对齐文本，装饰文本，对文本缩进等。<br> color                       文本颜色<br>dlirection                  文本方向<br>line-height                行高<br>letter-spacing            字符间距<br>text-align                   对齐元素中的文本<br>text-decoration           向文本添加修饰<br>text-indent                 缩进元素中文本的首行<br>text-transform             规范元素中的字母的格式<br>unicode-bidi                设置文本方向<br>white-space                 元素中空白的处理方式<br>word-spacing               字间距<br>text-shadow                 向文本添加阴影<br>word-wrap                    规定文本的换行规则</p>
+<p>例如<br>&lt;<code>!DOCTYPE html&gt; &lt;</code>html lang&#x3D;”en”&gt;<br>&lt;<code>head&gt;     &lt;</code>meta charset&#x3D;”UTF-8”&gt;<br>    &lt;<code>title&gt;Title&lt;</code>&#x2F;title&gt;<br>    &lt;<code>link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt; &lt;</code>&#x2F;head&gt;<br>&lt;<code>body&gt;     &lt;</code>p&gt;hello 狗哥&lt;<code>/p&gt; &lt;</code>&#x2F;body&gt;<br>&lt;&#96;&#x2F;html&gt;</p>
 <p>style.css<br>body{<br>    color:orangered;<br>    text-align: right;<br>}</p>
-<p>CSS字体<br>css字体属性定义文本的字体系列，大小，加粗，风格和变形<br>font-family                设置字体系列<br>font-size                    设置字体的尺寸<br>font-style                   设置字体风格<br>font-variant                以小型大写字体或正常字体显示文本<br>font-weight                设置字体的粗细</p>
-<p>style.css<!--引用字体--><br>@font-face{<br>  font-family:mafont;<br>  src:url(当前下载好的字体);<br>}</p>
-<p>CSS链接</p>
-<p>● a:link      普通的，未被访问的链接<br>● a:visited  用户已访问的链接<br>● a:hover   鼠标指针位于链接的上方<br>● a:active   链接被点击的时刻<br>a:link{<br>    color: #FF0000;<br>}<br>a:visited{<br>    color: #00FF00;<br>}<br>a:hover{<br>    color: #0000FF;<br>}<br>a:active{<br>    color: #0F0F00;<br>}</p>
-<p>CSS列表<br>css列表属性允许你放置，改变列表标志，或者将图像作为列表项标志<br>list-style                      简写列表项<br>list-style-image            列表项图像<br>list-style-position         列表标志位置<br>list-style-type               列表类型<br>例如</p>
-<p>&#96;&#96;&#96;<!DOCTYPE html></p>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-     <ul>
-         <li>苹果</li>
-         <li>苹果</li>
-         <li>苹果</li>
-         <li>苹果</li>
-     </ul>
-</body>
-</html>
 
+        <h2 id="CSS字体"   >
+          <a href="#CSS字体" class="heading-link"><i class="fas fa-link"></i></a><a href="#CSS字体" class="headerlink" title="CSS字体"></a>CSS字体</h2>
+      <p>css字体属性定义文本的字体系列，大小，加粗，风格和变形<br>font-family                设置字体系列<br>font-size                    设置字体的尺寸<br>font-style                   设置字体风格<br>font-variant                以小型大写字体或正常字体显示文本<br>font-weight                设置字体的粗细</p>
+<p>style.css&lt;&#96;&#96;!–引用字体–&#96;&gt;<br>@font-face{<br>  font-family:mafont;<br>  src:url(当前下载好的字体);<br>}</p>
+
+        <h2 id="CSS链接"   >
+          <a href="#CSS链接" class="heading-link"><i class="fas fa-link"></i></a><a href="#CSS链接" class="headerlink" title="CSS链接"></a>CSS链接</h2>
+      <p>● a:link      普通的，未被访问的链接<br>● a:visited  用户已访问的链接<br>● a:hover   鼠标指针位于链接的上方<br>● a:active   链接被点击的时刻<br> a:link{<br>    color: #FF0000;<br>}<br>a:visited{<br>    color: #00FF00;<br>}<br>a:hover{<br>    color: #0000FF;<br>}<br>a:active{<br>    color: #0F0F00;<br>}</p>
+
+        <h2 id="CSS列表"   >
+          <a href="#CSS列表" class="heading-link"><i class="fas fa-link"></i></a><a href="#CSS列表" class="headerlink" title="CSS列表"></a>CSS列表</h2>
+      <p>css列表属性允许你放置，改变列表标志，或者将图像作为列表项标志<br>list-style                      简写列表项<br>list-style-image            列表项图像<br>list-style-position         列表标志位置<br>list-style-type               列表类型<br>例如<br>&lt;<code>!DOCTYPE html&gt; &lt;</code>html lang&#x3D;”en”&gt;<br>&lt;<code>head&gt;     &lt;</code>meta charset&#x3D;”UTF-8”&gt;<br>    &lt;<code>title&gt;Title&lt;</code>&#x2F;title&gt;<br>    &lt;<code>link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt; &lt;</code>&#x2F;head&gt;<br>&lt;<code>body&gt;      &lt;</code>ul&gt;<br>         &lt;<code>li&gt;苹果&lt;</code>&#x2F;li&gt;<br>         &lt;<code>li&gt;苹果&lt;</code>&#x2F;li&gt;<br>         &lt;<code>li&gt;苹果&lt;</code>&#x2F;li&gt;<br>         &lt;<code>li&gt;苹果&lt;</code>&#x2F;li&gt;<br>     &lt;<code>/ul&gt; &lt;</code>&#x2F;body&gt;<br>&lt;&#96;&#x2F;html&gt;</p>
 <p>ul li{<br>    list-style-type:decimal;<br>}</p>
-<p>class是可以重复的（姓名），ID是不可以重复的<br>CSS表格<br>css表格属性可以帮助我们极大地改善表格的外观</p>
+<p>class是可以重复的（姓名），ID是不可以重复的</p>
+
+        <h2 id="CSS表格"   >
+          <a href="#CSS表格" class="heading-link"><i class="fas fa-link"></i></a><a href="#CSS表格" class="headerlink" title="CSS表格"></a>CSS表格</h2>
+      <p>css表格属性可以帮助我们极大地改善表格的外观</p>
 <ol>
 <li>表格边框</li>
 <li>折叠边框</li>
 <li>表格宽高</li>
 <li>表格文本对齐</li>
 <li>表格内边距</li>
-<li>表格颜色<body>
-  <div class="table-container"><table  id="tb">
-      <tr>
-          <th>姓名</th>
-          <th>年龄</th>
-          <th>性别</th>
-      </tr>
-      <tr>
-          <td>小王</td>
-          <td>20</td>
-          <td>男</td>
-      </tr>
-          <td>小王</td>
-          <td>20</td>
-          <td>男</td>
-      </tr>
-          <td>小王</td>
-          <td>20</td>
-          <td>男</td>
-      </tr>
-          <td>小王</td>
-          <td>20</td>
-          <td>男</td>
-      </tr>
-  </table></div>
-</body>
-</html></li>
+<li>表格颜色<br> &lt;<code>body&gt;   &lt;</code>table  id&#x3D;”tb”&gt;<br>  &lt;<code>tr&gt;       &lt;</code>th&gt;姓名&lt;<code>/th&gt;       &lt;</code>th&gt;年龄&lt;<code>/th&gt;       &lt;</code>th&gt;性别&lt;<code>/th&gt;   &lt;</code>&#x2F;tr&gt;<br>  &lt;<code>tr&gt;       &lt;</code>td&gt;小王&lt;<code>/td&gt;       &lt;</code>td&gt;20&lt;<code>/td&gt;       &lt;</code>td&gt;男&lt;<code>/td&gt;   &lt;</code>&#x2F;tr&gt;<br>      &lt;<code>td&gt;小王&lt;</code>&#x2F;td&gt;<br>      &lt;<code>td&gt;20&lt;</code>&#x2F;td&gt;<br>      &lt;<code>td&gt;男&lt;</code>&#x2F;td&gt;<br>  &lt;<code>/tr&gt;       &lt;</code>td&gt;小王&lt;<code>/td&gt;       &lt;</code>td&gt;20&lt;<code>/td&gt;       &lt;</code>td&gt;男&lt;<code>/td&gt;   &lt;</code>&#x2F;tr&gt;<br>      &lt;<code>td&gt;小王&lt;</code>&#x2F;td&gt;<br>      &lt;<code>td&gt;20&lt;</code>&#x2F;td&gt;<br>      &lt;<code>td&gt;男&lt;</code>&#x2F;td&gt;<br>  &lt;<code>/tr&gt;   &lt;</code>&#x2F;table&gt;<br>&lt;<code>/body&gt; &lt;</code>&#x2F;html&gt;</li>
 </ol>
-<p>#tb,tr,th,td{<br>    border:1px solid  blue;<br>    text-align: center;<br>    background-color: orange;<br>}<br>#tb{<br>    width: 400px;<br>    height: 400px;<br>    border-collapse: collapse;<br>}</p>
-<p>样式<br>#tb{<br>    border-collapse: collapse;<br>    width:500px;<br>}<br>#tb td,#tb th{<br>    border:1px solid bisque;<br>}<br>#tb th{<br>    text-align: right;<br>    background-color: aquamarine;<br>    color: cornsilk;<br>}<br>#tb tr.alt td{<br>    color: #000000;<br>    background-color: aquamarine;<br>}</p>
-<p>CSS轮廓<br>轮廓主要是用来突出显示元素的作用</p>
-<p>outline                           设置轮廓属性<br>outline-color                  设置轮廓的颜色<br>outline-style                   设置轮廓的样式<br>outline-width                  设置轮廓的宽度</p>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-   <p>突出的效果文字</p>
-</body>
-</html>
+<p> #tb,tr,th,td{<br>    border:1px solid  blue;<br>    text-align: center;<br>    background-color: orange;<br>}<br>#tb{<br>    width: 400px;<br>    height: 400px;<br>    border-collapse: collapse;<br>}</p>
+<p>样式<br> #tb{<br>    border-collapse: collapse;<br>    width:500px;<br>}<br>#tb td,#tb th{<br>    border:1px solid bisque;<br>}<br>#tb th{<br>    text-align: right;<br>    background-color: aquamarine;<br>    color: cornsilk;<br>}<br>#tb tr.alt td{<br>    color: #000000;<br>    background-color: aquamarine;<br>}</p>
 
-<p>p{<br>    outline-width: 10px;<br>    outline-color: #f95cff;<br>    outline-style: groove;<br>}</p>
-<p>CSS定位<br>定位</p>
-<ol>
+        <h2 id="CSS轮廓"   >
+          <a href="#CSS轮廓" class="heading-link"><i class="fas fa-link"></i></a><a href="#CSS轮廓" class="headerlink" title="CSS轮廓"></a>CSS轮廓</h2>
+      <p>轮廓主要是用来突出显示元素的作用</p>
+<p>outline                           设置轮廓属性<br>outline-color                  设置轮廓的颜色<br>outline-style                   设置轮廓的样式<br>outline-width                  设置轮廓的宽度</p>
+<p> &lt;<code>!DOCTYPE html&gt; &lt;</code>html lang&#x3D;”en”&gt;<br>&lt;<code>head&gt;     &lt;</code>meta charset&#x3D;”UTF-8”&gt;<br>    &lt;<code>title&gt;Title&lt;</code>&#x2F;title&gt;<br>    &lt;<code>link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt; &lt;</code>&#x2F;head&gt;<br>&lt;<code>body&gt;    &lt;</code>p&gt;突出的效果文字&lt;<code>/p&gt; &lt;</code>&#x2F;body&gt;<br>&lt;&#96;&#x2F;html&gt;</p>
+<p> p{<br>    outline-width: 10px;<br>    outline-color: #f95cff;<br>    outline-style: groove;<br>}</p>
+
+        <h1 id="CSS定位"   >
+          <a href="#CSS定位" class="heading-link"><i class="fas fa-link"></i></a><a href="#CSS定位" class="headerlink" title="CSS定位"></a>CSS定位</h1>
+      
+        <h2 id="定位"   >
+          <a href="#定位" class="heading-link"><i class="fas fa-link"></i></a><a href="#定位" class="headerlink" title="定位"></a>定位</h2>
+      <ol>
 <li>css定位 改变元素在页面上的位置</li>
 <li>css定位机制：普通流：元素按照其在HTML中的位置顺序决定排布的过程<br>                  浮动<br>                  绝对布局</li>
 </ol>
 <p>position               把元素放在一个静态的，相对的，绝对的，或固定的位置中<br>top                    元素向上的偏移量<br>left                   元素向左的偏移量<br>right                  元素向右的偏移量<br>bottom                 元素向下的偏移量<br>overflow               设置元素溢出其区域发生的事情<br>clip                   设置元素显示的形态<br>vertical-align         设置元素垂直对齐的方式<br>z-index                设置元素的堆叠顺序</p>
-<p>例如</p>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-   <div id="position1"></div>
-   <div id="position2"></div>
-   <script>
-       for(var i=0;i<100;i++){
-           document.write(i+"<br/>")
-       }
-   </script>
-</body>
-</html>
+<p>例如<br>&lt;<code>!DOCTYPE html&gt; &lt;</code>html lang&#x3D;”en”&gt;<br>&lt;<code>head&gt;     &lt;</code>meta charset&#x3D;”UTF-8”&gt;<br>    &lt;<code>title&gt;Title&lt;</code>&#x2F;title&gt;<br>    &lt;<code>link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt; &lt;</code>&#x2F;head&gt;<br>&lt;<code>body&gt;    &lt;</code>div id&#x3D;”position1”&gt;&lt;<code>/div&gt;    &lt;</code>div id&#x3D;”position2”&gt;&lt;<code>/div&gt;    &lt;</code>script&gt;<br>       for(var i&#x3D;0;i&lt;<code>100;i++)&#123;            document.write(i+&quot;&lt;</code>br&#x2F;&gt;”)<br>       }<br>   &lt;<code>/script&gt; &lt;</code>&#x2F;body&gt;<br>&lt;&#96;&#x2F;html&gt;</p>
+<p>#position1{<br>    width: 100px;<br>    height: 100px;<br>    background-color: #d2b3ff;<br>    position: absolute; &lt;<code>!--position位置属性 relative相对的absolute绝对的fixed固定static静态 --&gt;     left: 20px;     top: 20px;     z-index: 2; &lt;</code>!–谁的值大谁在前面–&gt;<br>}<br>#position2{<br>    width: 100px;<br>    height: 100px;<br>    background-color: #d2b3ff;<br>    position: absolute;<br>    left: 10px;<br>    top: 10px;<br>    z-index: 1;<br>}</p>
 
-<p>#position1{<br>    width: 100px;<br>    height: 100px;<br>    background-color: #d2b3ff;<br>    position: absolute; <!--position位置属性 relative相对的absolute绝对的fixed固定static静态 --><br>    left: 20px;<br>    top: 20px;<br>    z-index: 2; <!--谁的值大谁在前面--><br>}<br>#position2{<br>    width: 100px;<br>    height: 100px;<br>    background-color: #d2b3ff;<br>    position: absolute;<br>    left: 10px;<br>    top: 10px;<br>    z-index: 1;<br>}</p>
-<p>浮动</p>
-<ol>
+        <h2 id="浮动"   >
+          <a href="#浮动" class="heading-link"><i class="fas fa-link"></i></a><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h2>
+      <ol>
 <li>浮动  float属性可用的值： left:元素向左浮动     right元素向右浮动    none元素不浮动  inherit从父级继承浮动属性 </li>
-<li>clear 属性值： left，right：去掉元素向左向右浮动   both：左右两侧均去掉浮动  inherit：从父级继承来clear的值<body>
-<div id="container">
-<div id="sd"></div>
-<div id="tk"></div>
-<div id="tm"></div>
-<div id="tsxt">helloworld</div>
-</div>
-</script>
-</body></li>
+<li>clear 属性值： left，right：去掉元素向左向右浮动   both：左右两侧均去掉浮动  inherit：从父级继承来clear的值<br> &lt;<code>body&gt; &lt;</code>div id&#x3D;”container”&gt;<br>&lt;<code>div id=&quot;sd&quot;&gt;&lt;</code>&#x2F;div&gt;<br>&lt;<code>div id=&quot;tk&quot;&gt;&lt;</code>&#x2F;div&gt;<br>&lt;<code>div id=&quot;tm&quot;&gt;&lt;</code>&#x2F;div&gt;<br>&lt;<code>div id=&quot;tsxt&quot;&gt;helloworld&lt;</code>&#x2F;div&gt;<br>&lt;<code>/div&gt; &lt;</code>&#x2F;script&gt;<br>&lt;&#96;&#x2F;body&gt;</li>
 </ol>
 <p>#sd{<br>    width:100px;<br>    height:100px;<br>    background-color: #e8ffa8;<br>    float: left;<br>}<br>#tk{<br>    width:150px;<br>    height:100px;<br>    background-color:cadetblue;<br>    float: left;<br>}<br>#tm{<br>    width:100px;<br>    height:100px;<br>    background-color:red;<br>    float: left;<br>}<br>#container{<br>    width: 300px;<br>    height:500px;<br>    background: gray;<br>}<br>#text{<br>    clear: both;<br>}</p>
-<p>3.浮动应用</p>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>浮动</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-<div id="div1">
-    <ul>
-        <li><img src="01.jpg"></li>
-        <li><img src="02.jpg"></li>
-        <li><img src="03.jpg"></li>
-    </ul>
-    <ul>
-        <li><img src="04.jpg"></li>
-        <li><img src="05.jpg"></li>
-        <li><img src="06.jpg"></li>
-    </ul>
-    <ul>
-        <li><img src="07.jpg"></li>
-    </ul>
-</div>
-</body>
-</html>
-
+<p>3.浮动应用<br> &lt;<code>!DOCTYPE html&gt; &lt;</code>html lang&#x3D;”en”&gt;<br>&lt;<code>head&gt;     &lt;</code>meta charset&#x3D;”UTF-8”&gt;<br>    &lt;<code>title&gt;浮动&lt;</code>&#x2F;title&gt;<br>    &lt;<code>link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt; &lt;</code>&#x2F;head&gt;<br>&lt;<code>body&gt; &lt;</code>div id&#x3D;”div1”&gt;<br>    &lt;<code>ul&gt;         &lt;</code>li&gt;&lt;<code>img src=&quot;01.jpg&quot;&gt;&lt;</code>&#x2F;li&gt;<br>        &lt;<code>li&gt;&lt;</code>img src&#x3D;”02.jpg”&gt;&lt;<code>/li&gt;         &lt;</code>li&gt;&lt;<code>img src=&quot;03.jpg&quot;&gt;&lt;</code>&#x2F;li&gt;<br>    &lt;<code>/ul&gt;     &lt;</code>ul&gt;<br>        &lt;<code>li&gt;&lt;</code>img src&#x3D;”04.jpg”&gt;&lt;<code>/li&gt;         &lt;</code>li&gt;&lt;<code>img src=&quot;05.jpg&quot;&gt;&lt;</code>&#x2F;li&gt;<br>        &lt;<code>li&gt;&lt;</code>img src&#x3D;”06.jpg”&gt;&lt;<code>/li&gt;     &lt;</code>&#x2F;ul&gt;<br>    &lt;<code>ul&gt;         &lt;</code>li&gt;&lt;<code>img src=&quot;07.jpg&quot;&gt;&lt;</code>&#x2F;li&gt;<br>    &lt;<code>/ul&gt; &lt;</code>&#x2F;div&gt;<br>&lt;<code>/body&gt; &lt;</code>&#x2F;html&gt;</p>
 <p>*{<br>    margin: 0px;<br>    padding:0px;<br>}<br>li {<br>    list-style: none;<br>}<br>#div1{<br>    width:950px;<br>    height: auto;<br>    margin: 20px auto;<br>}<br>ul{<br>    width: 250px;<br>    float:left;<br>}</p>
-<p>CSS盒子模型<br>margin，border，padding，content部分组成<br>css内边距<br>内边距在content外，边框内<br>padding                      设置所有边距<br>padding-bottom          设置底边距<br>padding-left                设置左边距<br>padding-right              设置右边距<br>padding-top                设置上边距</p>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>浮动</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-  <div class="table-container"><table border="1" >
-      <tr>
-          <td>内边距</td>
-      </tr>
-  </table></div>
-</body>
-</html>
 
+        <h1 id="CSS盒子模型"   >
+          <a href="#CSS盒子模型" class="heading-link"><i class="fas fa-link"></i></a><a href="#CSS盒子模型" class="headerlink" title="CSS盒子模型"></a>CSS盒子模型</h1>
+      <p>margin，border，padding，content部分组成</p>
+
+        <h2 id="css内边距"   >
+          <a href="#css内边距" class="heading-link"><i class="fas fa-link"></i></a><a href="#css内边距" class="headerlink" title="css内边距"></a>css内边距</h2>
+      <p>内边距在content外，边框内<br>padding                      设置所有边距<br>padding-bottom          设置底边距<br>padding-left                设置左边距<br>padding-right              设置右边距<br>padding-top                设置上边距</p>
+<p> &lt;<code>!DOCTYPE html&gt;    &lt;</code>html lang&#x3D;”en”&gt;<br>   &lt;<code>head&gt;      &lt;</code>meta charset&#x3D;”UTF-8”&gt;<br>     &lt;<code>title&gt;浮动&lt;</code>&#x2F;title&gt;<br>     &lt;<code>link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt;    &lt;</code>&#x2F;head&gt;<br>   &lt;<code>body&gt;      &lt;</code>table border&#x3D;”1” &gt;<br>      &lt;<code>tr&gt;           &lt;</code>td&gt;内边距&lt;<code>/td&gt;       &lt;</code>&#x2F;tr&gt;<br>     &lt;<code>/table&gt;    &lt;</code>&#x2F;body&gt;<br>   &lt;&#96;&#x2F;html&gt;</p>
 <p>td{<br>    padding-left:100px;<br>    padding-right: 50px;<br>    padding-bottom: 60px;<br>    padding-top: 70px;<br>}</p>
-<p>css边框<br>  我们可以创建出效果出色的边框，并且可以应用于任何元素<br>边框的样式<br>border-style：定义了10个不同的非继承样式，包括none</p>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>浮动</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-<p>css边框样式</p>
-</body>
-</html>
 
+        <h2 id="css边框"   >
+          <a href="#css边框" class="heading-link"><i class="fas fa-link"></i></a><a href="#css边框" class="headerlink" title="css边框"></a>css边框</h2>
+      <p>  我们可以创建出效果出色的边框，并且可以应用于任何元素</p>
+
+        <h2 id="边框的样式"   >
+          <a href="#边框的样式" class="heading-link"><i class="fas fa-link"></i></a><a href="#边框的样式" class="headerlink" title="边框的样式"></a>边框的样式</h2>
+      <p>border-style：定义了10个不同的非继承样式，包括none</p>
+<p> &lt;<code>!DOCTYPE html&gt; &lt;</code>html lang&#x3D;”en”&gt;<br>&lt;<code>head&gt;     &lt;</code>meta charset&#x3D;”UTF-8”&gt;<br>    &lt;<code>title&gt;浮动&lt;</code>&#x2F;title&gt;<br>    &lt;<code>link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt; &lt;</code>&#x2F;head&gt;<br>&lt;<code>body&gt; &lt;</code>p&gt;css边框样式&lt;<code>/p&gt; &lt;</code>&#x2F;body&gt;<br>&lt;&#96;&#x2F;html&gt;</p>
 <p>p{<br>    border-style: dotted;<br>}</p>
-<p>边框的单边样式<br>border-top-style<br>border-left-style<br>border-right-style<br>border-bottom-style</p>
-<p>p{<br>    border-style: dotted;<br>    border-top-style:double;<br>}<br>边框的宽度<br>border-width<br>边框的单边的宽度<br>border-top-width<br>border-left-width<br>border-right-width<br>border-bottom-width<br>边框的颜色<br>border-color<br>边框单边的颜色<br>border-top-color<br>border-left-color<br>border-right-color<br>border-bottom-color<br>css3边框<br>border-radius  圆角边框<br>box-shadow    边框阴影<br>border-image  边框图片</p>
+
+        <h2 id="边框的单边样式"   >
+          <a href="#边框的单边样式" class="heading-link"><i class="fas fa-link"></i></a><a href="#边框的单边样式" class="headerlink" title="边框的单边样式"></a>边框的单边样式</h2>
+      <p>border-top-style<br>border-left-style<br>border-right-style<br>border-bottom-style</p>
+<p>p{<br>    border-style: dotted;<br>    border-top-style:double;<br>}</p>
+
+        <h2 id="边框的宽度"   >
+          <a href="#边框的宽度" class="heading-link"><i class="fas fa-link"></i></a><a href="#边框的宽度" class="headerlink" title="边框的宽度"></a>边框的宽度</h2>
+      <p>border-width</p>
+
+        <h2 id="边框的单边的宽度"   >
+          <a href="#边框的单边的宽度" class="heading-link"><i class="fas fa-link"></i></a><a href="#边框的单边的宽度" class="headerlink" title="边框的单边的宽度"></a>边框的单边的宽度</h2>
+      <p>border-top-width<br>border-left-width<br>border-right-width<br>border-bottom-width</p>
+
+        <h2 id="边框的颜色"   >
+          <a href="#边框的颜色" class="heading-link"><i class="fas fa-link"></i></a><a href="#边框的颜色" class="headerlink" title="边框的颜色"></a>边框的颜色</h2>
+      <p>border-color</p>
+
+        <h2 id="边框单边的颜色"   >
+          <a href="#边框单边的颜色" class="heading-link"><i class="fas fa-link"></i></a><a href="#边框单边的颜色" class="headerlink" title="边框单边的颜色"></a>边框单边的颜色</h2>
+      <p>border-top-color<br>border-left-color<br>border-right-color<br>border-bottom-color</p>
+
+        <h2 id="css3边框"   >
+          <a href="#css3边框" class="heading-link"><i class="fas fa-link"></i></a><a href="#css3边框" class="headerlink" title="css3边框"></a>css3边框</h2>
+      <p>border-radius  圆角边框<br>box-shadow    边框阴影<br>border-image  边框图片</p>
 <p>p{<br>    border-radius:10px;<br>    width:200px;<br>    background-color: #ff7b86;<br>    text-align: center;<br>}<br>.cssid{<br>    background-color: #2b6cff;<br>    width: 100px;<br>    height: 100px;<br>    text-align: center;<br>    box-shadow: 向右移动像素  向下移动像素  阴影透明度设计  阴影颜色;<br>}</p>
-<p>css外边距<br> 围绕在内容边框的区域就是外边距，外边距默认为透明区域，外边距接受任何长度单位，百分数值。<br>外边距常用属性<br>margin                          设置所有边距<br>margin-bottom              设置底边距<br>margin-left                    设置左边距<br>margin-right                  设置右边距<br>margin-top                    设置上边距 </p>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>浮动</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-   <div class="mg">外边距</div>
-</body>
-</html>
 
-<p>body{<br>     margin: 0px;<br> }<br>.mg{<br>    background-color: #42ff49;<br>    width: 100px;<br>    height: 100px;<br>    margin-top: 100px;<br>}<br>盒子模型</p>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>盒子模型</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-   <div class="container">
-       <div class="ab">
-           <div class="cd">
-               <div class="content">盒子模型</div>
-           </div>
-       </div>
-   </div>
-</body>
-</html>
+        <h1 id="css外边距"   >
+          <a href="#css外边距" class="heading-link"><i class="fas fa-link"></i></a><a href="#css外边距" class="headerlink" title="css外边距"></a>css外边距</h1>
+      <p> 围绕在内容边框的区域就是外边距，外边距默认为透明区域，外边距接受任何长度单位，百分数值。</p>
 
-<p>body{<br>     margin: 0px;<br> }<br>.container{<br>    margin: 0px;<br>}<br>.ab{<br>    border-style:double;<br>}<br>.cd{<br>    padding:10px;<br>}<br>.content{<br>    background-color: #ff78f4;<br>    text-align: center;<br>}</p>
-<p>css外边距合并</p>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>盒子模型</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-   <div class="container">
-       <div class="ab">
-           <div class="cd">
-               <div class="content">盒子模型</div>
-           </div>
-       </div>
-   </div>
-  <div class="container1">
-       <div class="ab1">
-           <div class="cd1">
-               <div class="content1">盒子模型</div>
-           </div>
-       </div>
-   </div>
-</body>
-</html>
+        <h2 id="外边距常用属性"   >
+          <a href="#外边距常用属性" class="heading-link"><i class="fas fa-link"></i></a><a href="#外边距常用属性" class="headerlink" title="外边距常用属性"></a>外边距常用属性</h2>
+      <p>margin                          设置所有边距<br>margin-bottom              设置底边距<br>margin-left                    设置左边距<br>margin-right                  设置右边距<br>margin-top                    设置上边距 </p>
+<p> &lt;<code>!DOCTYPE html&gt; &lt;</code>html lang&#x3D;”en”&gt;<br>&lt;<code>head&gt;     &lt;</code>meta charset&#x3D;”UTF-8”&gt;<br>    &lt;<code>title&gt;浮动&lt;</code>&#x2F;title&gt;<br>    &lt;<code>link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt; &lt;</code>&#x2F;head&gt;<br>&lt;<code>body&gt;    &lt;</code>div class&#x3D;”mg”&gt;外边距&lt;<code>/div&gt; &lt;</code>&#x2F;body&gt;<br>&lt;&#96;&#x2F;html&gt;</p>
+<p> body{<br>     margin: 0px;<br> }<br>.mg{<br>    background-color: #42ff49;<br>    width: 100px;<br>    height: 100px;<br>    margin-top: 100px;<br>}</p>
 
-<p>body{<br>     margin: 0px;<br> }<br>.container{<br>    margin: 0px;<br>}<br>.ab{<br>    border-style:double;<br>}<br>.cd{<br>    padding:10px;<br>}<br>.content{<br>    background-color: #ff78f4;<br>    text-align: center;<br>}<br>.container1{<br>    margin: 0px;<br>}<br>.ab1{<br>    border-style:double;<br>}<br>.cd1{<br>    padding:10px;<br>}<br>.content1{<br>    background-color: #ff78f4;<br>    text-align: center;<br>}<br>css盒子模型应用</p>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>盒子模型</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-  <div class="top">
-      <div class="top-content"></div>
-  </div>
-  <div class="content">
-      <div class="content-img"></div>
-      <div class="content-no"></div>
-      <div class="content-body"></div>
-  </div>
-  <div class="foot">
-      <div class="foot-content"></div>
-      <div class="foot-subnav"></div>
-  </div>
-</body>
-</html>
+        <h2 id="盒子模型"   >
+          <a href="#盒子模型" class="heading-link"><i class="fas fa-link"></i></a><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h2>
+      <p> &lt;<code>!DOCTYPE html&gt; &lt;</code>html lang&#x3D;”en”&gt;<br>&lt;<code>head&gt;     &lt;</code>meta charset&#x3D;”UTF-8”&gt;<br>    &lt;<code>title&gt;盒子模型&lt;</code>&#x2F;title&gt;<br>    &lt;<code>link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt; &lt;</code>&#x2F;head&gt;<br>&lt;<code>body&gt;    &lt;</code>div class&#x3D;”container”&gt;<br>       &lt;<code>div class=&quot;ab&quot;&gt;            &lt;</code>div class&#x3D;”cd”&gt;<br>               &lt;<code>div class=&quot;content&quot;&gt;盒子模型&lt;</code>&#x2F;div&gt;<br>           &lt;<code>/div&gt;        &lt;</code>&#x2F;div&gt;<br>   &lt;<code>/div&gt; &lt;</code>&#x2F;body&gt;<br>&lt;&#96;&#x2F;html&gt;</p>
+<p> body{<br>     margin: 0px;<br> }<br>.container{<br>    margin: 0px;<br>}<br>.ab{<br>    border-style:double;<br>}<br>.cd{<br>    padding:10px;<br>}<br>.content{<br>    background-color: #ff78f4;<br>    text-align: center;<br>}</p>
 
-<p>*{<br>    margin: 0px;<br>    padding:0px;<br>}<br>.top{<br>    width: 100%;<br>    height: 50px;<br>    background-color:black;<br>}<br>.top-content{<br>    width: 70%;<br>    height: 50px;<br>  background-color: #ff4060;<br>    margin:0px auto;<br>}<br>.content{<br>    width: 70%;<br>    height: 1150px;<br>    background-color: #ffb731;<br>    margin: 20px auto;<br>}<br>.content-img{<br>    width:100%;<br>    height: 100px;<br>    background-color: #fff067;<br>}<br>.content-no{<br>    width:100%;<br>    height: 50px;<br>    background-color: #37ff53;<br>}<br>.content-body{<br>    width:100%;<br>    height: 1000px;<br>    background-color: #46ffff;<br>}<br>.foot{<br>    width: 100%;<br>    height: 50px;<br>    background-color:black;<br>    margin: 0px auto;<br>}<br>.foot-content{<br>    width: 70%;<br>    height: 40px;<br>    background-color: #3659ff;<br>    margin: 0px auto;<br>}<br>.foot-subnav{<br>    width:70%;<br>    height:10px;<br>    background-color: #8839ff;<br>    margin: 0px auto;<br>}</p>
-<p>对齐操作</p>
-<ol>
-<li>使用margin属性进行水平对齐<!DOCTYPE html>
-<html lang="en">
-<head>
- <meta charset="UTF-8">
- <title>对齐</title>
- <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-  <div class="div"></div>
-</body>
-</html></li>
+        <h1 id="css外边距合并"   >
+          <a href="#css外边距合并" class="heading-link"><i class="fas fa-link"></i></a><a href="#css外边距合并" class="headerlink" title="css外边距合并"></a>css外边距合并</h1>
+      <p> &lt;<code>!DOCTYPE html&gt; &lt;</code>html lang&#x3D;”en”&gt;<br>&lt;<code>head&gt;     &lt;</code>meta charset&#x3D;”UTF-8”&gt;<br>    &lt;<code>title&gt;盒子模型&lt;</code>&#x2F;title&gt;<br>    &lt;<code>link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt; &lt;</code>&#x2F;head&gt;<br>&lt;<code>body&gt;    &lt;</code>div class&#x3D;”container”&gt;<br>       &lt;<code>div class=&quot;ab&quot;&gt;            &lt;</code>div class&#x3D;”cd”&gt;<br>               &lt;<code>div class=&quot;content&quot;&gt;盒子模型&lt;</code>&#x2F;div&gt;<br>           &lt;<code>/div&gt;        &lt;</code>&#x2F;div&gt;<br>   &lt;<code>/div&gt;   &lt;</code>div class&#x3D;”container1”&gt;<br>       &lt;<code>div class=&quot;ab1&quot;&gt;            &lt;</code>div class&#x3D;”cd1”&gt;<br>               &lt;<code>div class=&quot;content1&quot;&gt;盒子模型&lt;</code>&#x2F;div&gt;<br>           &lt;<code>/div&gt;        &lt;</code>&#x2F;div&gt;<br>   &lt;<code>/div&gt; &lt;</code>&#x2F;body&gt;<br>&lt;&#96;&#x2F;html&gt;</p>
+<p> body{<br>     margin: 0px;<br> }<br>.container{<br>    margin: 0px;<br>}<br>.ab{<br>    border-style:double;<br>}<br>.cd{<br>    padding:10px;<br>}<br>.content{<br>    background-color: #ff78f4;<br>    text-align: center;<br>}<br>.container1{<br>    margin: 0px;<br>}<br>.ab1{<br>    border-style:double;<br>}<br>.cd1{<br>    padding:10px;<br>}<br>.content1{<br>    background-color: #ff78f4;<br>    text-align: center;<br>}</p>
+
+        <h1 id="css盒子模型应用"   >
+          <a href="#css盒子模型应用" class="heading-link"><i class="fas fa-link"></i></a><a href="#css盒子模型应用" class="headerlink" title="css盒子模型应用"></a>css盒子模型应用</h1>
+      <p> &lt;<code>!DOCTYPE html&gt; &lt;</code>html lang&#x3D;”en”&gt;<br>&lt;<code>head&gt;     &lt;</code>meta charset&#x3D;”UTF-8”&gt;<br>    &lt;<code>title&gt;盒子模型&lt;</code>&#x2F;title&gt;<br>    &lt;<code>link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt; &lt;</code>&#x2F;head&gt;<br> &lt;<code>body&gt;   &lt;</code>div class&#x3D;”top”&gt;<br>      &lt;<code>div class=&quot;top-content&quot;&gt;&lt;</code>&#x2F;div&gt;<br>  &lt;<code>/div&gt;   &lt;</code>div class&#x3D;”content”&gt;<br>      &lt;<code>div class=&quot;content-img&quot;&gt;&lt;</code>&#x2F;div&gt;<br>      &lt;<code>div class=&quot;content-no&quot;&gt;&lt;</code>&#x2F;div&gt;<br>      &lt;<code>div class=&quot;content-body&quot;&gt;&lt;</code>&#x2F;div&gt;<br>  &lt;<code>/div&gt;   &lt;</code>div class&#x3D;”foot”&gt;<br>      &lt;<code>div class=&quot;foot-content&quot;&gt;&lt;</code>&#x2F;div&gt;<br>      &lt;<code>div class=&quot;foot-subnav&quot;&gt;&lt;</code>&#x2F;div&gt;<br>  &lt;<code>/div&gt; &lt;</code>&#x2F;body&gt;<br>&lt;&#96;&#x2F;html&gt;</p>
+<p> *{<br>    margin: 0px;<br>    padding:0px;<br>}<br>.top{<br>    width: 100%;<br>    height: 50px;<br>    background-color:black;<br>}<br>.top-content{<br>    width: 70%;<br>    height: 50px;<br>  background-color: #ff4060;<br>    margin:0px auto;<br>}<br>.content{<br>    width: 70%;<br>    height: 1150px;<br>    background-color: #ffb731;<br>    margin: 20px auto;<br>}<br>.content-img{<br>    width:100%;<br>    height: 100px;<br>    background-color: #fff067;<br>}<br>.content-no{<br>    width:100%;<br>    height: 50px;<br>    background-color: #37ff53;<br>}<br>.content-body{<br>    width:100%;<br>    height: 1000px;<br>    background-color: #46ffff;<br>}<br>.foot{<br>    width: 100%;<br>    height: 50px;<br>    background-color:black;<br>    margin: 0px auto;<br>}<br>.foot-content{<br>    width: 70%;<br>    height: 40px;<br>    background-color: #3659ff;<br>    margin: 0px auto;<br>}<br>.foot-subnav{<br>    width:70%;<br>    height:10px;<br>    background-color: #8839ff;<br>    margin: 0px auto;<br>}</p>
+
+        <h1 id="对齐操作"   >
+          <a href="#对齐操作" class="heading-link"><i class="fas fa-link"></i></a><a href="#对齐操作" class="headerlink" title="对齐操作"></a>对齐操作</h1>
+      <ol>
+<li>使用margin属性进行水平对齐<br> &lt;<code>!DOCTYPE html&gt; &lt;</code>html lang&#x3D;”en”&gt;<br>&lt;<code>head&gt; &lt;</code>meta charset&#x3D;”UTF-8”&gt;<br>&lt;<code>title&gt;对齐&lt;</code>&#x2F;title&gt;<br>&lt;<code>link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt; &lt;</code>&#x2F;head&gt;<br>&lt;<code>body&gt;  &lt;</code>div class&#x3D;”div”&gt;&lt;<code>/div&gt; &lt;</code>&#x2F;body&gt;<br>&lt;&#96;&#x2F;html&gt;</li>
 </ol>
-<p>*{<br>    margin: 0px;<br>}<br>.div{<br>    width: 70%;<br>    height: 1000px;<br>    background-color: cadetblue;<br>    margin-left:auto;<br>    margin-right: auto;    <!--也可以这样写margin:"0px auto";--><br>}</p>
+<p> *{<br>    margin: 0px;<br>}<br>.div{<br>    width: 70%;<br>    height: 1000px;<br>    background-color: cadetblue;<br>    margin-left:auto;<br>    margin-right: auto;    &lt;&#96;!–也可以这样写margin:”0px auto”;–&gt;<br>}</p>
 <p>2.使用position属性进行左右对齐</p>
-<p>*{<br>    margin: 0px;<br>}<br>.div{<br>    width: 70%;<br>    height: 1000px;<br>    background-color: cadetblue;<br>    position: absolute;<br>    left: 0px;<br>}</p>
+<p> *{<br>    margin: 0px;<br>}<br>.div{<br>    width: 70%;<br>    height: 1000px;<br>    background-color: cadetblue;<br>    position: absolute;<br>    left: 0px;<br>}</p>
 <p>3.使用float属性进行左右对齐</p>
 <p>*{<br>    margin: 0px;<br>}<br>.div{<br>    width: 70%;<br>    height: 1000px;<br>    background-color: cadetblue;<br>    float: left;<br>}</p>
-<p>尺寸操作</p>
-<p>heigh                          设置元素高度<br>line-height                  设置行高<br>max-hright                  设置元素最大高度<br>max-width                   设置元素最大宽度<br>min-width                   设置元素最小宽度<br>min-height                  设置元素最小高度<br>width                          设置元素宽度</p>
+
+        <h1 id="尺寸操作"   >
+          <a href="#尺寸操作" class="heading-link"><i class="fas fa-link"></i></a><a href="#尺寸操作" class="headerlink" title="尺寸操作"></a>尺寸操作</h1>
+      <p>heigh                          设置元素高度<br>line-height                  设置行高<br>max-hright                  设置元素最大高度<br>max-width                   设置元素最大宽度<br>min-width                   设置元素最小宽度<br>min-height                  设置元素最小高度<br>width                          设置元素宽度</p>
 <p>例如</p>
-<p>.p1{<br>    width:400px;<br>    line-height: normal;<br>}<br>.p2<br>{<br>    width: 400px;<br>    line-height: 200%;<br>}<br>.p3{<br>    width: 400px;<br>    line-height:50% ;<br>}</p>
-<p>分类操作<br>clear                    设置一个元素的侧面是否允许其他的浮动元素<br>cursor                  规定当只想某元素之上时显示的指针类型<br>display                设置是否及如何显示元素<br>float                    定义元素在那个方向浮动<br>position               把元素放置到一个静态的，相对的，绝对的，固定的位置<br>visibility               设置元素是否可见或不可见</p>
-<p>p{<br>    cursor:cell;          <!--还有其他样式--><br>    visibility：hidden;  <!--可见visible--><br>}</p>
-<p>导航栏</p>
-<ol>
-<li>垂直导航栏<!DOCTYPE html>
-<head>
- <meta charset="UTF-8">
- <title>对齐</title>
- <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
- <ul>
-     <li><a href="#">导航栏1</a></li>
-     <li><a href="#">导航栏2</a></li>
-     <li><a href="#">导航栏3</a></li>
- </ul>
-</body>
-</html></li>
+<p> .p1{<br>    width:400px;<br>    line-height: normal;<br>}<br>.p2<br>{<br>    width: 400px;<br>    line-height: 200%;<br>}<br>.p3{<br>    width: 400px;<br>    line-height:50% ;<br>}</p>
+
+        <h1 id="分类操作"   >
+          <a href="#分类操作" class="heading-link"><i class="fas fa-link"></i></a><a href="#分类操作" class="headerlink" title="分类操作"></a>分类操作</h1>
+      <p>clear                    设置一个元素的侧面是否允许其他的浮动元素<br>cursor                  规定当只想某元素之上时显示的指针类型<br>display                设置是否及如何显示元素<br>float                    定义元素在那个方向浮动<br>position               把元素放置到一个静态的，相对的，绝对的，固定的位置<br>visibility               设置元素是否可见或不可见</p>
+<p>p{<br>    cursor:cell;          &lt;<code>!--还有其他样式--&gt;     visibility：hidden;  &lt;</code>!–可见visible–&gt;<br>}</p>
+
+        <h1 id="导航栏"   >
+          <a href="#导航栏" class="heading-link"><i class="fas fa-link"></i></a><a href="#导航栏" class="headerlink" title="导航栏"></a>导航栏</h1>
+      <ol>
+<li>垂直导航栏<br> &lt;<code>!DOCTYPE html&gt; &lt;</code>head&gt;<br> &lt;<code>meta charset=&quot;UTF-8&quot;&gt;  &lt;</code>title&gt;对齐&lt;<code>/title&gt;  &lt;</code>link rel&#x3D;”stylesheet” type&#x3D;”text&#x2F;css” href&#x3D;”style.css”&gt;<br>&lt;<code>/head&gt; &lt;</code>body&gt;<br> &lt;<code>ul&gt;  &lt;</code>li&gt;&lt;<code>a href=&quot;#&quot;&gt;导航栏1&lt;</code>&#x2F;a&gt;&lt;<code>/li&gt;  &lt;</code>li&gt;&lt;<code>a href=&quot;#&quot;&gt;导航栏2&lt;</code>&#x2F;a&gt;&lt;<code>/li&gt;  &lt;</code>li&gt;&lt;<code>a href=&quot;#&quot;&gt;导航栏3&lt;</code>&#x2F;a&gt;&lt;<code>/li&gt;  &lt;</code>&#x2F;ul&gt;<br>&lt;<code>/body&gt; &lt;</code>&#x2F;html&gt;</li>
 </ol>
-<p>ul{<br>    list-style-type: none;   <!--去掉点--><br>    margin: 0px;<br>    padding: 0px;<br>}<br>a:link,a:visited{<br>    text-decoration: none;      <!--去掉下划线--><br>    display: block;             <!--摆放方式--><br>    background-color: #fff067;<br>    color: #ff4060;<br>    width: 50px;<br>    text-align: center;<br>}<br>a:active,a:hover{<br>    background-color: #3285ff;  <!--鼠标点击时颜色变化--><br>}<br>2.水平导航栏</p>
-<p>ul{<br>    list-style-type: none;<br>    margin: 0px;<br>    padding: 0px;<br>    width: 250px;<br>    text-align: center;<br>}<br>a:link,a:visited{<br>    font-weight: bold;      <!--文字加粗--><br>    text-decoration: none;<br>    background-color: #fff067;<br>    color: #ff4060;<br>    width: 50px;<br>    text-align: center;<br>}<br>a:active,a:hover{<br>    background-color: #3285ff;<br>}<br>li{<br>    display: inline;<br>    padding: 3px;<br>    padding-right: 5px;<br>    padding-left: 5px;<br>}</p>
-<p>图片操作</p>
-<!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <title>对齐</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <div class="image">
-            <a href="#" target="_self"></a>
-            <img src="01.jpg" alt="风景" width="200px" height="200px">
-        </div>
-        <div class="黑暗"></div>
-        <div class="image">
-            <a href="#" target="_self"></a>
-            <img src="01.jpg" alt="风景" width="200px" height="200px">
-        </div>
-        <div class="黑暗"></div>
-        <div class="image">
-            <a href="#" target="_self"></a>
-            <img src="01.jpg" alt="风景" width="200px" height="200px">
-        </div>
-        <div class="黑暗"></div>
-        <div class="image">
-            <a href="#" target="_self"></a>
-            <img src="01.jpg" alt="风景" width="200px" height="200px">
-        </div>
-        <div class="黑暗"></div>
-        <div class="image">
-            <a href="#" target="_self"></a>
-            <img src="01.jpg" alt="风景" width="200px" height="200px">
-        </div>
-        <div class="黑暗"></div>
-        <div class="image">
-            <a href="#" target="_self"></a>
-            <img src="01.jpg" alt="风景" width="200px" height="200px">
-        </div>
-        <div class="黑暗"></div>
-        <div class="image">
-            <a href="#" target="_self"></a>
-            <img src="01.jpg" alt="风景" width="200px" height="200px">
-        </div>
-        <div class="黑暗"></div>
-        <div class="image">
-            <a href="#" target="_self"></a>
-            <img src="01.jpg" alt="风景" width="200px" height="200px">
-        </div>
-        <div class="黑暗"></div>
-        <div class="image">
-            <a href="#" target="_self"></a>
-            <img src="01.jpg" alt="风景" width="200px" height="200px">
-        </div>
-        <div class="黑暗"></div>
-    </div>
-</body>
-</html>
+<p> ul{<br>    list-style-type: none;   &lt;<code>!--去掉点--&gt;     margin: 0px;     padding: 0px; &#125; a:link,a:visited&#123;     text-decoration: none;      &lt;</code>!–去掉下划线–&gt;<br>    display: block;             &lt;<code>!--摆放方式--&gt;     background-color: #fff067;     color: #ff4060;     width: 50px;     text-align: center; &#125; a:active,a:hover&#123;     background-color: #3285ff;  &lt;</code>!–鼠标点击时颜色变化–&gt;<br>}<br>2.水平导航栏</p>
+<p> ul{<br>    list-style-type: none;<br>    margin: 0px;<br>    padding: 0px;<br>    width: 250px;<br>    text-align: center;<br>}<br>a:link,a:visited{<br>    font-weight: bold;      &lt;&#96;!–文字加粗–&gt;<br>    text-decoration: none;<br>    background-color: #fff067;<br>    color: #ff4060;<br>    width: 50px;<br>    text-align: center;<br>}<br>a:active,a:hover{<br>    background-color: #3285ff;<br>}<br>li{<br>    display: inline;<br>    padding: 3px;<br>    padding-right: 5px;<br>    padding-left: 5px;<br>}</p>
 
-<p>body{<br>    margin: 10px auto;<br>    width: 70%;<br>    height: auto;<br>    background-color: #fffcb6;<br>}<br>.image{<br>    border: 1px solid #824b99;<br>    width: auto;<br>    height: auto;<br>    float: left;<br>    text-align: center;<br>    margin: 5px;<br>}<br>img{<br>    margin: 5px;<br>    opacity:0.8;   <!--透明度--><br>}<br>.text{<br>    font-size: 12px;<br>    margin-bottom: 5px;<br>}</p>
-<p>选择器详解<br>元素选择器<br>最常见的选择器就是元素选择器，文档的元素就是最基本的选择器 例如：h1{ } a{ }</p>
-<!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <title>对齐</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-   <p>hello</p>
-</body>
-</html>
+        <h1 id="图片操作"   >
+          <a href="#图片操作" class="heading-link"><i class="fas fa-link"></i></a><a href="#图片操作" class="headerlink" title="图片操作"></a>图片操作</h1>
+      <p> &lt;<code>!DOCTYPE html&gt; &lt;</code>head&gt;<br>    &lt;<code>meta charset=&quot;UTF-8&quot;&gt;     &lt;</code>title&gt;对齐&lt;<code>/title&gt;     &lt;</code>link rel&#x3D;”stylesheet” type&#x3D;”text&#x2F;css” href&#x3D;”style.css”&gt;<br>&lt;<code>/head&gt; &lt;</code>body&gt;<br>    &lt;<code>div class=&quot;container&quot;&gt;         &lt;</code>div class&#x3D;”image”&gt;<br>            &lt;<code>a href=&quot;#&quot; target=&quot;_self&quot;&gt;&lt;</code>&#x2F;a&gt;<br>            &lt;<code>img src=&quot;01.jpg&quot; alt=&quot;风景&quot; width=&quot;200px&quot; height=&quot;200px&quot;&gt;         &lt;</code>&#x2F;div&gt;<br>        &lt;<code>div class=&quot;黑暗&quot;&gt;&lt;</code>&#x2F;div&gt;<br>        &lt;<code>div class=&quot;image&quot;&gt;             &lt;</code>a href&#x3D;”#” target&#x3D;”_self”&gt;&lt;<code>/a&gt;             &lt;</code>img src&#x3D;”01.jpg” alt&#x3D;”风景” width&#x3D;”200px” height&#x3D;”200px”&gt;<br>        &lt;<code>/div&gt;         &lt;</code>div class&#x3D;”黑暗”&gt;&lt;<code>/div&gt;         &lt;</code>div class&#x3D;”image”&gt;<br>            &lt;<code>a href=&quot;#&quot; target=&quot;_self&quot;&gt;&lt;</code>&#x2F;a&gt;<br>            &lt;<code>img src=&quot;01.jpg&quot; alt=&quot;风景&quot; width=&quot;200px&quot; height=&quot;200px&quot;&gt;         &lt;</code>&#x2F;div&gt;<br>        &lt;<code>div class=&quot;黑暗&quot;&gt;&lt;</code>&#x2F;div&gt;<br>        &lt;<code>div class=&quot;image&quot;&gt;             &lt;</code>a href&#x3D;”#” target&#x3D;”_self”&gt;&lt;<code>/a&gt;             &lt;</code>img src&#x3D;”01.jpg” alt&#x3D;”风景” width&#x3D;”200px” height&#x3D;”200px”&gt;<br>        &lt;<code>/div&gt;         &lt;</code>div class&#x3D;”黑暗”&gt;&lt;<code>/div&gt;         &lt;</code>div class&#x3D;”image”&gt;<br>            &lt;<code>a href=&quot;#&quot; target=&quot;_self&quot;&gt;&lt;</code>&#x2F;a&gt;<br>            &lt;<code>img src=&quot;01.jpg&quot; alt=&quot;风景&quot; width=&quot;200px&quot; height=&quot;200px&quot;&gt;         &lt;</code>&#x2F;div&gt;<br>        &lt;<code>div class=&quot;黑暗&quot;&gt;&lt;</code>&#x2F;div&gt;<br>        &lt;<code>div class=&quot;image&quot;&gt;             &lt;</code>a href&#x3D;”#” target&#x3D;”_self”&gt;&lt;<code>/a&gt;             &lt;</code>img src&#x3D;”01.jpg” alt&#x3D;”风景” width&#x3D;”200px” height&#x3D;”200px”&gt;<br>        &lt;<code>/div&gt;         &lt;</code>div class&#x3D;”黑暗”&gt;&lt;<code>/div&gt;         &lt;</code>div class&#x3D;”image”&gt;<br>            &lt;<code>a href=&quot;#&quot; target=&quot;_self&quot;&gt;&lt;</code>&#x2F;a&gt;<br>            &lt;<code>img src=&quot;01.jpg&quot; alt=&quot;风景&quot; width=&quot;200px&quot; height=&quot;200px&quot;&gt;         &lt;</code>&#x2F;div&gt;<br>        &lt;<code>div class=&quot;黑暗&quot;&gt;&lt;</code>&#x2F;div&gt;<br>        &lt;<code>div class=&quot;image&quot;&gt;             &lt;</code>a href&#x3D;”#” target&#x3D;”_self”&gt;&lt;<code>/a&gt;             &lt;</code>img src&#x3D;”01.jpg” alt&#x3D;”风景” width&#x3D;”200px” height&#x3D;”200px”&gt;<br>        &lt;<code>/div&gt;         &lt;</code>div class&#x3D;”黑暗”&gt;&lt;<code>/div&gt;         &lt;</code>div class&#x3D;”image”&gt;<br>            &lt;<code>a href=&quot;#&quot; target=&quot;_self&quot;&gt;&lt;</code>&#x2F;a&gt;<br>            &lt;<code>img src=&quot;01.jpg&quot; alt=&quot;风景&quot; width=&quot;200px&quot; height=&quot;200px&quot;&gt;         &lt;</code>&#x2F;div&gt;<br>        &lt;<code>div class=&quot;黑暗&quot;&gt;&lt;</code>&#x2F;div&gt;<br>    &lt;<code>/div&gt; &lt;</code>&#x2F;body&gt;<br>&lt;&#96;&#x2F;html&gt;</p>
+<p> body{<br>    margin: 10px auto;<br>    width: 70%;<br>    height: auto;<br>    background-color: #fffcb6;<br>}<br>.image{<br>    border: 1px solid #824b99;<br>    width: auto;<br>    height: auto;<br>    float: left;<br>    text-align: center;<br>    margin: 5px;<br>}<br>img{<br>    margin: 5px;<br>    opacity:0.8;   &lt;&#96;!–透明度–&gt;<br>}<br>.text{<br>    font-size: 12px;<br>    margin-bottom: 5px;<br>}</p>
 
+        <h1 id="选择器详解"   >
+          <a href="#选择器详解" class="heading-link"><i class="fas fa-link"></i></a><a href="#选择器详解" class="headerlink" title="选择器详解"></a>选择器详解</h1>
+      
+        <h2 id="元素选择器"   >
+          <a href="#元素选择器" class="heading-link"><i class="fas fa-link"></i></a><a href="#元素选择器" class="headerlink" title="元素选择器"></a>元素选择器</h2>
+      <p>最常见的选择器就是元素选择器，文档的元素就是最基本的选择器 例如：h1{ } a{ }</p>
+<p> &lt;<code>!DOCTYPE html&gt; &lt;</code>head&gt;<br>    &lt;<code>meta charset=&quot;UTF-8&quot;&gt;     &lt;</code>title&gt;对齐&lt;<code>/title&gt;     &lt;</code>link rel&#x3D;”stylesheet” type&#x3D;”text&#x2F;css” href&#x3D;”style.css”&gt;<br>&lt;<code>/head&gt; &lt;</code>body&gt;<br>   &lt;<code>p&gt;hello&lt;</code>&#x2F;p&gt;<br>&lt;<code>/body&gt; &lt;</code>&#x2F;html&gt;</p>
+<p> p{<br>    color: cadetblue;     &lt;&#96;!–根据HTML中P标签 在CSS中选择P选择器–&gt;<br>}</p>
 
-<p>p{<br>    color: cadetblue;     <!--根据HTML中P标签 在CSS中选择P选择器--><br>}</p>
-<p>选择器分组<br>1.例子  h1{ } h2{ }<br>2.通配符*{ }</p>
-<!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <title>对齐</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-   <h1>标题1</h1>
-   <h2>标题2</h2>
-   <p>hello</p>
-</body>
-</html>
+        <h2 id="选择器分组"   >
+          <a href="#选择器分组" class="heading-link"><i class="fas fa-link"></i></a><a href="#选择器分组" class="headerlink" title="选择器分组"></a>选择器分组</h2>
+      <p>1.例子  h1{ } h2{ }<br>2.通配符*{ }</p>
+<p> &lt;<code>!DOCTYPE html&gt; &lt;</code>head&gt;<br>    &lt;<code>meta charset=&quot;UTF-8&quot;&gt;     &lt;</code>title&gt;对齐&lt;<code>/title&gt;     &lt;</code>link rel&#x3D;”stylesheet” type&#x3D;”text&#x2F;css” href&#x3D;”style.css”&gt;<br>&lt;<code>/head&gt; &lt;</code>body&gt;<br>   &lt;<code>h1&gt;标题1&lt;</code>&#x2F;h1&gt;<br>   &lt;<code>h2&gt;标题2&lt;</code>&#x2F;h2&gt;<br>   &lt;<code>p&gt;hello&lt;</code>&#x2F;p&gt;<br>&lt;<code>/body&gt; &lt;</code>&#x2F;html&gt;</p>
+<p> *{<br>   color: #ffb5f5;       &lt;<code>!-- 除了自己定义外，全都要用这个样式--&gt;     margin: 0px;     padding: 0px; &#125; h1,h2&#123;                  &lt;</code>!–h1,h2一起改–&gt;<br>    color: #3659ff;<br>}</p>
 
+        <h2 id="类选择器详解"   >
+          <a href="#类选择器详解" class="heading-link"><i class="fas fa-link"></i></a><a href="#类选择器详解" class="headerlink" title="类选择器详解"></a>类选择器详解</h2>
+      <p>类选择器允许以一种独立与文档元素的方式来指定样式  例如 .class{ }<br>结合元素选择器：例如 a.class{ }<br>多类选择器 例如：.class.class{ }</p>
+<p> &lt;<code>!DOCTYPE html&gt; &lt;</code>head&gt;<br>    &lt;<code>meta charset=&quot;UTF-8&quot;&gt;     &lt;</code>title&gt;对齐&lt;<code>/title&gt;     &lt;</code>link rel&#x3D;”stylesheet” type&#x3D;”text&#x2F;css” href&#x3D;”style.css”&gt;<br>&lt;<code>/head&gt; &lt;</code>body&gt;<br>   &lt;<code>p class=&quot;p1&quot;&gt;this is hello&lt;</code>&#x2F;p&gt;<br>   &lt;<code>p class=&quot;p1&quot;&gt;this is hello&lt;</code>&#x2F;p&gt;<br>   &lt;<code>p class=&quot;p1 p2&quot;&gt;this is hello&lt;</code>&#x2F;p&gt;<br>&lt;<code>/body&gt; &lt;</code>&#x2F;html&gt;</p>
+<p> .p1{<br>    color: #0000FF;<br>}<br>.P2{<br>    font-size: medium;<br>}<br>.p1.p2{<br>    font-weight: revert;   &lt;&#96;!–多类选择器–&gt;<br>}</p>
 
-<p>*{<br>   color: #ffb5f5;       <!-- 除了自己定义外，全都要用这个样式--><br>    margin: 0px;<br>    padding: 0px;<br>}<br>h1,h2{                  <!--h1,h2一起改--><br>    color: #3659ff;<br>}</p>
-<p>类选择器详解<br>类选择器允许以一种独立与文档元素的方式来指定样式  例如 .class{ }<br>结合元素选择器：例如 a.class{ }<br>多类选择器 例如：.class.class{ }</p>
-<!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <title>对齐</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-   <p class="p1">this is hello</p>
-   <p class="p1">this is hello</p>
-   <p class="p1 p2">this is hello</p>
-</body>
-</html>
+        <h2 id="ID选择器详解"   >
+          <a href="#ID选择器详解" class="heading-link"><i class="fas fa-link"></i></a><a href="#ID选择器详解" class="headerlink" title="ID选择器详解"></a>ID选择器详解</h2>
+      <p>ID选择器类似于类选择器，不过也有一些重要差别   例如#id{ }<br>类选择器和id选择器区别：<br>1.id只能在文档中使用一次，而类可以多次使用;<br>2.id选择器不能结合使用;<br>3.当使用js时候，需要用到id;</p>
 
-<p>.p1{<br>    color: #0000FF;<br>}<br>.P2{<br>    font-size: medium;<br>}<br>.p1.p2{<br>    font-weight: revert;   <!--多类选择器--><br>}</p>
-<p>ID选择器详解<br>ID选择器类似于类选择器，不过也有一些重要差别   例如#id{ }<br>类选择器和id选择器区别：id只能在文档中使用一次，而类可以多次使用<br>                                      id选择器不能结合使用<br>                                      当使用js时候，需要用到id<br>属性选择器详解<br>简单属性选择：例如[title]{}<br>根据具体属性值选择：除了选择拥有某些的元素，还可以进一步缩小选择范围，只选择有特定属性值的元素。例如：a[ herf&#x3D;”http&#x2F;&#x2F;www,jikexueyuan.com”]{}<br>属性和属性值必须完全匹配<br>根据部分属性值选择</p>
-<!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <title>对齐</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <style>
-        [title]{
-            color: #ff475b;
-        }
-        [href="http://www.jikexueyuan.com"]{
-            font-size: 30px;
-        }
-        [title~=title]{     <!--模糊-->
-            font-size: 50px;
-        }
-    </style>
-</head>
-<body>
-   <p title="tit">this is hello</p>
-   <p title="title">this is hello</p>
-   <p title="t">this is hello</p>
-   <p title="title hello">this is hello</p>
-   <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="http://www.jikexueyuan.com" >极客学院</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>
-</body>
-</html>
+        <h2 id="属性选择器详解"   >
+          <a href="#属性选择器详解" class="heading-link"><i class="fas fa-link"></i></a><a href="#属性选择器详解" class="headerlink" title="属性选择器详解"></a>属性选择器详解</h2>
+      <p>简单属性选择：例如[title]{}<br>根据具体属性值选择：除了选择拥有某些的元素，还可以进一步缩小选择范围，只选择有特定属性值的元素。例如：a[ herf&#x3D;”http&#x2F;&#x2F;www,jikexueyuan.com”]{}<br>属性和属性值必须完全匹配<br>根据部分属性值选择</p>
+<p> &lt;<code>!DOCTYPE html&gt; &lt;</code>head&gt;<br>    &lt;<code>meta charset=&quot;UTF-8&quot;&gt;     &lt;</code>title&gt;对齐&lt;<code>/title&gt;     &lt;</code>link rel&#x3D;”stylesheet” type&#x3D;”text&#x2F;css” href&#x3D;”style.css”&gt;<br>    &lt;<code>style&gt;         [title]&#123;             color: #ff475b;         &#125;         [href=&quot;http://www.jikexueyuan.com&quot;]&#123;             font-size: 30px;         &#125;         [title~=title]&#123;     &lt;</code>!–模糊–&gt;<br>            font-size: 50px;<br>        }<br>    &lt;<code>/style&gt; &lt;</code>&#x2F;head&gt;<br>&lt;<code>body&gt;    &lt;</code>p title&#x3D;”tit”&gt;this is hello&lt;<code>/p&gt;    &lt;</code>p title&#x3D;”title”&gt;this is hello&lt;<code>/p&gt;    &lt;</code>p title&#x3D;”t”&gt;this is hello&lt;<code>/p&gt;    &lt;</code>p title&#x3D;”title hello”&gt;this is hello&lt;<code>/p&gt;    &lt;</code>a href&#x3D;”<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="http://www.jikexueyuan.com&quot;&gt;极客学院/" >http://www.jikexueyuan.com&quot;&gt;极客学院</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>&lt;<code>/a&gt; &lt;</code>&#x2F;body&gt;<br>&lt;&#96;&#x2F;html&gt;</p>
 
-<p>后代选择器<br> 后代选择器可以选择作为某元素后代的元素</p>
-<p>this is my<strong>web<i>hello</i></strong> page</p>
+        <h2 id="后代选择器"   >
+          <a href="#后代选择器" class="heading-link"><i class="fas fa-link"></i></a><a href="#后代选择器" class="headerlink" title="后代选择器"></a>后代选择器</h2>
+      <p> 后代选择器可以选择作为某元素后代的元素<br> &lt;<code>p&gt;this is my&lt;</code>strong&gt;web&lt;<code>i&gt;hello&lt;</code>&#x2F;i&gt;&lt;<code>/strong&gt; page&lt;</code>&#x2F;p&gt;</p>
+<p> p strong i{<br>    color: #ff475b;<br>}</p>
 
-<p>p strong i{<br>    color: #ff475b;<br>}</p>
-<p>子元素选择器<br>与后代选择器相比，子元素选择器只能选择作为某元素子元素的元素  h1&gt;strong{ };</p>
-<p>this is my<strong>web<i>hello</i></strong> page</p>
+        <h2 id="子元素选择器"   >
+          <a href="#子元素选择器" class="heading-link"><i class="fas fa-link"></i></a><a href="#子元素选择器" class="headerlink" title="子元素选择器"></a>子元素选择器</h2>
+      <p>与后代选择器相比，子元素选择器只能选择作为某元素子元素的元素  h1&gt;strong{ };</p>
+<p> &lt;<code>p&gt;this is my&lt;</code>strong&gt;web&lt;<code>i&gt;hello&lt;</code>&#x2F;i&gt;&lt;<code>/strong&gt; page&lt;</code>&#x2F;p&gt;</p>
+<p> p&gt;strong&gt;i{          &lt;&#96;!–不可以隔代–&gt;<br>    color: #ffb731;<br>    font-size: 20px;<br>}</p>
 
-<p>p&gt;strong&gt;i{          <!--不可以隔代--><br>    color: #ffb731;<br>    font-size: 20px;<br>}</p>
-<p>相邻兄弟选择器<br>可选择紧接在另一个元素后的元素，而且二者有相同的父元素  例如h1+p{}</p>
-<div>
-    <ul>
-        <li>111</li>
-        <li>222</li>
-        <li>333</li>
-    </ul>
-    <ol>
-        <li>444</li>
-        <li>555</li>
-        <li>666</li>
-    </ol>
-</div>
+        <h2 id="相邻兄弟选择器"   >
+          <a href="#相邻兄弟选择器" class="heading-link"><i class="fas fa-link"></i></a><a href="#相邻兄弟选择器" class="headerlink" title="相邻兄弟选择器"></a>相邻兄弟选择器</h2>
+      <p>可选择紧接在另一个元素后的元素，而且二者有相同的父元素  例如h1+p{}</p>
+<p> &lt;<code>div&gt;     &lt;</code>ul&gt;<br>        &lt;<code>li&gt;111&lt;</code>&#x2F;li&gt;<br>        &lt;<code>li&gt;222&lt;</code>&#x2F;li&gt;<br>        &lt;<code>li&gt;333&lt;</code>&#x2F;li&gt;<br>    &lt;<code>/ul&gt;     &lt;</code>ol&gt;<br>        &lt;<code>li&gt;444&lt;</code>&#x2F;li&gt;<br>        &lt;<code>li&gt;555&lt;</code>&#x2F;li&gt;<br>        &lt;<code>li&gt;666&lt;</code>&#x2F;li&gt;<br>    &lt;<code>/ol&gt; &lt;</code>&#x2F;div&gt;</p>
+<p> li+li{<br>    color: #ff78f4;<br>    font-size: 50px;<br>} 只有222  333    444   555 有效果</p>
 
-<p>li+li{<br>    color: #ff78f4;<br>    font-size: 50px;<br>} 只有222  333    444   555 有效果</p>
-<p>CSS动画<br>2D,3D转换</p>
-<ol>
+        <h1 id="CSS动画"   >
+          <a href="#CSS动画" class="heading-link"><i class="fas fa-link"></i></a><a href="#CSS动画" class="headerlink" title="CSS动画"></a>CSS动画</h1>
+      
+        <h2 id="2D-3D转换"   >
+          <a href="#2D-3D转换" class="heading-link"><i class="fas fa-link"></i></a><a href="#2D-3D转换" class="headerlink" title="2D,3D转换"></a>2D,3D转换</h2>
+      <ol>
 <li>通过css3转换，我们能够对元素进行移动，缩放，转动，拉长或拉伸转换时使元素改变形状，尺寸和位置的一种效果。可以使用2D,3D来转换元素</li>
 <li>2D转换方法：translate(), rotate(),scale(),skew(),matrix()</li>
-<li>3D转换方法：rotateX（）,rotateY()<!DOCTYPE html>
-<head>
- <meta charset="UTF-8">
- <title>动画</title>
- <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-<div>这是一个初始效果</div>
-<br/>
-<div class="div2">改变后的效果</div>
-</body>
-</html></li>
+<li>3D转换方法：rotateX（）,rotateY()<br> &lt;<code>!DOCTYPE html&gt; &lt;</code>head&gt;<br> &lt;<code>meta charset=&quot;UTF-8&quot;&gt;  &lt;</code>title&gt;动画&lt;<code>/title&gt;  &lt;</code>link rel&#x3D;”stylesheet” type&#x3D;”text&#x2F;css” href&#x3D;”style.css”&gt;<br>&lt;<code>/head&gt; &lt;</code>body&gt;<br>&lt;<code>div&gt;这是一个初始效果&lt;</code>&#x2F;div&gt;<br>&lt;<code>br/&gt; &lt;</code>div class&#x3D;”div2”&gt;改变后的效果&lt;<code>/div&gt; &lt;</code>&#x2F;body&gt;<br>&lt;&#96;&#x2F;html&gt;</li>
 </ol>
-<p>div{<br>    width: 100px;<br>    height: 100px;<br>    background-color: #daffc6;<br>}<br>.div2{<br>    transform:translate(200px,100px);  <!--移动--><br>    -webkit-transform: translate(200px,100px);&#x2F;<em>safari chrome</em>&#x2F;<br>    -ms-transform:translate(200px,100px);&#x2F;<em>ie</em>&#x2F;<br>    -o-transform: translate(200px,100px);&#x2F;<em>opera</em>&#x2F;<br>    -moz-transform: translate(200px,100px);&#x2F;<em>Firefox</em>&#x2F;</p>
-<p>}<br>.div2{<br>    transform: rotate(200deg);  <!--旋转--><br>    -webkit-transform: rotate(200deg);<br>    -ms-transform:rotate(200deg);<br>    -o-transform: rotate(200deg);<br>    -moz-transform: rotate(200deg);<br>}<br>.div2{<br>    margin-top: 200px;<br>    transform: scale(1,2); <!--缩放--><br>    -webkit-transform: scale(1,2);<br>    -ms-transform:scale(1,2);<br>    -o-transform: scale(1,2);<br>    -moz-transform: scale(1,2);<br>}<br>.div2{<br>    transform:skew(50deg,50deg);  <!--偏移--><br>    -webkit-transform:skew(50deg,50deg);<br>    -ms-transform:skew(50deg,50deg);<br>    -o-transform: skew(50deg,50deg);<br>    -moz-transform: skew(50deg,50deg);<br>}<br>.div2{<br>    transform:rotateX(120deg);  <!--3D--><br>    -webkit-transform:rotateY(120deg);<br>}</p>
-<p>过渡</p>
-<ol>
+<p> div{<br>    width: 100px;<br>    height: 100px;<br>    background-color: #daffc6;<br>}<br>.div2{<br>    transform:translate(200px,100px);  &lt;&#96;!–移动–&gt;<br>    -webkit-transform: translate(200px,100px);&#x2F;<em>safari chrome</em>&#x2F;<br>    -ms-transform:translate(200px,100px);&#x2F;<em>ie</em>&#x2F;<br>    -o-transform: translate(200px,100px);&#x2F;<em>opera</em>&#x2F;<br>    -moz-transform: translate(200px,100px);&#x2F;<em>Firefox</em>&#x2F;</p>
+<p>}<br>.div2{<br>    transform: rotate(200deg);  &lt;<code>!--旋转--&gt;     -webkit-transform: rotate(200deg);     -ms-transform:rotate(200deg);     -o-transform: rotate(200deg);     -moz-transform: rotate(200deg); &#125; .div2&#123;     margin-top: 200px;        transform: scale(1,2); &lt;</code>!–缩放–&gt;<br>    -webkit-transform: scale(1,2);<br>    -ms-transform:scale(1,2);<br>    -o-transform: scale(1,2);<br>    -moz-transform: scale(1,2);<br>}<br>.div2{<br>    transform:skew(50deg,50deg);  &lt;<code>!--偏移--&gt;     -webkit-transform:skew(50deg,50deg);     -ms-transform:skew(50deg,50deg);     -o-transform: skew(50deg,50deg);     -moz-transform: skew(50deg,50deg); &#125; .div2&#123;     transform:rotateX(120deg);  &lt;</code>!–3D–&gt;<br>    -webkit-transform:rotateY(120deg);<br>}</p>
+
+        <h2 id="过渡"   >
+          <a href="#过渡" class="heading-link"><i class="fas fa-link"></i></a><a href="#过渡" class="headerlink" title="过渡"></a>过渡</h2>
+      <ol>
 <li>通过使用css3，可以给元素添加一些效果</li>
 <li>css3过渡是元素从一种样式转换成另一种样式  动画效果的css 和动画执行的时间</li>
 <li>属性    transition                                 设置四个过渡属性<br>        transition-property                  过渡的名称<br>        transition-duration                  过渡效果花费的时间<br>        transition-timing-function        过渡效果的时间曲线<br>        transition-delay                        过渡效果开始时间</li>
 </ol>
-<!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <title>动画</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-   <div>效果展示</div>
-</body>
-</html>
-
-
-<p>div{<br>    width: 100px;<br>    height: 100px;<br>    background-color: #ff836b;<br>    -webkit-transition: width 2s,height 2s,-webkit-transform 2s;<br>    transition: width 2s,height 2s,transform 2s;<br>    transition-delay: 2s;    <!--延迟--></p>
+<p> &lt;<code>!DOCTYPE html&gt; &lt;</code>head&gt;<br>    &lt;<code>meta charset=&quot;UTF-8&quot;&gt;     &lt;</code>title&gt;动画&lt;<code>/title&gt;     &lt;</code>link rel&#x3D;”stylesheet” type&#x3D;”text&#x2F;css” href&#x3D;”style.css”&gt;<br>&lt;<code>/head&gt; &lt;</code>body&gt;<br>   &lt;<code>div&gt;效果展示&lt;</code>&#x2F;div&gt;<br>&lt;<code>/body&gt; &lt;</code>&#x2F;html&gt;</p>
+<p> div{<br>    width: 100px;<br>    height: 100px;<br>    background-color: #ff836b;<br>    -webkit-transition: width 2s,height 2s,-webkit-transform 2s;<br>    transition: width 2s,height 2s,transform 2s;<br>    transition-delay: 2s;    &lt;&#96;!–延迟–&gt;</p>
 <p>}<br>div:hover{<br>    width: 200px;<br>    height: 200px;<br>    transform: rotate(360deg);<br>    -webkit-transform: rotate(360deg);<br>}</p>
-<p>动画</p>
-<ol>
+
+        <h2 id="动画"   >
+          <a href="#动画" class="heading-link"><i class="fas fa-link"></i></a><a href="#动画" class="headerlink" title="动画"></a>动画</h2>
+      <ol>
 <li>通过css3，也可以进行创建动画</li>
-<li>css3的动画需要遵循@keyframes规则     规定动画的时长和规定动画的名称<!DOCTYPE html>
-<head>
- <meta charset="UTF-8">
- <title>动画</title>
- <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-<div>动画效果</div>
-</body>
-</html></li>
+<li>css3的动画需要遵循@keyframes规则     规定动画的时长和规定动画的名称<br> &lt;<code>!DOCTYPE html&gt; &lt;</code>head&gt;<br> &lt;<code>meta charset=&quot;UTF-8&quot;&gt;  &lt;</code>title&gt;动画&lt;<code>/title&gt;  &lt;</code>link rel&#x3D;”stylesheet” type&#x3D;”text&#x2F;css” href&#x3D;”style.css”&gt;<br>&lt;<code>/head&gt; &lt;</code>body&gt;<br>&lt;<code>div&gt;动画效果&lt;</code>&#x2F;div&gt;<br>&lt;<code>/body&gt; &lt;</code>&#x2F;html&gt;</li>
 </ol>
-<p>div{<br>    width: 100px;<br>    height: 100px;<br>    background-color: #ff836b;<br>    position: relative;<br>    animation: anim 5s;<br>    -webkit-animation: anim 5s;<br>}<br>@keyframes anim {<br>    0%{background: #0f00f0;left:0px;top: 0px;}<br>    25%{background: #000f0f;left:200px;top: 0px;}<br>    50%{background: #0ffff0;left:200px;top: 200px;}<br>    75%{background: #f00f00;left:0px;top: 200px;}<br>    100%{background:#000ff0;left:0px;top: 0px;}<br>}<br>@-webkit-keyframes anim {<br>            0%{background: #0f00f0;left:0px;top: 0px;}<br>            25%{background: #000f0f;left:200px;top: 0px;}<br>            50%{background: #0ffff0;left:200px;top: 200px;}<br>            75%{background: #f00f00;left:0px;top: 200px;}<br>            100%{background:#000ff0;left:0px;top: 0px;}<br>        }</p>
-<p>多列</p>
-<ol>
+<p> div{<br>    width: 100px;<br>    height: 100px;<br>    background-color: #ff836b;<br>    position: relative;<br>    animation: anim 5s;<br>    -webkit-animation: anim 5s;<br>}<br>@keyframes anim {<br>    0%{background: #0f00f0;left:0px;top: 0px;}<br>    25%{background: #000f0f;left:200px;top: 0px;}<br>    50%{background: #0ffff0;left:200px;top: 200px;}<br>    75%{background: #f00f00;left:0px;top: 200px;}<br>    100%{background:#000ff0;left:0px;top: 0px;}<br>}<br>@-webkit-keyframes anim {<br>            0%{background: #0f00f0;left:0px;top: 0px;}<br>            25%{background: #000f0f;left:200px;top: 0px;}<br>            50%{background: #0ffff0;left:200px;top: 200px;}<br>            75%{background: #f00f00;left:0px;top: 200px;}<br>            100%{background:#000ff0;left:0px;top: 0px;}<br>        }</p>
+
+        <h2 id="多列"   >
+          <a href="#多列" class="heading-link"><i class="fas fa-link"></i></a><a href="#多列" class="headerlink" title="多列"></a>多列</h2>
+      <ol>
 <li>在css中，可以创建多列来对文本或者区域进行布局</li>
-<li>属性;column-count       column-gap          column-rule<br>.div1{<br> column-count: 4;<br> -webkit-column-count: 4;<br> -webkit-column-gap: 30px;<br> column-gap: 30px;<br> column-rule: 5px outset #ff0000;<br> -webkit-column-rule: 5px outset #ff0000;<br>}</li>
+<li>属性;column-count       column-gap          column-rule<br> .div1{<br> column-count: 4;<br> -webkit-column-count: 4;<br> -webkit-column-gap: 30px;<br> column-gap: 30px;<br> column-rule: 5px outset #ff0000;<br> -webkit-column-rule: 5px outset #ff0000;<br>}</li>
 </ol>
-<p>CSS瀑布流效果</p>
-<!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <title>动画</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-   <div   class="container">
-       <div><img src="01.jpg">
-           <p>风景图</p></div>
-       <div><img src="02.jpg"></div>
-       <div><img src="03.jpg">
-           <p>风景图</p></div>
-       <div><img src="04.jpg"></div>
-       <div><img src="05.jpg"></div>
-       <div><img src="06.jpg"></div>
-       <div><img src="07.jpg"></div>
-       <div><img src="01.jpg">
-           <p>风景图</p></div>
-       <div><img src="02.jpg"></div>
-       <div><img src="03.jpg"></div>
-       <div><img src="04.jpg"></div>
-       <div><img src="05.jpg">
-           <p>风景图</p></div>
-       <div><img src="06.jpg"></div>
-       <div><img src="07.jpg"></div>
-       <div><img src="01.jpg"></div>
-       <div><img src="02.jpg">
-           <p>风景图</p></div>
-       <div><img src="03.jpg"></div>
-       <div><img src="04.jpg"></div>
-       <div><img src="05.jpg"></div>
-       <div><img src="06.jpg"></div>
-       <div><img src="07.jpg"></div>
-   </div>
-</body>
-</html>
 
+        <h2 id="CSS瀑布流效果"   >
+          <a href="#CSS瀑布流效果" class="heading-link"><i class="fas fa-link"></i></a><a href="#CSS瀑布流效果" class="headerlink" title="CSS瀑布流效果"></a>CSS瀑布流效果</h2>
+      <p> &lt;<code>!DOCTYPE html&gt; &lt;</code>head&gt;<br>    &lt;<code>meta charset=&quot;UTF-8&quot;&gt;     &lt;</code>title&gt;动画&lt;<code>/title&gt;     &lt;</code>link rel&#x3D;”stylesheet” type&#x3D;”text&#x2F;css” href&#x3D;”style.css”&gt;<br>&lt;<code>/head&gt; &lt;</code>body&gt;<br>   &lt;<code>div   class=&quot;container&quot;&gt;        &lt;</code>div&gt;&lt;<code>img src=&quot;01.jpg&quot;&gt;            &lt;</code>p&gt;风景图&lt;<code>/p&gt;&lt;</code>&#x2F;div&gt;<br>       &lt;<code>div&gt;&lt;</code>img src&#x3D;”02.jpg”&gt;&lt;<code>/div&gt;        &lt;</code>div&gt;&lt;<code>img src=&quot;03.jpg&quot;&gt;            &lt;</code>p&gt;风景图&lt;<code>/p&gt;&lt;</code>&#x2F;div&gt;<br>       &lt;<code>div&gt;&lt;</code>img src&#x3D;”04.jpg”&gt;&lt;<code>/div&gt;        &lt;</code>div&gt;&lt;<code>img src=&quot;05.jpg&quot;&gt;&lt;</code>&#x2F;div&gt;<br>       &lt;<code>div&gt;&lt;</code>img src&#x3D;”06.jpg”&gt;&lt;<code>/div&gt;        &lt;</code>div&gt;&lt;<code>img src=&quot;07.jpg&quot;&gt;&lt;</code>&#x2F;div&gt;<br>       &lt;<code>div&gt;&lt;</code>img src&#x3D;”01.jpg”&gt;<br>           &lt;<code>p&gt;风景图&lt;</code>&#x2F;p&gt;&lt;<code>/div&gt;        &lt;</code>div&gt;&lt;<code>img src=&quot;02.jpg&quot;&gt;&lt;</code>&#x2F;div&gt;<br>       &lt;<code>div&gt;&lt;</code>img src&#x3D;”03.jpg”&gt;&lt;<code>/div&gt;        &lt;</code>div&gt;&lt;<code>img src=&quot;04.jpg&quot;&gt;&lt;</code>&#x2F;div&gt;<br>       &lt;<code>div&gt;&lt;</code>img src&#x3D;”05.jpg”&gt;<br>           &lt;<code>p&gt;风景图&lt;</code>&#x2F;p&gt;&lt;<code>/div&gt;        &lt;</code>div&gt;&lt;<code>img src=&quot;06.jpg&quot;&gt;&lt;</code>&#x2F;div&gt;<br>       &lt;<code>div&gt;&lt;</code>img src&#x3D;”07.jpg”&gt;&lt;<code>/div&gt;        &lt;</code>div&gt;&lt;<code>img src=&quot;01.jpg&quot;&gt;&lt;</code>&#x2F;div&gt;<br>       &lt;<code>div&gt;&lt;</code>img src&#x3D;”02.jpg”&gt;<br>           &lt;<code>p&gt;风景图&lt;</code>&#x2F;p&gt;&lt;<code>/div&gt;        &lt;</code>div&gt;&lt;<code>img src=&quot;03.jpg&quot;&gt;&lt;</code>&#x2F;div&gt;<br>       &lt;<code>div&gt;&lt;</code>img src&#x3D;”04.jpg”&gt;&lt;<code>/div&gt;        &lt;</code>div&gt;&lt;<code>img src=&quot;05.jpg&quot;&gt;&lt;</code>&#x2F;div&gt;<br>       &lt;<code>div&gt;&lt;</code>img src&#x3D;”06.jpg”&gt;&lt;<code>/div&gt;        &lt;</code>div&gt;&lt;<code>img src=&quot;07.jpg&quot;&gt;&lt;</code>&#x2F;div&gt;<br>   &lt;<code>/div&gt; &lt;</code>&#x2F;body&gt;<br>&lt;&#96;&#x2F;html&gt;</p>
+<p> .container{<br>    column-width: 250px;<br>    -webkit-column-width:250px;<br>    -webkit-column-gap: 5px;<br>    column-gap: 5px;<br>}<br>.container div{<br>   width:250px;<br>    margin: 5px 0;<br>}<br>.container p{<br>    text-align: center;<br>}</p>
 
-<p>.container{<br>    column-width: 250px;<br>    -webkit-column-width:250px;<br>    -webkit-column-gap: 5px;<br>    column-gap: 5px;<br>}<br>.container div{<br>   width:250px;<br>    margin: 5px 0;<br>}<br>.container p{<br>    text-align: center;<br>}</p>
-<p>HTML和CSS简单页面效果实例</p>
-<p>补充内容<br>inline和inline-block的区别</p>
-<ol>
+        <h1 id="HTML和CSS简单页面效果实例"   >
+          <a href="#HTML和CSS简单页面效果实例" class="heading-link"><i class="fas fa-link"></i></a><a href="#HTML和CSS简单页面效果实例" class="headerlink" title="HTML和CSS简单页面效果实例"></a>HTML和CSS简单页面效果实例</h1>
+      
+        <h1 id="补充内容"   >
+          <a href="#补充内容" class="heading-link"><i class="fas fa-link"></i></a><a href="#补充内容" class="headerlink" title="补充内容"></a>补充内容</h1>
+      
+        <h2 id="inline和inline-block的区别"   >
+          <a href="#inline和inline-block的区别" class="heading-link"><i class="fas fa-link"></i></a><a href="#inline和inline-block的区别" class="headerlink" title="inline和inline-block的区别"></a>inline和inline-block的区别</h2>
+      <ol>
 <li>block和inline这两个概念是简略的说法，完整确切的说应该是 block-level elements (块级元素) 和 inline elements (内联元素)。block元素通常被现实为独立的一块，会单独换一行；inline元素则前后不会产生换行，一系列inline元素都在一行内显示，直到该行排满。</li>
 <li>大体来说HTML元素各有其自身的布局级别（block元素还是inline元素）：常见的块级元素有 DIV, FORM, TABLE, P, PRE, H1~H6, DL, OL, UL 等。常见的内联元素有 SPAN, A, STRONG, EM, LABEL, INPUT, SELECT, TEXTAREA, IMG, BR 等。</li>
-<li>block元素可以包含block元素和inline元素；但inline元素只能包含inline元素。要注意的是这个是个大概的说法，每个特定的元素能包含的元素也是特定的，所以具体到个别元素上，这条规律是不适用的。比如 P 元素，只能包含inline元素，而不能包含block元素。一般来说，可以通过display:inline和display:block的设置，改变元素的布局级别。<br>block，inline和inlinke-block细节对比<br>● display:block<br>  a. block元素会独占一行，多个block元素会各自新起一行。默认情况下，block元素宽度自动填满其父元素宽度。<br>  b. block元素可以设置width,height属性。块级元素即使设置了宽度,仍然是独占一行。<br>  c. block元素可以设置margin和padding属性。<br>● display:inline<br>  a. inline元素不会独占一行，多个相邻的行内元素会排列在同一行里，直到一行排列不下，才会新换一行，其宽度随元素的内容而变化。<br>  b. inline元素设置width,height属性无效。<br>  c. inline元素的margin和padding属性，水平方向的padding-left, padding-right, margin-left, margin-right都产生边距效果；但竖直方向的padding-top, padding-bottom, margin-top, margin-bottom不会产生边距效果。<br>● display:inline-block<br>  a. 简单来说就是将对象呈现为inline对象，但是对象的内容作为block对象呈现。之后的内联对象会被排列在同一行内。比如我们可以给一个link（a元素）inline-block属性值，使其既具有block的宽度高度特性又具有inline的同行特性。<br>补充说明<br>● 一般我们会用display:block，display:inline或者display:inline-block来调整元素的布局级别，其实display的参数远远不止这三种，仅仅是比较常用而已。<br>● IE（低版本IE）本来是不支持inline-block的，所以在IE中对内联元素使用display:inline-block，理论上IE是不识别的，但使用display:inline-block在IE下会触发layout，从而使内联元素拥有了display:inline-block属性的表象。<br>标签: CSS</li>
+<li>block元素可以包含block元素和inline元素；但inline元素只能包含inline元素。要注意的是这个是个大概的说法，每个特定的元素能包含的元素也是特定的，所以具体到个别元素上，这条规律是不适用的。比如 P 元素，只能包含inline元素，而不能包含block元素。一般来说，可以通过display:inline和display:block的设置，改变元素的布局级别。
+        <h2 id="block，inline和inlinke-block细节对比"   >
+          <a href="#block，inline和inlinke-block细节对比" class="heading-link"><i class="fas fa-link"></i></a><a href="#block，inline和inlinke-block细节对比" class="headerlink" title="block，inline和inlinke-block细节对比"></a>block，inline和inlinke-block细节对比</h2>
+      ● display:block<br>  a. block元素会独占一行，多个block元素会各自新起一行。默认情况下，block元素宽度自动填满其父元素宽度。<br>  b. block元素可以设置width,height属性。块级元素即使设置了宽度,仍然是独占一行。<br>  c. block元素可以设置margin和padding属性。<br>● display:inline<br>  a. inline元素不会独占一行，多个相邻的行内元素会排列在同一行里，直到一行排列不下，才会新换一行，其宽度随元素的内容而变化。<br>  b. inline元素设置width,height属性无效。<br>  c. inline元素的margin和padding属性，水平方向的padding-left, padding-right, margin-left, margin-right都产生边距效果；但竖直方向的padding-top, padding-bottom, margin-top, margin-bottom不会产生边距效果。<br>● display:inline-block<br>  a. 简单来说就是将对象呈现为inline对象，但是对象的内容作为block对象呈现。之后的内联对象会被排列在同一行内。比如我们可以给一个link（a元素）inline-block属性值，使其既具有block的宽度高度特性又具有inline的同行特性。
+        <h2 id="补充说明"   >
+          <a href="#补充说明" class="heading-link"><i class="fas fa-link"></i></a><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h2>
+      ● 一般我们会用display:block，display:inline或者display:inline-block来调整元素的布局级别，其实display的参数远远不止这三种，仅仅是比较常用而已。<br>● IE（低版本IE）本来是不支持inline-block的，所以在IE中对内联元素使用display:inline-block，理论上IE是不识别的，但使用display:inline-block在IE下会触发layout，从而使内联元素拥有了display:inline-block属性的表象。<br>标签: CSS</li>
 </ol>
 </div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2022/03/09/HTML5/">HTML5</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-03-09</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-03-09</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>HTML是用来描述网页的语言，是一种标记语言。HTML5适用与2G内存双核处理器的计算机，对于Mac，Windows，Linux都可以用。<br>HTML的特性</p>
 <ol>
@@ -708,59 +366,53 @@ css
 <li>对本地离线储存的更好支持</li>
 <li>新的内容元素  如：article，footer，header，nav,section.</li>
 <li>新的表单控件  如：calendar，date，time，email，URL</li>
-<li>支持IE，chrome<br>常用的开发工具<br>● Webstorm<br>● notepad<br>● eclipse<br>● tsxt sublime<br>● dreamweaver<br>● interllij  IDEA<br>HTML元素</li>
+<li>支持IE，chrome<br>常用的开发工具<br>● Webstorm<br>● notepad<br>● eclipse<br>● tsxt sublime<br>● dreamweaver<br>● interllij  IDEA
+        <h1 id="HTML元素"   >
+          <a href="#HTML元素" class="heading-link"><i class="fas fa-link"></i></a><a href="#HTML元素" class="headerlink" title="HTML元素"></a>HTML元素</h1>
+      </li>
 </ol>
 <p>1.元素指的是从开始标签到结束标签的所有代码。</p>
-<pre><code>&lt;p&gt;  开始标签
-</code></pre>
-<p>   this is my web page    元素内容</p>
-<p>   &#96;&#96;&#96;</p>   结束标签</p>
-<p>   &#96;&#96;&#96;<br/>  换行</p>
-<p>2.元素语法<br>元素的内容是开始标签与结束标签之间的内容，空元素在开始标签中进行关闭。（大多数HTML元素拥有属性）<br>3.嵌套的HTML元素<br>大多数的HTML元素都可以嵌套使用<br>HTML标签<br>1.声明<!DOCTYPE  html><br>2.标签</p>
-<h1>    </h1>  标题
-<p>    </p>   段落
-<a>     </a>   链接
-<img>   </img> 图像
-<head>  </head> 基础标签
-<body>  </body>
+  <figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;`p`&gt;  开始标签</span><br><span class="line"> this is my web page    元素内容</span><br><span class="line">  &lt;``/p`&gt;   结束标签</span><br><span class="line">  &lt;``br/`&gt; 换行 </span><br></pre></td></tr></table></div></figure>
 
-<p>HTML属性<br>● 标签可以拥有属性为元素提供更多的信息<br>● 属性一键&#x2F;值对的形式出现  如： href&#x3D;”<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="http://www.jikexueyuan.com&quot;/" >www.jikexueyuan.com&quot;</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>● 常用标签属性    <h1>:align  对齐方式     <body>:bgcolor  背景颜色    <a>:target 规定在何处打开连接<br>● 通用属性： class：规定元素的类名    id：规定元素唯一ID<br>                        style：规定元素的样式    title：规定元素的额外信息</p>
-<p>HTML格式化</p>
-<p><b>        定义粗体字<br><big>      定义大号字<br><em>       定义着重文字<br><i>        定义斜体字<br><small>    定义小号字<br><strong>   定义加重语气<br><sub>      定义下标字<br><sup>      定义上标字<br><ins>      定义插入字<br><del>      定义删除字</p>
-<p>HTML样式</p>
-<ol>
-<li>标签  <style>: 样式定义      <link> :资源引用  <link rel="stylesheet"  type="test/css"  href="资源地址“></li>
-</ol>
-<p>2.属性<br>    rel&#x3D;”stylesheet”  外部样式表<br>    type&#x3D;”test&#x2F;css”  引入文档的类型<br>    margin-left ：边距<br>3.三种样式表插入方法</p>
-<p>●    外部样式表：</p>
-<link rel="stylesheet"  type="test/css"  href="资源地址“>
+<p>2.元素语法<br>元素的内容是开始标签与结束标签之间的内容，空元素在开始标签中进行关闭。（大多数HTML元素拥有属性）<br>3.嵌套的HTML元素<br>大多数的HTML元素都可以嵌套使用<br>HTML标签<br>1.声明&lt;<code>!DOCTYPE  html</code>&gt;<br>2.标签<br>&lt;<code>h1</code>&gt;    &lt;<code>/h1</code>&gt;  标题<br>&lt;<code>p</code>&gt;    &lt;<code>/p</code>&gt;   段落<br>&lt;<code>a</code>&gt;     &lt;<code>/a</code>&gt;   链接<br>&lt;<code>img</code>&gt;   &lt;<code>/img</code>&gt; 图像<br>&lt;<code>head</code>&gt;  &lt;<code>/head</code>&gt; 基础标签<br>&lt;<code>body</code>&gt;  &lt;<code>/body</code>&gt;</p>
+<p>HTML属性<br>● 标签可以拥有属性为元素提供更多的信息<br>● 属性一键&#x2F;值对的形式出现  如： <code>href=&quot;www.jikexueyuan.com&quot;</code><br>● 常用标签属性    &lt;<code>h1</code>&gt;:align  对齐方式     &lt;<code>body</code>&gt;:bgcolor  背景颜色<br>&lt;<code>a</code>&gt;:target 规定在何处打开连接<br>● 通用属性： class：规定元素的类名 <code>id</code>：规定元素唯一ID<br> style：规定元素的样式    title：规定元素的额外信息</p>
 
-<p>● 内部样式表</p>
-<style type="text/css">
-body{backgrond-color:red}
-p{margin-left:20px}
-</style>
+        <h1 id="HTML格式化"   >
+          <a href="#HTML格式化" class="heading-link"><i class="fas fa-link"></i></a><a href="#HTML格式化" class="headerlink" title="HTML格式化"></a>HTML格式化</h1>
+      <p>&lt;<code>b</code>&gt;        定义粗体字<br>&lt;<code>big</code>&gt;      定义大号字<br>&lt;<code>em</code>&gt;       定义着重文字<br>&lt;<code>i</code>&gt;        定义斜体字<br>&lt;<code>small</code>&gt;    定义小号字<br>&lt;<code>strong</code>&gt;   定义加重语气<br>&lt;<code>sub</code>&gt;      定义下标字<br>&lt;<code>sup</code>&gt;      定义上标字<br>&lt;<code>ins</code>&gt;      定义插入字<br>&lt;<code>del</code>&gt;      定义删除字</p>
 
+        <h1 id="HTML样式"   >
+          <a href="#HTML样式" class="heading-link"><i class="fas fa-link"></i></a><a href="#HTML样式" class="headerlink" title="HTML样式"></a>HTML样式</h1>
+      <p>1.标签  &lt;<code>style</code>&gt;-样式定义<br>&lt;<code>link</code>&gt;-资源引用<br>&lt;<code>link rel=&quot;stylesheet&quot;  type=&quot;test/css&quot;  href=&quot;资源地址“</code>&gt;<br>2.属性</p>
+<ul>
+<li>&#96;rel&#x3D;”stylesheet”  外部样式表</li>
+<li>&#96;type&#x3D;”test&#x2F;css”  引入文档的类型</li>
+<li>&#96;margin-left ：边距</li>
+</ul>
+<p>3.三种样式表插入方法</p>
+<ul>
+<li>外部样式表：<br>&lt;<code>link rel=&quot;stylesheet&quot;  type=&quot;test/css&quot;  href=&quot;资源地址“</code>&gt;</li>
+<li>内部样式表<br><code>&lt;`style type=&quot;text/css&quot;``&gt; body&#123;backgrond-color:red&#125; p&#123;margin-left:20px&#125; &lt;`/style`&gt;</code></li>
+<li>内联样式表<br>&lt;<code>p style=&quot;color:red</code>&gt;</li>
+</ul>
 
-<p>● 内联样式表</p>
-<p style="color:red>
+        <h1 id="HTML链接"   >
+          <a href="#HTML链接" class="heading-link"><i class="fas fa-link"></i></a><a href="#HTML链接" class="headerlink" title="HTML链接"></a>HTML链接</h1>
+      <p>1.链接数据   （文本链接和图片连接）<br>2.属性 </p>
+<ul>
+<li>href属性：指向另一个文档的链接        </li>
+<li>name属性：创建文档内的链接（回到顶部）</li>
+</ul>
+<p>3.img标签属性   </p>
+<ul>
+<li>alt：替换文本属性</li>
+<li>width：宽</li>
+<li>height：高</li>
+</ul>
 
-<p>HTML链接</p>
-<ol>
-<li>链接数据   （文本链接和图片连接）</li>
-<li>属性    href属性：指向另一个文档的链接<br>         name属性：创建文档内的链接（回到顶部）</li>
-<li>img标签属性<br>        alt：替换文本属性<br>        width：宽<br>        height：高<br>HTML表格</li>
-</ol>
-<table cellpadding=”边距“  cellspacing="间距”  bgcolor="颜色“ >   定义表格
-<caption>     表格标题
-<th>          表头
-<tr>          表格的一行
-<td>          表格的单元
-<thead>       页眉
-<tbody>       主体
-<tfoot>       页脚
-<col>         列属性
-            
+        <h1 id="HTML表格"   >
+          <a href="#HTML表格" class="heading-link"><i class="fas fa-link"></i></a><a href="#HTML表格" class="headerlink" title="HTML表格"></a>HTML表格</h1>
+      <p>&lt;<code>table cellpadding=”边距“  cellspacing=&quot;间距”  bgcolor=&quot;颜色“ </code>&gt;-定义表格<br>&lt;<code>caption</code>&gt;-表格标题<br>&lt;<code>th</code>&gt;-表头<br>&lt;<code>tr</code>&gt;-表格的一行<br>&lt;<code>td</code>&gt;-表格的单元<br>&lt;<code>thead</code>&gt;-页眉<br>&lt;<code>tbody</code>&gt;-主体<br>&lt;<code>tfoot</code>&gt;-页脚<br>&lt;<code>col</code>&gt;-列属性</p>
 <p>动手：</p>
 <ol>
 <li>没有边框的表格</li>
@@ -774,137 +426,52 @@ p{margin-left:20px}
 <li>单元格内容排列</li>
 <li>跨行和跨列单元格S</li>
 </ol>
-<p>HTML列表</p>
-<ol>  有序列表
-<ul>  无序列表
-<li>  列表项
-<dl>  列表
-<dt>  列表项
-<dd>  描述
 
-<ol>
-<li>无序列表<br>  a. 使用标签 :<ul>  <li><br>  b. 属性:  disc (实体圆)   circle（空心圆） square（实体方块）<br>  c. <ul type="disc"></li>
-<li>有序列表（默认是数字）<br>  a. 使用标签：<ol>  <li><br>  b. 属性:  A  a I  i<br>  c.  <ol  type="A"></li>
-<li>嵌套列表<br>  a. 使用标签：<ul>  <ol>  <li></li>
-<li>自定义列表<br>  a. 使用标签：<dl>  <dt> <dd></li>
-</ol>
-<p>HTML块<br>1.HTML块元素 &lt;！–   –&gt;注释<br>块元素在显示时，通常会以新的行开始  如：<h1>  <p>  <ul><br>2.HTML内联元素<br>      内联元素通常不会以新行开始  如：<b>  <a>  <img><br>3.HTML<div>元素 配合CSS样式<br>      <div>元素也被称为块元素，其主要是组合HTML元素的容器<br>4.HTML<span>元素<br>     <span>元素是内联元素，可作为文本的容器</p>
+        <h1 id="HTML列表"   >
+          <a href="#HTML列表" class="heading-link"><i class="fas fa-link"></i></a><a href="#HTML列表" class="headerlink" title="HTML列表"></a>HTML列表</h1>
+      <p>&lt;<code>ol</code>&gt;  有序列表<br>&lt;<code>ul</code>&gt;  无序列表<br>&lt;<code>li</code>&gt;  列表项<br>&lt;<code>dl</code>&gt;  列表<br>&lt;<code>dt</code>&gt;  列表项<br>&lt;<code>dd</code>&gt;  描述</p>
+<p>1.无序列表   </p>
+<ul>
+<li>使用标签 :&lt;<code>ul</code>&gt;  &lt;<code>li</code>&gt;</li>
+<li>属性:  disc (实体圆)   circle（空心圆） square（实体方块）</li>
+<li>&lt;<code>ul type=&quot;disc&quot;</code>&gt;</li>
+</ul>
+<p>2.有序列表（默认是数字）</p>
+<ul>
+<li>使用标签：&lt;<code>ol</code>&gt;  &lt;<code>li</code>&gt;</li>
+<li>属性:  A  a I  i</li>
+<li>&lt;<code>ol  type=&quot;A&quot;</code>&gt;</li>
+</ul>
+<p>3.嵌套列表</p>
+<ul>
+<li>使用标签：&lt;<code>ul</code>&gt;  &lt;<code>ol</code>&gt;  &lt;<code>li</code>&gt;</li>
+</ul>
+<p>3.自定义列表</p>
+<ul>
+<li>使用标签：&lt;<code>dl</code>&gt;  &lt;<code>dt</code>&gt; &lt;<code>dd</code>&gt;</li>
+</ul>
+<p>HTML块<br>1.HTML块元素 &lt;<code>！--   --</code>&gt;注释<br>块元素在显示时，通常会以新的行开始  如：&lt;<code>h1</code>&gt;  &lt;<code>p</code>&gt;  &lt;<code>ul</code>&gt;<br>2.HTML内联元素<br>      内联元素通常不会以新行开始  如：&lt;<code>b</code>&gt;  &lt;<code>a</code>&gt;  &lt;<code>img</code>&gt;<br>3.HTML&lt;<code>div</code>&gt;元素 配合CSS样式<br>      &lt;<code>div</code>&gt;元素也被称为块元素，其主要是组合HTML元素的容器<br>4.HTML&lt;<code>span</code>&gt;元素<br>     &lt;<code>span</code>&gt;元素是内联元素，可作为文本的容器</p>
 <p>HTML布局</p>
-<p>● 使用<div>元素布局</p>
-<title>div布局<title>
-<style type="text/css">
-     body{
-           margin:0px //去掉周围留白
-           }
-      div#container｛
-                width：100%;//充满全屏
-                height:950px;
-                background-color:颜色;
-                ｝
-      div#heading{
-                width：100%;
-                height:10%;
-                background-color:颜色;
-                }
-      div#content-menu{
-                width：30%;
-                height:80%;
-                background-color:颜色;
-                floot:left;
-                }
-      div#content-body{
-                width：70%;
-                height:80%;
-                background-color:颜色;
-                floot:left;
-                } 
-      div#content-footing{
-                width：100%;
-                height:10%;
-                background-color:颜色;
-                clear:both;//清除浮动
-                }
-       <body>
-             <div  id="container">
-             <div  id="heading">头部</div>
-             <div  id="content-menu">内容菜单</div>
-             <div  id="content-body">内容菜单</div>
-             <div  id="footing">底部</div>
-             </div>
-            </body>
-            可以删除div
-
-
-<p>● 使用<div class="table-container"><table>元素布局<br><tabl>布局</p>
-<title>  table 布局 </title>
-<body  marginheight ="0px" marginwidth="0px">
-    <table  width="100%"  height="950px"  style="background-color:颜色”>
-    <tr>
-        <td colspan="3"  width="100%"  height"10%"  style="background-color:颜色“>这是头部
-        </td>
-    </tr>
-    <tr>
-        <td  width="20%"  height"80%"  style="background-color:颜色“></td>
-        <td  width="60%"  height"80%"  style="background-color:颜色“></td>
-        <td  width="20%"  height"80%"  style="background-color:颜色“></td>
-    </tr>
-    <tr>
-        <td colspan="3"  width="100%"  height"10%"  style="background-color:颜色“>这是底部
-        </td>
-    </tr>
-   </table></div>
-
+<p>● 使用&lt;<code>div</code>&gt;元素布局<br>&lt;<code>title</code>&gt;div布局&lt;<code>title</code>&gt;<br>&lt;<code>style type=&quot;text/css&quot;</code>&gt;<br>     body{<br>           margin:0px &#x2F;&#x2F;去掉周围留白<br>           }<br>      div#container｛<br>                width：100%;&#x2F;&#x2F;充满全屏<br>                height:950px;<br>                background-color:颜色;<br>                ｝<br>      div#heading{<br>                width：100%;<br>                height:10%;<br>                background-color:颜色;<br>                }<br>      div#content-menu{<br>                width：30%;<br>                height:80%;<br>                background-color:颜色;<br>                floot:left;<br>                }<br>      div#content-body{<br>                width：70%;<br>                height:80%;<br>                background-color:颜色;<br>                floot:left;<br>                }<br>      div#content-footing{<br>                width：100%;<br>                height:10%;<br>                background-color:颜色;<br>                clear:both;&#x2F;&#x2F;清除浮动<br>                }<br>       &lt;<code>body</code>&gt;<br>             &lt;<code>div  id=&quot;container&quot;</code>&gt;<br>             &lt;<code>div  id=&quot;heading&quot;</code>&gt;头部&lt;<code>/div</code>&gt;<br>             &lt;<code>div  id=&quot;content-menu&quot;</code>&gt;内容菜单&lt;<code>/div</code>&gt;<br>             &lt;<code>div  id=&quot;content-body&quot;</code>&gt;内容菜单&lt;<code>/div</code>&gt;<br>             &lt;<code>div  id=&quot;footing&quot;</code>&gt;底部&lt;<code>/div</code>&gt;<br>             &lt;<code>/div</code>&gt;<br>            &lt;<code>/body</code>&gt;<br>            可以删除div</p>
+<p>● 使用&lt;<code>table</code>&gt;元素布局<br>&lt;<code>tabl</code>&gt;布局<br>&lt;<code>title</code>&gt;  table 布局 &lt;<code>/title</code>&gt;<br>&lt;<code>body  marginheight =&quot;0px&quot; marginwidth=&quot;0px&quot;</code>&gt;<br>    &lt;<code>table  width=&quot;100%&quot;  height=&quot;950px&quot;  style=&quot;background-color:颜色”</code>&gt;<br>    &lt;<code>tr</code>&gt;<br>        &lt;<code>td colspan=&quot;3&quot;  width=&quot;100%&quot;  height&quot;10%&quot;  style=&quot;background-color:颜色“</code>&gt;这是头部<br>        &lt;<code>/td</code>&gt;<br>    &lt;<code>/tr</code>&gt;<br>    &lt;<code>tr</code>&gt;<br>        &lt;<code>td  width=&quot;20%&quot;  height&quot;80%&quot;  style=&quot;background-color:颜色“</code>&gt;&lt;<code>/td</code>&gt;<br>        &lt;<code>td  width=&quot;60%&quot;  height&quot;80%&quot;  style=&quot;background-color:颜色“</code>&gt;&lt;<code>/td</code>&gt;<br>        &lt;<code>td  width=&quot;20%&quot;  height&quot;80%&quot;  style=&quot;background-color:颜色“</code>&gt;&lt;<code>/td</code>&gt;<br>    &lt;<code>/tr</code>&gt;<br>    &lt;<code>tr</code>&gt;<br>        &lt;<code>td colspan=&quot;3&quot;  width=&quot;100%&quot;  height&quot;10%&quot;  style=&quot;background-color:颜色“</code>&gt;这是底部<br>        &lt;<code>/td</code>&gt;<br>    &lt;<code>/tr</code>&gt;<br>   &lt;<code>/table</code>&gt;</p>
 <p>HTML表单<br>● 复选框</p>
-<p>你喜欢的水果有？<br><br/><br>苹果<input  type="checkbox"><br>香蕉<input  type="checkbox"><br>橘子<input  type="checkbox"></p>
-<!-- CheckBox 是检查框的意思-->
-
-
-<p>● 单选按钮<br><br/><br>请选择您的性别：<br>男<input type="radio" name="sex"><br>女<input type="radio" name="sex"></p>
-<!-- radio为单元框  同时写name=“sex”是让两个单选框属于同一个组-->
-
-
-<p>● 下拉列表<br>请选择您常用的网站：<br><select><br>    <option><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="http://www.taobao.com/" >www.taobao.com</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></option><br>    <option><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="http://www.baidu.com/" >www.baidu.com</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></option><br>    <option><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="http://www.goolge.com/" >www.goolge.com</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></option><br></select>  </p>
-<p>● 文本域</p>
-<textarea cols="30"  rows="30">请在此填写个人信息</textarea>
-<p>可以写在form以外</p>
-<p>● 创建按钮<br><input type="button" value="按钮"><br><input type="submit" value="确定"><br>submit是提交按钮，更改名字用value</p>
+<p>你喜欢的水果有？<br>&lt;<code>br/</code>&gt;<br>苹果&lt;<code>input  type=&quot;checkbox&quot;</code>&gt;<br>香蕉&lt;<code>input  type=&quot;checkbox&quot;</code>&gt;<br>橘子&lt;<code>input  type=&quot;checkbox&quot;</code>&gt;<br>&lt;<code>!-- CheckBox 是检查框的意思--</code>&gt;</p>
+<p>● 单选按钮<br>&lt;<code>br/</code>&gt;<br>请选择您的性别：<br>男&lt;<code>input type=&quot;radio&quot; name=&quot;sex&quot;</code>&gt;<br>女&lt;<code>input type=&quot;radio&quot; name=&quot;sex&quot;</code>&gt;<br>&lt;<code>!-- radio为单元框  同时写name=“sex”是让两个单选框属于同一个组--</code>&gt;</p>
+<p>● 下拉列表<br>请选择您常用的网站：<br>&lt;<code>select</code>&gt;<br>    &lt;<code>option</code>&gt;<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="http://www.taobao.com/" >www.taobao.com</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>&lt;<code>/option</code>&gt;<br>    &lt;<code>option</code>&gt;<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="http://www.baidu.com/" >www.baidu.com</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>&lt;<code>/option</code>&gt;<br>    &lt;<code>option</code>&gt;<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="http://www.goolge.com/" >www.goolge.com</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>&lt;<code>/option</code>&gt;<br>&lt;<code>/select</code>&gt;  </p>
+<p>● 文本域<br>&lt;<code>textarea cols=&quot;30&quot;  rows=&quot;30&quot;</code>&gt;请在此填写个人信息&lt;<code>/textarea</code>&gt;<br>可以写在form以外</p>
+<p>● 创建按钮<br>&lt;<code>input type=&quot;button&quot; value=&quot;按钮&quot;</code>&gt;<br>&lt;<code>input type=&quot;submit&quot; value=&quot;确定&quot;</code>&gt;<br>submit是提交按钮，更改名字用value</p>
 <p>常用的表单标签</p>
-<form>      表单
-<input>     输入域
-<textare>   文本域
-<label>     控制标签
-<fieldset>  定义域
-<legend>    域的标题
-<select>    选择列表
-<optgroup>  选项组
-<option>    下拉列表中的选项
-<button>    按钮
-
+<p>&lt;<code>form</code>&gt;      表单<br>&lt;<code>input</code>&gt;     输入域<br>&lt;<code>textare</code>&gt;   文本域<br>&lt;<code>label</code>&gt;     控制标签<br>&lt;<code>fieldset</code>&gt;  定义域<br>&lt;<code>legend</code>&gt;    域的标题<br>&lt;<code>select</code>&gt;    选择列表<br>&lt;<code>optgroup</code>&gt;  选项组<br>&lt;<code>option</code>&gt;    下拉列表中的选项<br>&lt;<code>button</code>&gt;    按钮</p>
 <p>表单和PHP交互</p>
-<form>
-用户名<input type="text" name="">
-密码< input type="possword"  name="possword">
-   <input type="submit" value="提交">
-   </form>
-   name的提交方法有两种： 
-   1.get提交方式用户名和密码都显示在地址中，但是有时候地址不适合太长，有的浏览器太长了会不能解析
-   2.post则不显示，因此更安全
-
+<p>&lt;<code>form</code>&gt;<br>用户名&lt;<code>input type=&quot;text&quot; name=&quot;&quot;</code>&gt;<br>密码&lt;<code> input type=&quot;possword&quot;  name=&quot;possword&quot;</code>&gt;<br>   &lt;<code>input type=&quot;submit&quot; value=&quot;提交&quot;</code>&gt;<br>   &lt;<code>/form</code>&gt;<br>   name的提交方法有两种：<br>   1.get提交方式用户名和密码都显示在地址中，但是有时候地址不适合太长，有的浏览器太长了会不能解析<br>   2.post则不显示，因此更安全</p>
 <p>HTML框架</p>
 <ol>
 <li>框架标签（frame）框架对于页面设计有着很大作用（已过时）</li>
-<li>框架集标签（<iframesets>）框架集标签定义如何将窗口分割成框架，每一行frameset定义一系列行或列，rows、cols的值规定了每行或每列占据屏幕的面积</li>
+<li>框架集标签（&lt;<code>iframesets</code>&gt;）框架集标签定义如何将窗口分割成框架，每一行frameset定义一系列行或列，rows、cols的值规定了每行或每列占据屏幕的面积</li>
 <li>常用标签   noresize：固定框架大小   cols:列   rows：行</li>
 <li>内联框架</li>
 </ol>
-<iframe  sre="引入内容" framebode="边框值"   width=""    height="">
-</iframe>
-改变引用内容
-<a  链接   target="self">在自己所在页面打开
-<a  链接   target="blank">在新的页面打开
-<a  链接   target="parent">在父级（承载页面）页面打开
-<a  链接   target="top">在顶级页面打开
-
+<p>&lt;<code>iframe  sre=&quot;引入内容&quot; framebode=&quot;边框值&quot;   width=&quot;&quot;    height=&quot;&quot;</code>&gt;<br>&lt;<code>/iframe</code>&gt;<br>改变引用内容<br>&lt;<code>a  链接   target=&quot;self&quot;</code>&gt;在自己所在页面打开<br>&lt;<code>a  链接   target=&quot;blank&quot;</code>&gt;在新的页面打开<br>&lt;<code>a  链接   target=&quot;parent&quot;</code>&gt;在父级（承载页面）页面打开<br>&lt;<code>a  链接   target=&quot;top&quot;</code>&gt;在顶级页面打开</p>
 <p>HTML背景<br>● 背景标签  Background （背景图片）<br>● 背景颜色  bgcolor（背景颜色）<br>● 颜色是由一个十进制符号来定义，这个符号由红色，绿色，蓝色组成(RGB)<br>● 颜色最小值：0（#00）<br>● 颜色最大值：255（#FF）<br>● 红色：#FF0000<br>● 绿色：#00FF00<br>● 蓝色：#0000FF</p>
 <p>XHTML简介<br>● XHTNL指的是可扩展超文本标记语言，所有浏览器都支持，为了代码的完整性和良好性<br>● 声明：规定了使用通用标记语言的网页语法<br>● 三种XHTML文档  STRICT(严格)，TRANSITNAL（过度）， FRAMESET（框架）<br>HTML5<br>解决了：web浏览器之间的兼容问题<br>            文档结构不够明确<br>            web应用程序的功能受到了限制</p>
 <p>全局属性<br>    contentEditable    编辑<br>    flag<br>    designMode<br>    hidden                  可见，不可见<br>    spellcheck             检查<br>    tabindex               获取焦点</p>
@@ -930,14 +497,7 @@ p{margin-left:20px}
 </li>
 <li><p>网页编排。<br>HTML5属性</p>
 </li>
-<li><p>form属性  在HTML4中，表单的从属元素必须写在表单内部，而在HTML5中，可以把他们书写在页面上任何地方，然后为该元素制定一个form属性，属性值为该表单的ID，这样就可以声明该元素从属于指定表单了。</p>
-<form  id="testform>
-<article>  </article>
-</form>
-也可以表示为
-<textares  form="testform">
-</textares> 这样方便以后添加
-
+<li><p>form属性  在HTML4中，表单的从属元素必须写在表单内部，而在HTML5中，可以把他们书写在页面上任何地方，然后为该元素制定一个form属性，属性值为该表单的ID，这样就可以声明该元素从属于指定表单了。<br>&lt;<code>form  id=&quot;testform</code>&gt;<br>&lt;<code>article</code>&gt;  &lt;<code>/article</code>&gt;<br>&lt;<code>/form</code>&gt;<br>也可以表示为<br>&lt;<code>textares  form=&quot;testform&quot;</code>&gt;<br>&lt;<code>/textares</code>&gt; 这样方便以后添加</p>
 </li>
 <li><p>formaction   在HTML4 中，一个表单内所有元素只能通过表单的action属性被统一提交到另一个页面，而在HTML5中，可以为所有的提交按钮，增加不同的formaction属性，使单机不同的按钮是可以将表单提交到不用的页面。</p>
 </li>
@@ -972,6 +532,158 @@ p{margin-left:20px}
 </ol>
 <p>补充<br>块级元素和行内元素<br>区别：<br>块级元素会霸占一整行，不与其他任何元素并排，可以设置宽度和高度，但如果不设置宽度就会100%继承父级的宽度。<br>行内元素可以与其他元素并排排列，但是不能设置宽和高，默认的宽度就是文字的宽度。<br>分类：<br>   文本级标签：p , span , a , b , i , u , em<br>   容器级标签：div , h系列 , li , dt ,dd<br>   p：里面只能放文字和图片和表单元素，p里面不能放h和ul，也不能放p。<br> 从CSS的角度讲，CSS的分类和上面的很像，就p不一样：<br>   行内元素：除了p之外，所有的文本级标签，都是行内元素。p是个文本级标签，但是是个块级元素。<br>   块级元素：所有的容器级标签，都是块级元素，以及p标签。<br>相互转换：<br> 我们可以通过display属性将块级元素(比如div)和行内元素进行相互转换。<br> display：inline;<br> 那么这个标签将变为行内元素，即：<br>   1，此时这个div将不能设置宽度和高度了。<br>   2，此时这个div可以和其他行内元素并排了。<br> 同样的到了我们也可以用display将行内元素(比如span)转行成块级元素。<br> display：block；<br> 那么这个span标签将变为块级标签，即：<br>   1，此时这个span能够设置宽度，高度。<br>   2，此时这个span必须独占一行，其他元素无法与之并排。<br>   3，如果不设置宽度，将占满父级。</p>
 <p>标准流里面的限制非常多，导致很多页面效果无法实现，如果我们现在就要并排，并且就要设置宽度，就hi有：脱离标准流。<br>CSS一共有三种手段，是一个元素脱离标准流文档：<br>浮动<br>绝对定位<br>固定定位<br>浮动：<br> 浮动是CSS里面布局最多的一个属性。<br> float：表示浮动的意思。<br>属性：<br>none：表示不浮动，默认。<br>left：表示左浮动。<br>rigth：表示右浮动。<br>例子<br>我们会发现，三个元素并排显示，.box1和span因为是左浮动，所有紧挨在一起，这种现象是贴边现象。<br>.box2盒子因为是右浮动，所以紧靠着右边。<br>浮动的四大特性：<br> 1，浮动的的元素脱标，<br> 2，浮动的元素互相贴靠。<br> 3，浮动的元素由”子围”效果。<br> 4，收缩的效果。<br>浮动元素的脱标：<br> 脱标：就是脱离了标准文档流。</p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2022/03/09/Javascript/">Javascript</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-03-09</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-03-09</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h2 id="介绍"   >
+          <a href="#介绍" class="heading-link"><i class="fas fa-link"></i></a><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2>
+      <p>Javascript是最流行的脚本语言：是一种轻量级的编程语言；可以插入html的编程代码；插入html页面之后可以由任何浏览器打开。</p>
+
+        <h2 id="准备工作"   >
+          <a href="#准备工作" class="heading-link"><i class="fas fa-link"></i></a><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2>
+      <p>用Javascript编写代码必须要通过HTML和XHTML文档才能执行，有三种方法可以做到这一点：<br>第一种方法是把Javascript放到head中script标签中：<br>&lt;<code>!DOCTYPE html&gt; &lt;</code>html lang&#x3D;”en”&gt;<br>  &lt;<code>head&gt;   &lt;</code>meta charset&#x3D;”utf-8”&#x2F;&gt;<br>  &lt;<code>title&gt;element&lt;</code>&#x2F;title&gt;<br>  &lt;<code>script&gt; javascript&lt;</code>&#x2F;script&gt;<br>&lt;<code>/head&gt; &lt;</code>body&gt;<br>&lt;<code>/body&gt; 第二种方法是将Javascript代码存为一个扩展名为.js的独立文件，然后在script中src属性中引用 &lt;</code>!DOCTYPE html&gt;<br>&lt;<code>html lang=&quot;en&quot;&gt; &lt;</code>head&gt;<br>  &lt;<code>meta charset=&quot;utf-8&quot;/&gt;   &lt;</code>title&gt;element&lt;<code>/title&gt;   &lt;</code>script src&#x3D;”lw03.js”&gt; &lt;<code>/script&gt; &lt;</code>&#x2F;head&gt;<br>&lt;<code>body&gt; &lt;</code>&#x2F;body&gt;<br>第三种方法，也是最好的一种方法是联合第二种方法将script标签放在body之前，这样可以更快的加载页面。<br>&lt;<code>!DOCTYPE html&gt; &lt;</code>html lang&#x3D;”en”&gt;<br>&lt;<code>head&gt;   &lt;</code>meta charset&#x3D;”utf-8”&#x2F;&gt;<br>  &lt;<code>title&gt;element&lt;</code>&#x2F;title&gt;<br>&lt;<code>/head&gt; &lt;</code>body&gt;<br>&lt;<code>script src=&quot;lw03.js&quot;&gt;&lt;</code>&#x2F;script&gt;<br>&lt;&#96;&#x2F;body&gt;<br>程序语言分为编译型和解释型。java和C++等语言需要一个编译器，编译器是一种程序，能够把java等高级语言编写出来的源代码翻译为可以直接在计算机上执行的文件。解释型程序设计语言不需要编译器，它们仅需要解释器。对于javascript语言，web浏览器负责完成有关的解释和和执行工作。浏览器中的javascript解释器将直接读入源代码并执行。浏览器中没有编译器，将无法执行。<br>用编译型语言编写的代码有错误，在编译阶段就可以发现。而解释型语言代码中的错误只能呢个等到解释器执行到有关代码才可以被发现。<br>编译型语言比解释型语言速度更快，可移植性更好，但是比较难学。</p>
+
+        <h2 id="语法"   >
+          <a href="#语法" class="heading-link"><i class="fas fa-link"></i></a><a href="#语法" class="headerlink" title="语法"></a>语法</h2>
+      
+        <h3 id="语句-statement"   >
+          <a href="#语句-statement" class="heading-link"><i class="fas fa-link"></i></a><a href="#语句-statement" class="headerlink" title="语句(statement)"></a>语句(statement)</h3>
+      <p>用JavaScript编写脚本，与其他语言编写出来的脚本一样，都由一系列指令构成，这些指令叫语句。<br>JavaScript只需要简单的把各条语句放在不同行上就可以分隔它们，或者在同一行的花用逗号分隔，最后要加上分号结尾。</p>
+
+        <h3 id="注释-comment"   >
+          <a href="#注释-comment" class="heading-link"><i class="fas fa-link"></i></a><a href="#注释-comment" class="headerlink" title="注释(comment)"></a>注释(comment)</h3>
+      <p>&#x2F;&#x2F;单行注释  &lt;&#96;&#96;!–&#x2F;**&#x2F;多行注释</p>
+
+        <h3 id="变量（variable"   >
+          <a href="#变量（variable" class="heading-link"><i class="fas fa-link"></i></a><a href="#变量（variable" class="headerlink" title="变量（variable)"></a>变量（variable)</h3>
+      <p>var 是变量的关键字<br>var mood&#x3D;”happy”   &#x2F;&#x2F;声明+赋值  var 是变量的关键字  mood是变量名  happy是值<br>var age&#x3D;20,mood&#x3D;”happy” &#x2F;&#x2F;最有效的做法<br>JavaScript语法不允许变量名中包含空格或标点符号，但美元符号$除外；<br>javascript变量名可以含有字母，下划线，数字和美元符号，但第一个字谜不能是数字<br>驼峰格式的myMood通常是函数名，方法名和对象属性命名的首选格式</p>
+
+        <h3 id="数据类型"   >
+          <a href="#数据类型" class="heading-link"><i class="fas fa-link"></i></a><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3>
+      <p>在声明变量名的同时还要声明变量名的类型称为强类型</p>
+<ol>
+<li>字符串<br>字符串由零个或多个字符组成。字符包括（但不限于）字母，数字，标点符号和空格，字符串必须包含在引号里，单引号和双引号都可以。选择引号的时候最好根据字符串所包含的字符来选择。最好和字符串中的引号区别使用，要不然就要字符串中的引号进行转义，通过反斜杠\。例如：var &#x3D;”don&#39;t  ask”.另外最好保持一个脚本中的引号是一致的。</li>
+<li>数值<br>数值不限制，可以是整数也可以是小数（浮点数），可以是正数也可以是负数。</li>
+<li>布尔值（Boolean）<br>布尔数据只有两个可选值—–true或false，重要的是两个中只能取一个。布尔值不是字符串，千万不能加引号。
+        <h3 id="数组（array）"   >
+          <a href="#数组（array）" class="heading-link"><i class="fas fa-link"></i></a><a href="#数组（array）" class="headerlink" title="数组（array）"></a>数组（array）</h3>
+      字符串，数值和布尔值都是标量（scalar）。如果想用一个变量来储存一组值，就需要数组，数组可以用Arrary来声明，声明的同时还可以指定数组初始元素个数，也就是这个数组的长度（length）。<br>var Beatles &#x3D; Arrary(length);<br>向数组中添加元素的操作称为填充（populating），在填充时不仅要各处新元素的值，还需要给出新元素在数组中存放的位置，这个位置就是这个元素的下标（index），下标必须用方括号括起来：<br>Arrary[index]&#x3D;element;</li>
+</ol>
+<p>数组的各种写法：<br>这是一个相当强大的储存方式<br>var Beatles &#x3D; Arrary(4);<br>Beatles[0]&#x3D;”John”;<br>Beatles[1]&#x3D;”Gaul”;<br>Beatles[2]&#x3D;”George”;<br>Beatles[3]&#x3D;”George”;</p>
+<p>var Beatles &#x3D; Arrary(“John”,”Gaul”,”George”,”George”);<br>&#x2F;&#x2F;声明的同时填充<br>var lennon &#x3D; [“John”,1940,fales];<br>&#x2F;&#x2F;数组里面可以放字符串，数字，布尔值<br>var name &#x3D; “John”;<br>beatles[0]&#x3D;name;<br>&#x2F;&#x2F;数组可以是一个变量<br>var names &#x3D; Arrary(“John”,”Gaul”,”George”,”George”);<br>beatles[1] &#x3D; names[3];<br>&#x2F;&#x2F;数组元素的值还可以是另一个数组的元素<br>var lennon &#x3D; [“John”,1940,fales];<br>var beatles &#x3D;[];<br>beatles[0] &#x3D; lennon;<br>&#x2F;&#x2F;beatles数组的一个元素就是一个数组<br>4. 关联数组<br>Beatles是一个传统的数组，关联数组则不是一个传统的数组。区别在于，传统的数组下标是整数，而关联数组下标则可以是其他，比如字符串。这样使代码更有可读性。<br>var lennon &#x3D; Arrary();<br>lennon[“name”] &#x3D; “John”;<br>lennon[“year”] &#x3D; 1940;<br>lennon[“living”] &#x3D; fales;</p>
+
+        <h3 id="对象"   >
+          <a href="#对象" class="heading-link"><i class="fas fa-link"></i></a><a href="#对象" class="headerlink" title="对象"></a>对象</h3>
+      <p>与数组类似，对象也是使用一个名字来表示一组值。对象的每个值都是对象的属性。用点来获取<br>var lennon &#x3D; object();<br>lennon.name &#x3D; “name”;<br>lennon.year &#x3D; 1940;<br>lennon.living &#x3D; fales;</p>
+<p>创建对象的各种方法：<br>{propertyName:value,propertyName:value}<br>var lennon &#x3D; {name:”John”,year:1940,living:fales};</p>
+
+        <h2 id="操作"   >
+          <a href="#操作" class="heading-link"><i class="fas fa-link"></i></a><a href="#操作" class="headerlink" title="操作"></a>操作</h2>
+      <p>+-*&#x2F; ++  &#x3D;&#x3D;&#x3D; +&#x3D;(加法和赋值)<br>++可以拼接字符串和数值<br>注意区别</p>
+
+        <h2 id="条件语句"   >
+          <a href="#条件语句" class="heading-link"><i class="fas fa-link"></i></a><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h2>
+      
+        <h3 id="if"   >
+          <a href="#if" class="heading-link"><i class="fas fa-link"></i></a><a href="#if" class="headerlink" title="if"></a>if</h3>
+      <p>条件必须放在if后面的圆括号中。条件的求职结果永远是一个布尔值，只能是true或fales。花括号中的语句，不管他们有多少条，只有在给定条件的求值结果是true的情况下才会执行。</p>
+<p>if(1&gt;2){<br>  alert(“The world has gone mad!”)<br>} eles{<br>  alert(“All is well with the world”)<br>}<br>花括号并不是必不可少的<br>if(1&gt;2) alert(“The world has gone mad!”)</p>
+
+        <h3 id="比较操作符"   >
+          <a href="#比较操作符" class="heading-link"><i class="fas fa-link"></i></a><a href="#比较操作符" class="headerlink" title="比较操作符"></a>比较操作符</h3>
+      <p>大于&gt;，小于&lt;<code>，大于或等于&gt;=，小于或等于 &lt;</code>&#x3D;，等于 &#x3D;&#x3D; ，不等于!&#x3D; ，严格相等 &#x3D;&#x3D;&#x3D;，严格不等!&#x3D;&#x3D; </p>
+
+        <h3 id="逻辑操作符"   >
+          <a href="#逻辑操作符" class="heading-link"><i class="fas fa-link"></i></a><a href="#逻辑操作符" class="headerlink" title="逻辑操作符"></a>逻辑操作符</h3>
+      <p>&amp;&amp;（逻辑与） 逻辑操作符的操作对象是布尔值，每个逻辑操作数返回一个布尔值true或者是fales。逻辑与操作只有在它的两个操作数都是true时才会是true。<br>||（逻辑或）只要他的操作数中有一个是true，逻辑或就将是true。如果它的两个操作数都是true，逻辑或操作也将是true，只有当它的两个操作数都是fales时，逻辑或才会是fales。<br>！（逻辑非）只能作用于单个操作数，其结果是把那个逻辑操作数所返回的布尔值取反。如果那个逻辑操作数所返回的值是true，那么逻辑非操作符将把它取反为fales。</p>
+
+        <h2 id="循环语句"   >
+          <a href="#循环语句" class="heading-link"><i class="fas fa-link"></i></a><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h2>
+      
+        <h3 id="while"   >
+          <a href="#while" class="heading-link"><i class="fas fa-link"></i></a><a href="#while" class="headerlink" title="while"></a>while</h3>
+      <ol>
+<li>while循环和if循环唯一的区别是：只要给定条件的求值结果是true，包含在花括号里的代码就讲反复地执行下去<br>var count &#x3D; 1;<br>while (count&lt;&#96;11){<br>  alert(count);<br>  count++;<br>}</li>
+<li>do…while<br>对循环控制条件的求值发生在每次循环结束之后。因此花括号里的语句至少被执行一次<br>do{<br>  statement;<br>}while(cindition);
+        <h3 id="for"   >
+          <a href="#for" class="heading-link"><i class="fas fa-link"></i></a><a href="#for" class="headerlink" title="for"></a>for</h3>
+      类似于while，for循环只是while循环的一种变体，变得更紧凑。用for循环来重复执行一些代码的好处是循环控制结构更加清晰。最常见的用途之一是对某个数组里的全体元素进行遍历处理。<br>initionlize;<br>while (condition){<br>  statements;<br>  increment;<br>}</li>
+</ol>
+<p>for(initial condition;test condition;alter condition){<br>  statement;<br>}<br>for（conut&#x3D;1;count&lt;&#96;11;count++）{<br>  alert(count);<br>}</p>
+
+        <h2 id="函数（founction）"   >
+          <a href="#函数（founction）" class="heading-link"><i class="fas fa-link"></i></a><a href="#函数（founction）" class="headerlink" title="函数（founction）"></a>函数（founction）</h2>
+      <p>如果需要多次使用同一段代码，可以把它们封装成一个函数。函数就是一组允许在你的代码里随时调用的语句.<br>founction shout(){<br>  var Beatles &#x3D; Arrary(“John”,”Gaul”,”George”,”George”);<br>  for(var count &#x3D; 0;count&lt;&#96;bearles.length;count++){<br>    alert(beatles[count]);<br>  }<br>}<br>函数不仅能够（以参数的形式）接受数据，还能够返回数据。用到return语句<br>function multiply(num1,num2){<br>  var total &#x3D; num1*num2;<br>  return total;<br>}<br>函数的真正价值体现在，我们可以把它们当做一种数据类型来使用，这意味着可以把一个函数的调用结果赋给一个变量：<br>var temp_fahrenheit &#x3D; 95;<br>var temp_celsius &#x3D; converToCelsius(temp_fahrenheit);<br>alert(temp_Celsius)；<br>驼峰命名法可以区分变量名和函数</p>
+
+        <h3 id="变量的作用域"   >
+          <a href="#变量的作用域" class="heading-link"><i class="fas fa-link"></i></a><a href="#变量的作用域" class="headerlink" title="变量的作用域"></a>变量的作用域</h3>
+      <p>全局变量可以在脚本中的任何位置被引用。<br>局部变量只存在于声明它的那个函数内部。<br>如果在某个函数中使用了var，那个变量就讲被视为一个局部变量，它只存在于这个函数的上下文中；反之，如果没有使用var，那个变量就讲被视为一个全局变量，如果脚本里已经存在一个与同名的全局变量，这个函数就会改变那个全局变量的值。<br>在定义一个函数时，我们一定要把它内部的变量全都明确地声明为局部变量。</p>
+
+        <h2 id="对象-1"   >
+          <a href="#对象-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#对象-1" class="headerlink" title="对象"></a>对象</h2>
+      <p>对象是自包含的数据集合，包含在对象里的数据可以通过两种形式访问——属性（property）和方法（method）<br>属性是隶属于某个特定对象的变量。方法是只有某个特定对象才能调用的函数。对象就是由一些属性和方法构成的一个数据实体。</p>
+<ol>
+<li>内建对象<br>内建在JavaScript语言里的对象，如Arrary,Math,Date等。</li>
+<li>宿主对象<br>由流浪器提供的预定义对象被称为宿主对象
+        <h2 id="DOM"   >
+          <a href="#DOM" class="heading-link"><i class="fas fa-link"></i></a><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h2>
+      文档DOM中D—-document<br>对象DOM中O—-object<br>模型DOM中M—-Model<br>DOM代表着加载到浏览器窗口的当前网页。浏览器提供了网页的地图（或者说模型），而我们可以通过JavaScript去读取这张地图。<br>DOM把一份文档表示为一棵家谱树，并使用parent，child,sibling等记号来表明家族成员之间的关系。
+        <h2 id="节点（node）"   >
+          <a href="#节点（node）" class="heading-link"><i class="fas fa-link"></i></a><a href="#节点（node）" class="headerlink" title="节点（node）"></a>节点（node）</h2>
+      使用节点比使用家谱树更为准确。它表示网络中的一个连接点，一个网络就是由一些节点构成的集合。
+        <h3 id="元素节点"   >
+          <a href="#元素节点" class="heading-link"><i class="fas fa-link"></i></a><a href="#元素节点" class="headerlink" title="元素节点"></a>元素节点</h3>
+      标签的名字就是元素的名字。HTML是根元素
+        <h3 id="文本节点"   >
+          <a href="#文本节点" class="heading-link"><i class="fas fa-link"></i></a><a href="#文本节点" class="headerlink" title="文本节点"></a>文本节点</h3>
+      在XHTML文档中，文本节点总是被包含在元素节点的内部。
+        <h3 id="属性节点"   >
+          <a href="#属性节点" class="heading-link"><i class="fas fa-link"></i></a><a href="#属性节点" class="headerlink" title="属性节点"></a>属性节点</h3>
+      属性节点用来对元素做出更具体的描述。在DOM中，title &#x3D; “a gentle reminder”是一个属性节点，属性节点总是被包含在起始标签内，所以属性节点总是被包含在元素节点中。并非所有的元素都包含着属性，但所有的属性都被元素包含着。
+        <h3 id="CSS"   >
+          <a href="#CSS" class="heading-link"><i class="fas fa-link"></i></a><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3>
+      DOM并不是与网页结构打交道的唯一技术。我们还可以通过css告诉浏览器应该如何显示一份文档。<br>继承（inheritance）是CSS技术中的一项强大功能。类似于DOM，CSS也把文档的内容视为一颗节点树。节点树上的各个元素将继承其父元素的样式属性。<br>为了把某一个或某几个元素与其他内院区别开来，需要使用class和ID属性。</li>
+<li>class<br>可以在所有元素上任意应用class属性</li>
+<li>ID<br>ID属性的用途是给网页里的某个元素加上一个独一无二的标识符
+        <h3 id="获取元素"   >
+          <a href="#获取元素" class="heading-link"><i class="fas fa-link"></i></a><a href="#获取元素" class="headerlink" title="获取元素"></a>获取元素</h3>
+      有3种DOM方法可获取元素节点，分别是通过元素ID，通过标签名字和通过类名字来获取。</li>
+<li>getElementById<br>这个将返回一个与那个有着给定ID属性值的元素节点对应的对象。<br>docunment.getElementById(id)<br>&#x2F;&#x2F;通用<br>&#96;&#96;&#96;&lt;<code>!DOCTYPE html&gt; &lt;</code>html lang&#x3D;”en”&gt;<br>&lt;<code>head&gt;  &lt;</code>meta charset&#x3D;”utf-8”&#x2F;&gt;<br> &lt;<code>title&gt;Shopping list&lt;</code>&#x2F;title&gt;<br>&lt;<code>/head&gt; &lt;</code>body&gt;<br> &lt;<code>h1&gt;What to buy&lt;</code>&#x2F;h1&gt;<br> &lt;<code>p title=&quot;a gentle reminder&quot;&gt;Don&#39;t forget to buy this stuff.&lt;</code>&#x2F;p&gt;<br> &lt;<code>ul&gt;   &lt;</code>li&gt;A tin of beans&lt;<code>/li&gt;   &lt;</code>li class&#x3D;”sale”&gt;Cheese&lt;<code>/li&gt;   &lt;</code>li class&#x3D;”sale”&gt;Milk&lt;<code>/li&gt;  &lt;</code>&#x2F;ul&gt;<br> &lt;<code>script&gt;   alert(typeof document.getElementById(&quot;purchass&quot;))  &lt;</code>&#x2F;script&gt;<br>&lt;<code>/body&gt; &lt;</code>&#x2F;html&gt;</li>
+<li>getElementByTagName<br>返回一个对象数组，每个对象分别对应着文档里有着给定标签的一个元素<br>document.getElementByTagName(“li”)</li>
+<li>getElementByClassName<br>返回一个数组<br>document.getElementByClassName(“class”)</li>
+</ol>
+<p>&lt;<code>script&gt;    function getElementsClassName (node,classname)&#123;        if(node.getElementsByClassName)&#123;            //使用现有方法            return node.getElementsByClassName(classname);&lt;</code><br>       }else{<br>           var results &#x3D; new Arrary();<br>           var elems &#x3D; node.getElementsByClassName(“*”);<br>             for (var i&#x3D;0;i&lt;&#96;elems.length;i++ ){<br>                 if(elems[i].className.indexOf(classname) !&#x3D; -1){<br>                     results[results.length]&#x3D;elems[i];<br>                 }<br>             }<br>             return results;<br>       }<br>   }</p>
+
+        <h2 id="获取和设置属性"   >
+          <a href="#获取和设置属性" class="heading-link"><i class="fas fa-link"></i></a><a href="#获取和设置属性" class="headerlink" title="获取和设置属性"></a>获取和设置属性</h2>
+      
+        <h3 id="getAttribute"   >
+          <a href="#getAttribute" class="heading-link"><i class="fas fa-link"></i></a><a href="#getAttribute" class="headerlink" title="getAttribute"></a>getAttribute</h3>
+      <p>只有一个参数—-你打算查询的属性的名字<br>object.getAttribute(attribute)</p>
+<p>var paras &#x3D; document.getElementsByTagName(“p”);<br>for(var i&#x3D;0;i&lt;&#96;paras.length;i++ ){<br>  var title_text &#x3D; paras[i].getAttribute(“title”);<br>  if (title_text !&#x3D;null) {<br>    alert(title_text);<br>  }</p>
+<p>}</p>
+
+        <h3 id="setAttrubute"   >
+          <a href="#setAttrubute" class="heading-link"><i class="fas fa-link"></i></a><a href="#setAttrubute" class="headerlink" title="setAttrubute"></a>setAttrubute</h3>
+      <p>允许我们对属性节点的值做出修改<br>object.setAttribute(attribute,value)</p>
+<p>var shopping &#x3D; document.getElementById(“purchases”);<br>alert(shopping.getAttribute(“title”));<br>shopping.setAttribute(“title”,”a list of goods”);<br>alert(shopping.getAttribute(“title”));</p>
+
+        <h2 id="图片库"   >
+          <a href="#图片库" class="heading-link"><i class="fas fa-link"></i></a><a href="#图片库" class="headerlink" title="图片库"></a>图片库</h2>
+      <p>完整的代码块<br>function showPic(whichpic) {<br>    var source &#x3D; whichpic.getAttribute(“href”);<br>    var placeholder &#x3D; document.getElementById(“placeholder”);<br>    placeholder.setAttribute(“src”,source);<br>    var text &#x3D; whichpic.getAttribute(“title”);<br>    var description &#x3D; document.getElementById(“description”);<br>    description.firstChild.nodeValue &#x3D; text;<br>}<br>function countBodyChildren() {<br>    var body_elelment &#x3D; document.getElementsByTagName(“body”)[0];<br>    alert(body_elelment.nodeType);<br>}<br>window.onload &#x3D; countBodyChildren;</p>
+
+        <h3 id="如何插入一个占位符？"   >
+          <a href="#如何插入一个占位符？" class="heading-link"><i class="fas fa-link"></i></a><a href="#如何插入一个占位符？" class="headerlink" title="如何插入一个占位符？"></a>如何插入一个占位符？</h3>
+      <p>&lt;&#96;img id&#x3D;”placeholder” src&#x3D;”图片的路径” alt&#x3D;”图片的显示”&gt;<br>问题1：alt和title的区别？</p>
+<p>alt属性将在图片无法显示时，替代图片显示文本。<br>title属性规定标签元素以外的信息。</p>
+
+        <h3 id="如何让图片代替占位符并且显示在当页？"   >
+          <a href="#如何让图片代替占位符并且显示在当页？" class="heading-link"><i class="fas fa-link"></i></a><a href="#如何让图片代替占位符并且显示在当页？" class="headerlink" title="如何让图片代替占位符并且显示在当页？"></a>如何让图片代替占位符并且显示在当页？</h3>
+      <p>function showPic(whichpic) {<br>    var source &#x3D; whichpic.getAttribute(“href”);<br>    var placeholder &#x3D; document.getElementById(“placeholder”);<br>    placeholder.setAttribute(“src”,source);<br>}</p>
+<ol>
+<li>事件处理函数(作用是在特定事件发生时调用特定的JavaScript代码）<br>onmouseover：鼠标指正悬停在某个元素上市触发一个动作。<br>onmouseout：鼠标指针离开某个元素时触发一个动作。<br>onclick：鼠标点击某个链接是触发一个动作。<br>&lt;<code>li&gt;   &lt;</code>a href&#x3D;”lw&#x2F;d.jpg” onclick&#x3D;”showPic(this); return false” title &#x3D; “Family portraits”&gt;全家福&lt;<code>/a&gt; &lt;</code>&#x2F;li&gt;<br>此处的this指待&lt;&#96;a&gt;</li>
+<li>childNodes属性<br>是用来获取某个元素的所有子元素的属性。但首先要确定这个元素。<br>element.childNodes</li>
+<li>nodeType属性<br>是用来确定当前打交道的节点是哪一种节点。但是nodeType属性是用数值来显示的，共有12种，常用为以下三种：<br>元素节点的nodeType属性值是1；<br>属性节点的nodeType属性值是2；<br>文本节点的nodeType属性值是3.</li>
+<li>nodeValue属性<br>是用来改变文本节点的值，也就是本次案例中改变图片的描述值。<br>alert（description.childNodes[0].nodeValue）; &#x2F;&#x2F;打印description的文本。<br>var text &#x3D; whichpic.getAttribute(“title”);&#x2F;&#x2F;改变文本值<br> var description &#x3D; document.getElementById(“description”);<br> description.firstChild.nodeValue &#x3D; text;<br>childNodes[0]的同义词firstchild<br>lastchild是childNodes的最后一个子元素</li>
+</ol>
 </div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2022/03/09/web%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">web基础知识</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-03-09</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-03-09</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>HTML中块级元素和内联元素的区别</p>
 <ol>
 <li>下标列出了内联元素和块级元素的主要区别<br>html中内联元素和块级元素的区别<br> 块级元素：</li>
@@ -1059,156 +771,4 @@ p{margin-left:20px}
 <li><p>不可替代的元素：html的大多数元素时不可替代元素，其内容直接表现给用户端（例如浏览器）。</p>
 </li>
 </ol>
-</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2022/03/09/Javascript/">Javascript</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-03-09</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-03-09</span></span></div></header><div class="post-body"><div class="post-excerpt">
-        <h2 id="介绍"   >
-          <a href="#介绍" class="heading-link"><i class="fas fa-link"></i></a><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2>
-      <p>Javascript是最流行的脚本语言：是一种轻量级的编程语言；可以插入html的编程代码；插入html页面之后可以由任何浏览器打开。</p>
-
-        <h2 id="准备工作"   >
-          <a href="#准备工作" class="heading-link"><i class="fas fa-link"></i></a><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2>
-      <p>用Javascript编写代码必须要通过HTML和XHTML文档才能执行，有三种方法可以做到这一点：<br>第一种方法是把Javascript放到head中script标签中：<br>&lt;.!DOCTYPE html&gt;<br>&lt;.html lang&#x3D;”en”&gt;<br>&lt;.head&gt;<br>  &lt;.meta charset&#x3D;”utf-8”&#x2F;&gt;<br>  &lt;.title&gt;element&lt;.&#x2F;title&gt;<br>  &lt;.script&gt; javascript&lt;.&#x2F;script&gt;<br>&lt;.&#x2F;head&gt;<br>&lt;.body&gt;<br>&lt;.&#x2F;body&gt;<br>第二种方法是将Javascript代码存为一个扩展名为.js的独立文件，然后在script中src属性中引用<br>&lt;.!DOCTYPE html&gt;<br>&lt;.html lang&#x3D;”en”&gt;<br>&lt;.head&gt;<br>  &lt;.meta charset&#x3D;”utf-8”&#x2F;&gt;<br>  &lt;.title&gt;element&lt;.&#x2F;title&gt;<br>  &lt;.script src&#x3D;”lw03.js”&gt; &lt;.&#x2F;script&gt;<br>&lt;.&#x2F;head&gt;<br>&lt;.body&gt;<br>&lt;.&#x2F;body&gt;<br>第三种方法，也是最好的一种方法是联合第二种方法将script标签放在body之前，这样可以更快的加载页面。<br>&lt;.!DOCTYPE html&gt;<br>&lt;.html lang&#x3D;”en”&gt;<br>&lt;.head&gt;<br>  &lt;.meta charset&#x3D;”utf-8”&#x2F;&gt;<br>  &lt;.title&gt;element&lt;.&#x2F;title&gt;<br>&lt;.&#x2F;head&gt;<br>&lt;.body&gt;<br>&lt;.script src&#x3D;”lw03.js”&gt;&lt;.&#x2F;script&gt;<br>&lt;.&#x2F;body&gt;<br>程序语言分为编译型和解释型。java和C++等语言需要一个编译器，编译器是一种程序，能够把java等高级语言编写出来的源代码翻译为可以直接在计算机上执行的文件。解释型程序设计语言不需要编译器，它们仅需要解释器。对于javascript语言，web浏览器负责完成有关的解释和和执行工作。浏览器中的javascript解释器将直接读入源代码并执行。浏览器中没有编译器，将无法执行。<br>用编译型语言编写的代码有错误，在编译阶段就可以发现。而解释型语言代码中的错误只能呢个等到解释器执行到有关代码才可以被发现。<br>编译型语言比解释型语言速度更快，可移植性更好，但是比较难学。</p>
-
-        <h2 id="语法"   >
-          <a href="#语法" class="heading-link"><i class="fas fa-link"></i></a><a href="#语法" class="headerlink" title="语法"></a>语法</h2>
-      
-        <h3 id="语句-statement"   >
-          <a href="#语句-statement" class="heading-link"><i class="fas fa-link"></i></a><a href="#语句-statement" class="headerlink" title="语句(statement)"></a>语句(statement)</h3>
-      <p>用JavaScript编写脚本，与其他语言编写出来的脚本一样，都由一系列指令构成，这些指令叫语句。<br>JavaScript只需要简单的把各条语句放在不同行上就可以分隔它们，或者在同一行的花用逗号分隔，最后要加上分号结尾。</p>
-
-        <h3 id="注释-comment"   >
-          <a href="#注释-comment" class="heading-link"><i class="fas fa-link"></i></a><a href="#注释-comment" class="headerlink" title="注释(comment)"></a>注释(comment)</h3>
-      <p>&#x2F;&#x2F;单行注释  &lt;!–<br>&#x2F;**&#x2F;多行注释</p>
-
-        <h3 id="变量（variable"   >
-          <a href="#变量（variable" class="heading-link"><i class="fas fa-link"></i></a><a href="#变量（variable" class="headerlink" title="变量（variable)"></a>变量（variable)</h3>
-      <p>var 是变量的关键字<br>var mood&#x3D;”happy”   &#x2F;&#x2F;声明+赋值  var 是变量的关键字  mood是变量名  happy是值<br>var age&#x3D;20,mood&#x3D;”happy” &#x2F;&#x2F;最有效的做法<br>JavaScript语法不允许变量名中包含空格或标点符号，但美元符号$除外；<br>javascript变量名可以含有字母，下划线，数字和美元符号，但第一个字谜不能是数字<br>驼峰格式的myMood通常是函数名，方法名和对象属性命名的首选格式</p>
-
-        <h3 id="数据类型"   >
-          <a href="#数据类型" class="heading-link"><i class="fas fa-link"></i></a><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3>
-      <p>在声明变量名的同时还要声明变量名的类型称为强类型</p>
-<ol>
-<li>字符串<br>字符串由零个或多个字符组成。字符包括（但不限于）字母，数字，标点符号和空格，字符串必须包含在引号里，单引号和双引号都可以。选择引号的时候最好根据字符串所包含的字符来选择。最好和字符串中的引号区别使用，要不然就要字符串中的引号进行转义，通过反斜杠\。例如：var &#x3D;”don&#39;t  ask”.另外最好保持一个脚本中的引号是一致的。</li>
-<li>数值<br>数值不限制，可以是整数也可以是小数（浮点数），可以是正数也可以是负数。</li>
-<li>布尔值（Boolean）<br>布尔数据只有两个可选值—–true或false，重要的是两个中只能取一个。布尔值不是字符串，千万不能加引号。
-        <h3 id="数组（array）"   >
-          <a href="#数组（array）" class="heading-link"><i class="fas fa-link"></i></a><a href="#数组（array）" class="headerlink" title="数组（array）"></a>数组（array）</h3>
-      字符串，数值和布尔值都是标量（scalar）。如果想用一个变量来储存一组值，就需要数组，数组可以用Arrary来声明，声明的同时还可以指定数组初始元素个数，也就是这个数组的长度（length）。<br>var Beatles &#x3D; Arrary(length);<br>向数组中添加元素的操作称为填充（populating），在填充时不仅要各处新元素的值，还需要给出新元素在数组中存放的位置，这个位置就是这个元素的下标（index），下标必须用方括号括起来：<br>Arrary[index]&#x3D;element;</li>
-</ol>
-<p>数组的各种写法：<br>这是一个相当强大的储存方式<br>var Beatles &#x3D; Arrary(4);<br>Beatles[0]&#x3D;”John”;<br>Beatles[1]&#x3D;”Gaul”;<br>Beatles[2]&#x3D;”George”;<br>Beatles[3]&#x3D;”George”;</p>
-<p>var Beatles &#x3D; Arrary(“John”,”Gaul”,”George”,”George”);<br>&#x2F;&#x2F;声明的同时填充<br>var lennon &#x3D; [“John”,1940,fales];<br>&#x2F;&#x2F;数组里面可以放字符串，数字，布尔值<br>var name &#x3D; “John”;<br>beatles[0]&#x3D;name;<br>&#x2F;&#x2F;数组可以是一个变量<br>var names &#x3D; Arrary(“John”,”Gaul”,”George”,”George”);<br>beatles[1] &#x3D; names[3];<br>&#x2F;&#x2F;数组元素的值还可以是另一个数组的元素<br>var lennon &#x3D; [“John”,1940,fales];<br>var beatles &#x3D;[];<br>beatles[0] &#x3D; lennon;<br>&#x2F;&#x2F;beatles数组的一个元素就是一个数组<br>4. 关联数组<br>Beatles是一个传统的数组，关联数组则不是一个传统的数组。区别在于，传统的数组下标是整数，而关联数组下标则可以是其他，比如字符串。这样使代码更有可读性。<br>var lennon &#x3D; Arrary();<br>lennon[“name”] &#x3D; “John”;<br>lennon[“year”] &#x3D; 1940;<br>lennon[“living”] &#x3D; fales;</p>
-
-        <h3 id="对象"   >
-          <a href="#对象" class="heading-link"><i class="fas fa-link"></i></a><a href="#对象" class="headerlink" title="对象"></a>对象</h3>
-      <p>与数组类似，对象也是使用一个名字来表示一组值。对象的每个值都是对象的属性。用点来获取<br>var lennon &#x3D; object();<br>lennon.name &#x3D; “name”;<br>lennon.year &#x3D; 1940;<br>lennon.living &#x3D; fales;</p>
-<p>创建对象的各种方法：<br>{propertyName:value,propertyName:value}<br>var lennon &#x3D; {name:”John”,year:1940,living:fales};</p>
-
-        <h2 id="操作"   >
-          <a href="#操作" class="heading-link"><i class="fas fa-link"></i></a><a href="#操作" class="headerlink" title="操作"></a>操作</h2>
-      <p>+-*&#x2F; ++  &#x3D;&#x3D;&#x3D; +&#x3D;(加法和赋值)<br>++可以拼接字符串和数值<br>注意区别</p>
-
-        <h2 id="条件语句"   >
-          <a href="#条件语句" class="heading-link"><i class="fas fa-link"></i></a><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h2>
-      
-        <h3 id="if"   >
-          <a href="#if" class="heading-link"><i class="fas fa-link"></i></a><a href="#if" class="headerlink" title="if"></a>if</h3>
-      <p>条件必须放在if后面的圆括号中。条件的求职结果永远是一个布尔值，只能是true或fales。花括号中的语句，不管他们有多少条，只有在给定条件的求值结果是true的情况下才会执行。</p>
-<p>if(1&gt;2){<br>  alert(“The world has gone mad!”)<br>} eles{<br>  alert(“All is well with the world”)<br>}<br>花括号并不是必不可少的<br>if(1&gt;2) alert(“The world has gone mad!”)</p>
-
-        <h3 id="比较操作符"   >
-          <a href="#比较操作符" class="heading-link"><i class="fas fa-link"></i></a><a href="#比较操作符" class="headerlink" title="比较操作符"></a>比较操作符</h3>
-      <p>大于&gt;，小于&lt;，大于或等于&gt;&#x3D;，小于或等于 &lt;&#x3D;，等于 &#x3D;&#x3D; ，不等于!&#x3D; ，严格相等 &#x3D;&#x3D;&#x3D;，严格不等!&#x3D;&#x3D; </p>
-
-        <h3 id="逻辑操作符"   >
-          <a href="#逻辑操作符" class="heading-link"><i class="fas fa-link"></i></a><a href="#逻辑操作符" class="headerlink" title="逻辑操作符"></a>逻辑操作符</h3>
-      <p>&amp;&amp;（逻辑与） 逻辑操作符的操作对象是布尔值，每个逻辑操作数返回一个布尔值true或者是fales。逻辑与操作只有在它的两个操作数都是true时才会是true。<br>||（逻辑或）只要他的操作数中有一个是true，逻辑或就将是true。如果它的两个操作数都是true，逻辑或操作也将是true，只有当它的两个操作数都是fales时，逻辑或才会是fales。<br>！（逻辑非）只能作用于单个操作数，其结果是把那个逻辑操作数所返回的布尔值取反。如果那个逻辑操作数所返回的值是true，那么逻辑非操作符将把它取反为fales。</p>
-
-        <h2 id="循环语句"   >
-          <a href="#循环语句" class="heading-link"><i class="fas fa-link"></i></a><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h2>
-      
-        <h3 id="while"   >
-          <a href="#while" class="heading-link"><i class="fas fa-link"></i></a><a href="#while" class="headerlink" title="while"></a>while</h3>
-      <ol>
-<li>while循环和if循环唯一的区别是：只要给定条件的求值结果是true，包含在花括号里的代码就讲反复地执行下去<br>var count &#x3D; 1;<br>while (count&lt;11){<br>  alert(count);<br>  count++;<br>}</li>
-<li>do…while<br>对循环控制条件的求值发生在每次循环结束之后。因此花括号里的语句至少被执行一次<br>do{<br>  statement;<br>}while(cindition);
-        <h3 id="for"   >
-          <a href="#for" class="heading-link"><i class="fas fa-link"></i></a><a href="#for" class="headerlink" title="for"></a>for</h3>
-      类似于while，for循环只是while循环的一种变体，变得更紧凑。用for循环来重复执行一些代码的好处是循环控制结构更加清晰。最常见的用途之一是对某个数组里的全体元素进行遍历处理。<br>initionlize;<br>while (condition){<br>  statements;<br>  increment;<br>}</li>
-</ol>
-<p>for(initial condition;test condition;alter condition){<br>  statement;<br>}<br>for（conut&#x3D;1;count&lt;11;count++）{<br>  alert(count);<br>}</p>
-
-        <h2 id="函数（founction）"   >
-          <a href="#函数（founction）" class="heading-link"><i class="fas fa-link"></i></a><a href="#函数（founction）" class="headerlink" title="函数（founction）"></a>函数（founction）</h2>
-      <p>如果需要多次使用同一段代码，可以把它们封装成一个函数。函数就是一组允许在你的代码里随时调用的语句.<br>founction shout(){<br>  var Beatles &#x3D; Arrary(“John”,”Gaul”,”George”,”George”);<br>  for(var count &#x3D; 0;count&lt;bearles.length;count++){<br>    alert(beatles[count]);<br>  }<br>}<br>函数不仅能够（以参数的形式）接受数据，还能够返回数据。用到return语句<br>function multiply(num1,num2){<br>  var total &#x3D; num1*num2;<br>  return total;<br>}<br>函数的真正价值体现在，我们可以把它们当做一种数据类型来使用，这意味着可以把一个函数的调用结果赋给一个变量：<br>var temp_fahrenheit &#x3D; 95;<br>var temp_celsius &#x3D; converToCelsius(temp_fahrenheit);<br>alert(temp_Celsius)；<br>驼峰命名法可以区分变量名和函数</p>
-
-        <h3 id="变量的作用域"   >
-          <a href="#变量的作用域" class="heading-link"><i class="fas fa-link"></i></a><a href="#变量的作用域" class="headerlink" title="变量的作用域"></a>变量的作用域</h3>
-      <p>全局变量可以在脚本中的任何位置被引用。<br>局部变量只存在于声明它的那个函数内部。<br>如果在某个函数中使用了var，那个变量就讲被视为一个局部变量，它只存在于这个函数的上下文中；反之，如果没有使用var，那个变量就讲被视为一个全局变量，如果脚本里已经存在一个与同名的全局变量，这个函数就会改变那个全局变量的值。<br>在定义一个函数时，我们一定要把它内部的变量全都明确地声明为局部变量。</p>
-
-        <h2 id="对象-1"   >
-          <a href="#对象-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#对象-1" class="headerlink" title="对象"></a>对象</h2>
-      <p>对象是自包含的数据集合，包含在对象里的数据可以通过两种形式访问——属性（property）和方法（method）<br>属性是隶属于某个特定对象的变量。方法是只有某个特定对象才能调用的函数。对象就是由一些属性和方法构成的一个数据实体。</p>
-<ol>
-<li>内建对象<br>内建在JavaScript语言里的对象，如Arrary,Math,Date等。</li>
-<li>宿主对象<br>由流浪器提供的预定义对象被称为宿主对象
-        <h2 id="DOM"   >
-          <a href="#DOM" class="heading-link"><i class="fas fa-link"></i></a><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h2>
-      文档DOM中D—-document<br>对象DOM中O—-object<br>模型DOM中M—-Model<br>DOM代表着加载到浏览器窗口的当前网页。浏览器提供了网页的地图（或者说模型），而我们可以通过JavaScript去读取这张地图。<br>DOM把一份文档表示为一棵家谱树，并使用parent，child,sibling等记号来表明家族成员之间的关系。
-        <h2 id="节点（node）"   >
-          <a href="#节点（node）" class="heading-link"><i class="fas fa-link"></i></a><a href="#节点（node）" class="headerlink" title="节点（node）"></a>节点（node）</h2>
-      使用节点比使用家谱树更为准确。它表示网络中的一个连接点，一个网络就是由一些节点构成的集合。
-        <h3 id="元素节点"   >
-          <a href="#元素节点" class="heading-link"><i class="fas fa-link"></i></a><a href="#元素节点" class="headerlink" title="元素节点"></a>元素节点</h3>
-      标签的名字就是元素的名字。HTML是根元素
-        <h3 id="文本节点"   >
-          <a href="#文本节点" class="heading-link"><i class="fas fa-link"></i></a><a href="#文本节点" class="headerlink" title="文本节点"></a>文本节点</h3>
-      在XHTML文档中，文本节点总是被包含在元素节点的内部。
-        <h3 id="属性节点"   >
-          <a href="#属性节点" class="heading-link"><i class="fas fa-link"></i></a><a href="#属性节点" class="headerlink" title="属性节点"></a>属性节点</h3>
-      属性节点用来对元素做出更具体的描述。在DOM中，title &#x3D; “a gentle reminder”是一个属性节点，属性节点总是被包含在起始标签内，所以属性节点总是被包含在元素节点中。并非所有的元素都包含着属性，但所有的属性都被元素包含着。
-        <h3 id="CSS"   >
-          <a href="#CSS" class="heading-link"><i class="fas fa-link"></i></a><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3>
-      DOM并不是与网页结构打交道的唯一技术。我们还可以通过css告诉浏览器应该如何显示一份文档。<br>继承（inheritance）是CSS技术中的一项强大功能。类似于DOM，CSS也把文档的内容视为一颗节点树。节点树上的各个元素将继承其父元素的样式属性。<br>为了把某一个或某几个元素与其他内院区别开来，需要使用class和ID属性。</li>
-<li>class<br>可以在所有元素上任意应用class属性</li>
-<li>ID<br>ID属性的用途是给网页里的某个元素加上一个独一无二的标识符
-        <h3 id="获取元素"   >
-          <a href="#获取元素" class="heading-link"><i class="fas fa-link"></i></a><a href="#获取元素" class="headerlink" title="获取元素"></a>获取元素</h3>
-      有3种DOM方法可获取元素节点，分别是通过元素ID，通过标签名字和通过类名字来获取。</li>
-<li>getElementById<br>这个将返回一个与那个有着给定ID属性值的元素节点对应的对象。<br>docunment.getElementById(id)<br>&#x2F;&#x2F;通用<br>&lt;.!DOCTYPE html&gt;<br>&lt;.html lang&#x3D;”en”&gt;<br>&lt;.head&gt;<br> &lt;.meta charset&#x3D;”utf-8”&#x2F;&gt;<br> &lt;.title&gt;Shopping list</title><br>&lt;.&#x2F;head&gt;<br>&lt;.body&gt;<br> &lt;.h1&gt;What to buy&lt;.&#x2F;h1&gt;<br> &lt;.p title&#x3D;”a gentle reminder”&gt;Don’t forget to buy this stuff.&lt;.&#x2F;p&gt;<br> &lt;.ul&gt;<br>  &lt;.li&gt;A tin of beans&lt;.&#x2F;li&gt;<br>  &lt;.li class&#x3D;”sale”&gt;Cheese&lt;.&#x2F;li&gt;<br>  &lt;.li class&#x3D;”sale”&gt;Milk&lt;.&#x2F;li&gt;<br> &lt;.&#x2F;ul&gt;<br> &lt;.script&gt;<br>  alert(typeof document.getElementById(“purchass”))<br> &lt;.&#x2F;script&gt;<br>&lt;.&#x2F;body&gt;<br>&lt;.&#x2F;html&gt;</li>
-<li>getElementByTagName<br>返回一个对象数组，每个对象分别对应着文档里有着给定标签的一个元素<br>document.getElementByTagName(“li”)</li>
-<li>getElementByClassName<br>返回一个数组<br>document.getElementByClassName(“class”)</li>
-</ol>
-<p>&lt;.script&gt;<br>   function getElementsClassName (node,classname){<br>       if(node.getElementsByClassName){<br>           &#x2F;&#x2F;使用现有方法<br>           return node.getElementsByClassName(classname);&lt;<br>       }else{<br>           var results &#x3D; new Arrary();<br>           var elems &#x3D; node.getElementsByClassName(“*”);<br>             for (var i&#x3D;0;i&lt;elems.length;i++ ){<br>                 if(elems[i].className.indexOf(classname) !&#x3D; -1){<br>                     results[results.length]&#x3D;elems[i];<br>                 }<br>             }<br>             return results;<br>       }<br>   }</p>
-
-        <h2 id="获取和设置属性"   >
-          <a href="#获取和设置属性" class="heading-link"><i class="fas fa-link"></i></a><a href="#获取和设置属性" class="headerlink" title="获取和设置属性"></a>获取和设置属性</h2>
-      
-        <h3 id="getAttribute"   >
-          <a href="#getAttribute" class="heading-link"><i class="fas fa-link"></i></a><a href="#getAttribute" class="headerlink" title="getAttribute"></a>getAttribute</h3>
-      <p>只有一个参数—-你打算查询的属性的名字<br>object.getAttribute(attribute)</p>
-<p>var paras &#x3D; document.getElementsByTagName(“p”);<br>for(var i&#x3D;0;i&lt;.paras.length;i++ ){<br>  var title_text &#x3D; paras[i].getAttribute(“title”);<br>  if (title_text !&#x3D;null) {<br>    alert(title_text);<br>  }</p>
-<p>}</p>
-
-        <h3 id="setAttrubute"   >
-          <a href="#setAttrubute" class="heading-link"><i class="fas fa-link"></i></a><a href="#setAttrubute" class="headerlink" title="setAttrubute"></a>setAttrubute</h3>
-      <p>允许我们对属性节点的值做出修改<br>object.setAttribute(attribute,value)</p>
-<p>var shopping &#x3D; document.getElementById(“purchases”);<br>alert(shopping.getAttribute(“title”));<br>shopping.setAttribute(“title”,”a list of goods”);<br>alert(shopping.getAttribute(“title”));</p>
-
-        <h2 id="图片库"   >
-          <a href="#图片库" class="heading-link"><i class="fas fa-link"></i></a><a href="#图片库" class="headerlink" title="图片库"></a>图片库</h2>
-      <p>完整的代码块<br>function showPic(whichpic) {<br>    var source &#x3D; whichpic.getAttribute(“href”);<br>    var placeholder &#x3D; document.getElementById(“placeholder”);<br>    placeholder.setAttribute(“src”,source);<br>    var text &#x3D; whichpic.getAttribute(“title”);<br>    var description &#x3D; document.getElementById(“description”);<br>    description.firstChild.nodeValue &#x3D; text;<br>}<br>function countBodyChildren() {<br>    var body_elelment &#x3D; document.getElementsByTagName(“body”)[0];<br>    alert(body_elelment.nodeType);<br>}<br>window.onload &#x3D; countBodyChildren;</p>
-
-        <h3 id="如何插入一个占位符？"   >
-          <a href="#如何插入一个占位符？" class="heading-link"><i class="fas fa-link"></i></a><a href="#如何插入一个占位符？" class="headerlink" title="如何插入一个占位符？"></a>如何插入一个占位符？</h3>
-      <p>&lt;.img id&#x3D;”placeholder” src&#x3D;”图片的路径” alt&#x3D;”图片的显示”&gt;<br>问题1：alt和title的区别？</p>
-<p>alt属性将在图片无法显示时，替代图片显示文本。<br>title属性规定标签元素以外的信息。</p>
-
-        <h3 id="如何让图片代替占位符并且显示在当页？"   >
-          <a href="#如何让图片代替占位符并且显示在当页？" class="heading-link"><i class="fas fa-link"></i></a><a href="#如何让图片代替占位符并且显示在当页？" class="headerlink" title="如何让图片代替占位符并且显示在当页？"></a>如何让图片代替占位符并且显示在当页？</h3>
-      <p>function showPic(whichpic) {<br>    var source &#x3D; whichpic.getAttribute(“href”);<br>    var placeholder &#x3D; document.getElementById(“placeholder”);<br>    placeholder.setAttribute(“src”,source);<br>}</p>
-<ol>
-<li>事件处理函数(作用是在特定事件发生时调用特定的JavaScript代码）<br>onmouseover：鼠标指正悬停在某个元素上市触发一个动作。<br>onmouseout：鼠标指针离开某个元素时触发一个动作。<br>onclick：鼠标点击某个链接是触发一个动作。<br>&lt;.li&gt;<br>  &lt;.a href&#x3D;”lw&#x2F;d.jpg” onclick&#x3D;”showPic(this); return false” title &#x3D; “Family portraits”&gt;全家福&lt;.&#x2F;a&gt;<br>&lt;.&#x2F;li&gt;<br>此处的this指待&lt;.a&gt;</li>
-<li>childNodes属性<br>是用来获取某个元素的所有子元素的属性。但首先要确定这个元素。<br>element.childNodes</li>
-<li>nodeType属性<br>是用来确定当前打交道的节点是哪一种节点。但是nodeType属性是用数值来显示的，共有12种，常用为以下三种：<br>元素节点的nodeType属性值是1；<br>属性节点的nodeType属性值是2；<br>文本节点的nodeType属性值是3.</li>
-<li>nodeValue属性<br>是用来改变文本节点的值，也就是本次案例中改变图片的描述值。<br>alert（description.childNodes[0].nodeValue）; &#x2F;&#x2F;打印description的文本。<br>var text &#x3D; whichpic.getAttribute(“title”);&#x2F;&#x2F;改变文本值<br> var description &#x3D; document.getElementById(“description”);<br> description.firstChild.nodeValue &#x3D; text;<br>childNodes[0]的同义词firstchild<br>lastchild是childNodes的最后一个子元素</li>
-</ol>
-</div></div></article></section></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/assets/tx.jpg" alt="avatar"></div></div><div class="sidebar-ov-social"></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">1</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">1</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2022</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>圆圆</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>
+</div></div></article></section></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/assets/tx.jpg" alt="avatar"></div></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/" target="_blank" rel="noopener"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span><span class="sidebar-ov-social-item__text">github</span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">1</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">1</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2022</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>圆圆</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>

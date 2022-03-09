@@ -1102,20 +1102,21 @@ kbd {
   text-align: center;
   color: var(--color-gray-100);
   background-color: #a0daff;
-  border-radius: 0.75rem;
-  padding: 0 0.25rem;
-  min-width: 1.5rem;
-  height: 1.5rem;
-  line-height: 1.5rem;
-  -webkit-transition: background-color 0.2s ease;
-  -moz-transition: background-color 0.2s ease;
-  -o-transition: background-color 0.2s ease;
-  -ms-transition: background-color 0.2s ease;
-  transition: background-color 0.2s ease;
+  border-radius: 3px;
+  padding: 0 0.4rem;
+  -webkit-transition: color 0.2s ease, background-color 0.2s ease;
+  -moz-transition: color 0.2s ease, background-color 0.2s ease;
+  -o-transition: color 0.2s ease, background-color 0.2s ease;
+  -ms-transition: color 0.2s ease, background-color 0.2s ease;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
 .sidebar-ov-social-item:hover {
   color: var(--color-gray-100);
   background-color: #4dbaff;
+}
+.sidebar-ov-social-item__icon,
+.sidebar-ov-social-item__text {
+  margin: 0 3px;
 }
 .sidebar-ov-state {
   padding: 0.5rem 0;
