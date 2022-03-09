@@ -1,0 +1,751 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="介绍       CSS指层叠样式表。层叠样式表极大地提高了工作效率。                     CSS基础语法       selector {         property：value         }h1{color:red;font-size:14px;}属性大于1个之后，属性之间用分号隔开，写完用分号结尾如果值大于1个单词，则需">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS3">
+<meta property="og:url" content="http://example.com/2022/03/07/CSS3/index.html">
+<meta property="og:site_name" content="圆圆的乐园">
+<meta property="og:description" content="介绍       CSS指层叠样式表。层叠样式表极大地提高了工作效率。                     CSS基础语法       selector {         property：value         }h1{color:red;font-size:14px;}属性大于1个之后，属性之间用分号隔开，写完用分号结尾如果值大于1个单词，则需">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/01.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/02.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/03.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/04.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/05.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/06.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/07.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/01.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/01.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/01.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/01.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/01.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/01.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/01.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/01.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/01.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/01.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/02.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/03.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/04.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/05.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/06.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/07.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/01.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/02.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/03.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/04.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/05.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/06.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/07.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/01.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/02.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/03.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/04.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/05.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/06.jpg">
+<meta property="og:image" content="http://example.com/2022/03/07/CSS3/07.jpg">
+<meta property="article:published_time" content="2022-03-07T12:09:37.314Z">
+<meta property="article:modified_time" content="2022-03-09T08:18:08.174Z">
+<meta property="article:author" content="圆圆">
+<meta property="article:tag" content="web">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2022/03/07/CSS3/01.jpg"><title>CSS3 | 圆圆的乐园</title><link ref="canonical" href="http://example.com/2022/03/07/CSS3/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.0.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">圆圆的乐园</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">CSS3</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-03-07</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-03-09</span></span></div></header><div class="post-body">
+        <h1 id="介绍"   >
+          <a href="#介绍" class="heading-link"><i class="fas fa-link"></i></a><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1>
+      <p>CSS指层叠样式表。层叠样式表极大地提高了工作效率。</p>
+
+        <h1 id="CSS基础语法"   >
+          <a href="#CSS基础语法" class="heading-link"><i class="fas fa-link"></i></a><a href="#CSS基础语法" class="headerlink" title="CSS基础语法"></a>CSS基础语法</h1>
+      <p>selector {<br>         property：value<br>         }<br>h1{color:red;font-size:14px;}<br>属性大于1个之后，属性之间用分号隔开，写完用分号结尾<br>如果值大于1个单词，则需要加上引号：<br>  p{font-family:”sans serif”}</p>
+
+        <h1 id="CSS高级语法"   >
+          <a href="#CSS高级语法" class="heading-link"><i class="fas fa-link"></i></a><a href="#CSS高级语法" class="headerlink" title="CSS高级语法"></a>CSS高级语法</h1>
+      <ol>
+<li>选择器分组<br>  h1,h2,h3,h4,h5,h6{color：red}  给多个元素加标签</li>
+<li>继承（如果有单独的定义样式，则会用单独定义的；如果没有单独定义，则会引用body里的样式）</li>
+</ol>
+<p>body{<br>    color:blue;<br>}</p>
+
+        <h1 id="CSS派生选择器"   >
+          <a href="#CSS派生选择器" class="heading-link"><i class="fas fa-link"></i></a><a href="#CSS派生选择器" class="headerlink" title="CSS派生选择器"></a>CSS派生选择器</h1>
+      <p>通过依据元素在其位置的上下文关系来定义样式。strong加粗 </p>
+<p>&#96;&#96;&#96;<html></p>
+<body><strong>
+<p><strong>标签hello css</strong></p>
+<ul>
+   <li><strong>li标签：hello css</strong></li>
+</ul>
+</strong></body>
+</html>
+要求只在li strong 标签的文字加样式，其他的不加样式
+用派生选择器 
+css
+  li  strong{
+          color:red;
+          }
+此时就只有li  strong里的文字加了样式
+ 如果派生strong{color：blue}时，已经加过样式的li strong 不会覆盖，只有 p  strong更改了样式
+
+<p>CSS id选择器</p>
+<ol>
+<li>ID选择器可以为标有ID的HTML元素指定特定的样式  ID选择器用”#”来定义</li>
+</ol>
+<p>2.ID选择器和派生选择器:目前比较常用的方式ID选择器常常用于建立派生选择器</p>
+<p>&#96;&#96;&#96;<html></p>
+<body>
+  <p  id="pid">hello css<span class="exturl"><a class="exturl__link"    target="_blank" rel="noopener" href="http://www/jikexuanyuan.com" >学院</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+  <div id="divid">这是一个div标签</div>
+</body>
+</html>
+
+<p>CSS<br>#p a{ color:red}  <!-- id选择器和派生选择器同时用--><br>#divid{color:blue}</p>
+<p>CSS类选择器<br>1.类选择器以一个点显示<br>2.class也可以用作派生选择器</p>
+<p>&#96;&#96;&#96;<html></p>
+<head></head>
+<body>
+<p class="pclass">这是一个class效果 <a href="www.jikexueyuan.com>极客学院</a></p>
+<div class="divclass">hello<p>标签</p></div>
+</body></html>
+
+<p>CSS样式表<br>.pclass a{ color:red}<br>.divclass p{color:green}  类选择器和派生选择器的结合应用</p>
+<p>CSS属性选择器<br>1.对带有指定属性的HTML元素设置样式<br>2.属性和值选择器</p>
+<p>&#96;&#96;&#96;<html></p>
+<head><meta charset="UTF-8">
+      <title></title>
+      <stype type="test/css">
+      [title]{               <!--如果属性选择器不指定值是多少，那么写任何值都生效-->
+           color:blue;}
+      [title=te]{             <!--如果属性选择器指定值是什么，那么只有写指定的值才会生效，更改值则不生效-->
+           color:red
+           }
+      </stype></head>
+<body>
+<p title="t">属性选择器</p>
+<p title="te">属性和值选择器</p>
+</body>
+</html>
+
+
+<p>属性选择器在IE6或者更低的版本是不支持的</p>
+<p>CSS3样式<br>CSS背景<br>1.css允许应用纯色作为背景，也允许使用背景图像创建相当复杂的效果<br>   background-attachment         背景图像是否固定或者随着页面的其余部分滚动<br>   background-color                  设置元素的背景颜色<br>   background-image                 把图片设置为背景<br>   background-position              设置背景图片的起始位置<br>   background-repeat                 设置背景图片是否及如何重复<br>   background-size                     规定背景图片的尺寸<br>   background-origin                  规定背景图片的定位区域<br>   background-clip                      对顶背景的绘制区域</p>
+<p>&#96;&#96;&#96;<html></p>
+<head><meta charset="UTF-8">
+      <title></title>
+      <link  rel="stylesheet" type="test/css" href="style.css">
+<body>
+      <p>测试一下背景是否可以继承</p>
+</body>
+</html>```
+先找一张背景图片
+
+<p>style.css<br>body{<br>    background:gray;}<br> p{  width:150px;<br>     padding:10px; <!--内边距--><br>    background:blue;}</p>
+<!--引入背景图片-->
+<p>body{<br>    background-image:url(“图片名字”); <!--引入背景图片--><br>    background-repeat：no-repeat;<!--背景图片不允许重复--><br>    background-attachment:fixed;<!--背景图片固定不随文字而滚动--><br>    background-size：100px 100px;<!--裁定大小--><br>    }<br>p{    width:200px;                   <!--把图片应用到p标签上--><br>  background-image:url（”图片名字”）}</p>
+<p>CSS文本<br>CSS文本属性可定义文本外观，通过文本属性，可以改变文本的颜色，字符间距，对齐文本，装饰文本，对文本缩进等。<br> color                       文本颜色<br>dlirection                  文本方向<br>line-height                行高<br>letter-spacing            字符间距<br>text-align                   对齐元素中的文本<br>text-decoration           向文本添加修饰<br>text-indent                 缩进元素中文本的首行<br>text-transform             规范元素中的字母的格式<br>unicode-bidi                设置文本方向<br>white-space                 元素中空白的处理方式<br>word-spacing               字间距<br>text-shadow                 向文本添加阴影<br>word-wrap                    规定文本的换行规则</p>
+<p>例如<br><!DOCTYPE html></p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <p>hello 狗哥</p>
+</body>
+</html>
+
+<p>style.css<br>body{<br>    color:orangered;<br>    text-align: right;<br>}</p>
+<p>CSS字体<br>css字体属性定义文本的字体系列，大小，加粗，风格和变形<br>font-family                设置字体系列<br>font-size                    设置字体的尺寸<br>font-style                   设置字体风格<br>font-variant                以小型大写字体或正常字体显示文本<br>font-weight                设置字体的粗细</p>
+<p>style.css<!--引用字体--><br>@font-face{<br>  font-family:mafont;<br>  src:url(当前下载好的字体);<br>}</p>
+<p>CSS链接</p>
+<p>● a:link      普通的，未被访问的链接<br>● a:visited  用户已访问的链接<br>● a:hover   鼠标指针位于链接的上方<br>● a:active   链接被点击的时刻<br>a:link{<br>    color: #FF0000;<br>}<br>a:visited{<br>    color: #00FF00;<br>}<br>a:hover{<br>    color: #0000FF;<br>}<br>a:active{<br>    color: #0F0F00;<br>}</p>
+<p>CSS列表<br>css列表属性允许你放置，改变列表标志，或者将图像作为列表项标志<br>list-style                      简写列表项<br>list-style-image            列表项图像<br>list-style-position         列表标志位置<br>list-style-type               列表类型<br>例如</p>
+<p>&#96;&#96;&#96;<!DOCTYPE html></p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+     <ul>
+         <li>苹果</li>
+         <li>苹果</li>
+         <li>苹果</li>
+         <li>苹果</li>
+     </ul>
+</body>
+</html>
+
+<p>ul li{<br>    list-style-type:decimal;<br>}</p>
+<p>class是可以重复的（姓名），ID是不可以重复的<br>CSS表格<br>css表格属性可以帮助我们极大地改善表格的外观</p>
+<ol>
+<li>表格边框</li>
+<li>折叠边框</li>
+<li>表格宽高</li>
+<li>表格文本对齐</li>
+<li>表格内边距</li>
+<li>表格颜色<body>
+  <div class="table-container"><table  id="tb">
+      <tr>
+          <th>姓名</th>
+          <th>年龄</th>
+          <th>性别</th>
+      </tr>
+      <tr>
+          <td>小王</td>
+          <td>20</td>
+          <td>男</td>
+      </tr>
+          <td>小王</td>
+          <td>20</td>
+          <td>男</td>
+      </tr>
+          <td>小王</td>
+          <td>20</td>
+          <td>男</td>
+      </tr>
+          <td>小王</td>
+          <td>20</td>
+          <td>男</td>
+      </tr>
+  </table></div>
+</body>
+</html></li>
+</ol>
+<p>#tb,tr,th,td{<br>    border:1px solid  blue;<br>    text-align: center;<br>    background-color: orange;<br>}<br>#tb{<br>    width: 400px;<br>    height: 400px;<br>    border-collapse: collapse;<br>}</p>
+<p>样式<br>#tb{<br>    border-collapse: collapse;<br>    width:500px;<br>}<br>#tb td,#tb th{<br>    border:1px solid bisque;<br>}<br>#tb th{<br>    text-align: right;<br>    background-color: aquamarine;<br>    color: cornsilk;<br>}<br>#tb tr.alt td{<br>    color: #000000;<br>    background-color: aquamarine;<br>}</p>
+<p>CSS轮廓<br>轮廓主要是用来突出显示元素的作用</p>
+<p>outline                           设置轮廓属性<br>outline-color                  设置轮廓的颜色<br>outline-style                   设置轮廓的样式<br>outline-width                  设置轮廓的宽度</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+   <p>突出的效果文字</p>
+</body>
+</html>
+
+<p>p{<br>    outline-width: 10px;<br>    outline-color: #f95cff;<br>    outline-style: groove;<br>}</p>
+<p>CSS定位<br>定位</p>
+<ol>
+<li>css定位 改变元素在页面上的位置</li>
+<li>css定位机制：普通流：元素按照其在HTML中的位置顺序决定排布的过程<br>                  浮动<br>                  绝对布局</li>
+</ol>
+<p>position               把元素放在一个静态的，相对的，绝对的，或固定的位置中<br>top                    元素向上的偏移量<br>left                   元素向左的偏移量<br>right                  元素向右的偏移量<br>bottom                 元素向下的偏移量<br>overflow               设置元素溢出其区域发生的事情<br>clip                   设置元素显示的形态<br>vertical-align         设置元素垂直对齐的方式<br>z-index                设置元素的堆叠顺序</p>
+<p>例如</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+   <div id="position1"></div>
+   <div id="position2"></div>
+   <script>
+       for(var i=0;i<100;i++){
+           document.write(i+"<br/>")
+       }
+   </script>
+</body>
+</html>
+
+<p>#position1{<br>    width: 100px;<br>    height: 100px;<br>    background-color: #d2b3ff;<br>    position: absolute; <!--position位置属性 relative相对的absolute绝对的fixed固定static静态 --><br>    left: 20px;<br>    top: 20px;<br>    z-index: 2; <!--谁的值大谁在前面--><br>}<br>#position2{<br>    width: 100px;<br>    height: 100px;<br>    background-color: #d2b3ff;<br>    position: absolute;<br>    left: 10px;<br>    top: 10px;<br>    z-index: 1;<br>}</p>
+<p>浮动</p>
+<ol>
+<li>浮动  float属性可用的值： left:元素向左浮动     right元素向右浮动    none元素不浮动  inherit从父级继承浮动属性 </li>
+<li>clear 属性值： left，right：去掉元素向左向右浮动   both：左右两侧均去掉浮动  inherit：从父级继承来clear的值<body>
+<div id="container">
+<div id="sd"></div>
+<div id="tk"></div>
+<div id="tm"></div>
+<div id="tsxt">helloworld</div>
+</div>
+</script>
+</body></li>
+</ol>
+<p>#sd{<br>    width:100px;<br>    height:100px;<br>    background-color: #e8ffa8;<br>    float: left;<br>}<br>#tk{<br>    width:150px;<br>    height:100px;<br>    background-color:cadetblue;<br>    float: left;<br>}<br>#tm{<br>    width:100px;<br>    height:100px;<br>    background-color:red;<br>    float: left;<br>}<br>#container{<br>    width: 300px;<br>    height:500px;<br>    background: gray;<br>}<br>#text{<br>    clear: both;<br>}</p>
+<p>3.浮动应用</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="div1">
+    <ul>
+        <li><img src="01.jpg"></li>
+        <li><img src="02.jpg"></li>
+        <li><img src="03.jpg"></li>
+    </ul>
+    <ul>
+        <li><img src="04.jpg"></li>
+        <li><img src="05.jpg"></li>
+        <li><img src="06.jpg"></li>
+    </ul>
+    <ul>
+        <li><img src="07.jpg"></li>
+    </ul>
+</div>
+</body>
+</html>
+
+<p>*{<br>    margin: 0px;<br>    padding:0px;<br>}<br>li {<br>    list-style: none;<br>}<br>#div1{<br>    width:950px;<br>    height: auto;<br>    margin: 20px auto;<br>}<br>ul{<br>    width: 250px;<br>    float:left;<br>}</p>
+<p>CSS盒子模型<br>margin，border，padding，content部分组成<br>css内边距<br>内边距在content外，边框内<br>padding                      设置所有边距<br>padding-bottom          设置底边距<br>padding-left                设置左边距<br>padding-right              设置右边距<br>padding-top                设置上边距</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="table-container"><table border="1" >
+      <tr>
+          <td>内边距</td>
+      </tr>
+  </table></div>
+</body>
+</html>
+
+<p>td{<br>    padding-left:100px;<br>    padding-right: 50px;<br>    padding-bottom: 60px;<br>    padding-top: 70px;<br>}</p>
+<p>css边框<br>  我们可以创建出效果出色的边框，并且可以应用于任何元素<br>边框的样式<br>border-style：定义了10个不同的非继承样式，包括none</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<p>css边框样式</p>
+</body>
+</html>
+
+<p>p{<br>    border-style: dotted;<br>}</p>
+<p>边框的单边样式<br>border-top-style<br>border-left-style<br>border-right-style<br>border-bottom-style</p>
+<p>p{<br>    border-style: dotted;<br>    border-top-style:double;<br>}<br>边框的宽度<br>border-width<br>边框的单边的宽度<br>border-top-width<br>border-left-width<br>border-right-width<br>border-bottom-width<br>边框的颜色<br>border-color<br>边框单边的颜色<br>border-top-color<br>border-left-color<br>border-right-color<br>border-bottom-color<br>css3边框<br>border-radius  圆角边框<br>box-shadow    边框阴影<br>border-image  边框图片</p>
+<p>p{<br>    border-radius:10px;<br>    width:200px;<br>    background-color: #ff7b86;<br>    text-align: center;<br>}<br>.cssid{<br>    background-color: #2b6cff;<br>    width: 100px;<br>    height: 100px;<br>    text-align: center;<br>    box-shadow: 向右移动像素  向下移动像素  阴影透明度设计  阴影颜色;<br>}</p>
+<p>css外边距<br> 围绕在内容边框的区域就是外边距，外边距默认为透明区域，外边距接受任何长度单位，百分数值。<br>外边距常用属性<br>margin                          设置所有边距<br>margin-bottom              设置底边距<br>margin-left                    设置左边距<br>margin-right                  设置右边距<br>margin-top                    设置上边距 </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+   <div class="mg">外边距</div>
+</body>
+</html>
+
+<p>body{<br>     margin: 0px;<br> }<br>.mg{<br>    background-color: #42ff49;<br>    width: 100px;<br>    height: 100px;<br>    margin-top: 100px;<br>}<br>盒子模型</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+   <div class="container">
+       <div class="ab">
+           <div class="cd">
+               <div class="content">盒子模型</div>
+           </div>
+       </div>
+   </div>
+</body>
+</html>
+
+<p>body{<br>     margin: 0px;<br> }<br>.container{<br>    margin: 0px;<br>}<br>.ab{<br>    border-style:double;<br>}<br>.cd{<br>    padding:10px;<br>}<br>.content{<br>    background-color: #ff78f4;<br>    text-align: center;<br>}</p>
+<p>css外边距合并</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+   <div class="container">
+       <div class="ab">
+           <div class="cd">
+               <div class="content">盒子模型</div>
+           </div>
+       </div>
+   </div>
+  <div class="container1">
+       <div class="ab1">
+           <div class="cd1">
+               <div class="content1">盒子模型</div>
+           </div>
+       </div>
+   </div>
+</body>
+</html>
+
+<p>body{<br>     margin: 0px;<br> }<br>.container{<br>    margin: 0px;<br>}<br>.ab{<br>    border-style:double;<br>}<br>.cd{<br>    padding:10px;<br>}<br>.content{<br>    background-color: #ff78f4;<br>    text-align: center;<br>}<br>.container1{<br>    margin: 0px;<br>}<br>.ab1{<br>    border-style:double;<br>}<br>.cd1{<br>    padding:10px;<br>}<br>.content1{<br>    background-color: #ff78f4;<br>    text-align: center;<br>}<br>css盒子模型应用</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="top">
+      <div class="top-content"></div>
+  </div>
+  <div class="content">
+      <div class="content-img"></div>
+      <div class="content-no"></div>
+      <div class="content-body"></div>
+  </div>
+  <div class="foot">
+      <div class="foot-content"></div>
+      <div class="foot-subnav"></div>
+  </div>
+</body>
+</html>
+
+<p>*{<br>    margin: 0px;<br>    padding:0px;<br>}<br>.top{<br>    width: 100%;<br>    height: 50px;<br>    background-color:black;<br>}<br>.top-content{<br>    width: 70%;<br>    height: 50px;<br>  background-color: #ff4060;<br>    margin:0px auto;<br>}<br>.content{<br>    width: 70%;<br>    height: 1150px;<br>    background-color: #ffb731;<br>    margin: 20px auto;<br>}<br>.content-img{<br>    width:100%;<br>    height: 100px;<br>    background-color: #fff067;<br>}<br>.content-no{<br>    width:100%;<br>    height: 50px;<br>    background-color: #37ff53;<br>}<br>.content-body{<br>    width:100%;<br>    height: 1000px;<br>    background-color: #46ffff;<br>}<br>.foot{<br>    width: 100%;<br>    height: 50px;<br>    background-color:black;<br>    margin: 0px auto;<br>}<br>.foot-content{<br>    width: 70%;<br>    height: 40px;<br>    background-color: #3659ff;<br>    margin: 0px auto;<br>}<br>.foot-subnav{<br>    width:70%;<br>    height:10px;<br>    background-color: #8839ff;<br>    margin: 0px auto;<br>}</p>
+<p>对齐操作</p>
+<ol>
+<li>使用margin属性进行水平对齐<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>对齐</title>
+ <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="div"></div>
+</body>
+</html></li>
+</ol>
+<p>*{<br>    margin: 0px;<br>}<br>.div{<br>    width: 70%;<br>    height: 1000px;<br>    background-color: cadetblue;<br>    margin-left:auto;<br>    margin-right: auto;    <!--也可以这样写margin:"0px auto";--><br>}</p>
+<p>2.使用position属性进行左右对齐</p>
+<p>*{<br>    margin: 0px;<br>}<br>.div{<br>    width: 70%;<br>    height: 1000px;<br>    background-color: cadetblue;<br>    position: absolute;<br>    left: 0px;<br>}</p>
+<p>3.使用float属性进行左右对齐</p>
+<p>*{<br>    margin: 0px;<br>}<br>.div{<br>    width: 70%;<br>    height: 1000px;<br>    background-color: cadetblue;<br>    float: left;<br>}</p>
+<p>尺寸操作</p>
+<p>heigh                          设置元素高度<br>line-height                  设置行高<br>max-hright                  设置元素最大高度<br>max-width                   设置元素最大宽度<br>min-width                   设置元素最小宽度<br>min-height                  设置元素最小高度<br>width                          设置元素宽度</p>
+<p>例如</p>
+<p>.p1{<br>    width:400px;<br>    line-height: normal;<br>}<br>.p2<br>{<br>    width: 400px;<br>    line-height: 200%;<br>}<br>.p3{<br>    width: 400px;<br>    line-height:50% ;<br>}</p>
+<p>分类操作<br>clear                    设置一个元素的侧面是否允许其他的浮动元素<br>cursor                  规定当只想某元素之上时显示的指针类型<br>display                设置是否及如何显示元素<br>float                    定义元素在那个方向浮动<br>position               把元素放置到一个静态的，相对的，绝对的，固定的位置<br>visibility               设置元素是否可见或不可见</p>
+<p>p{<br>    cursor:cell;          <!--还有其他样式--><br>    visibility：hidden;  <!--可见visible--><br>}</p>
+<p>导航栏</p>
+<ol>
+<li>垂直导航栏<!DOCTYPE html>
+<head>
+ <meta charset="UTF-8">
+ <title>对齐</title>
+ <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+ <ul>
+     <li><a href="#">导航栏1</a></li>
+     <li><a href="#">导航栏2</a></li>
+     <li><a href="#">导航栏3</a></li>
+ </ul>
+</body>
+</html></li>
+</ol>
+<p>ul{<br>    list-style-type: none;   <!--去掉点--><br>    margin: 0px;<br>    padding: 0px;<br>}<br>a:link,a:visited{<br>    text-decoration: none;      <!--去掉下划线--><br>    display: block;             <!--摆放方式--><br>    background-color: #fff067;<br>    color: #ff4060;<br>    width: 50px;<br>    text-align: center;<br>}<br>a:active,a:hover{<br>    background-color: #3285ff;  <!--鼠标点击时颜色变化--><br>}<br>2.水平导航栏</p>
+<p>ul{<br>    list-style-type: none;<br>    margin: 0px;<br>    padding: 0px;<br>    width: 250px;<br>    text-align: center;<br>}<br>a:link,a:visited{<br>    font-weight: bold;      <!--文字加粗--><br>    text-decoration: none;<br>    background-color: #fff067;<br>    color: #ff4060;<br>    width: 50px;<br>    text-align: center;<br>}<br>a:active,a:hover{<br>    background-color: #3285ff;<br>}<br>li{<br>    display: inline;<br>    padding: 3px;<br>    padding-right: 5px;<br>    padding-left: 5px;<br>}</p>
+<p>图片操作</p>
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>对齐</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="image">
+            <a href="#" target="_self"></a>
+            <img src="01.jpg" alt="风景" width="200px" height="200px">
+        </div>
+        <div class="黑暗"></div>
+        <div class="image">
+            <a href="#" target="_self"></a>
+            <img src="01.jpg" alt="风景" width="200px" height="200px">
+        </div>
+        <div class="黑暗"></div>
+        <div class="image">
+            <a href="#" target="_self"></a>
+            <img src="01.jpg" alt="风景" width="200px" height="200px">
+        </div>
+        <div class="黑暗"></div>
+        <div class="image">
+            <a href="#" target="_self"></a>
+            <img src="01.jpg" alt="风景" width="200px" height="200px">
+        </div>
+        <div class="黑暗"></div>
+        <div class="image">
+            <a href="#" target="_self"></a>
+            <img src="01.jpg" alt="风景" width="200px" height="200px">
+        </div>
+        <div class="黑暗"></div>
+        <div class="image">
+            <a href="#" target="_self"></a>
+            <img src="01.jpg" alt="风景" width="200px" height="200px">
+        </div>
+        <div class="黑暗"></div>
+        <div class="image">
+            <a href="#" target="_self"></a>
+            <img src="01.jpg" alt="风景" width="200px" height="200px">
+        </div>
+        <div class="黑暗"></div>
+        <div class="image">
+            <a href="#" target="_self"></a>
+            <img src="01.jpg" alt="风景" width="200px" height="200px">
+        </div>
+        <div class="黑暗"></div>
+        <div class="image">
+            <a href="#" target="_self"></a>
+            <img src="01.jpg" alt="风景" width="200px" height="200px">
+        </div>
+        <div class="黑暗"></div>
+    </div>
+</body>
+</html>
+
+<p>body{<br>    margin: 10px auto;<br>    width: 70%;<br>    height: auto;<br>    background-color: #fffcb6;<br>}<br>.image{<br>    border: 1px solid #824b99;<br>    width: auto;<br>    height: auto;<br>    float: left;<br>    text-align: center;<br>    margin: 5px;<br>}<br>img{<br>    margin: 5px;<br>    opacity:0.8;   <!--透明度--><br>}<br>.text{<br>    font-size: 12px;<br>    margin-bottom: 5px;<br>}</p>
+<p>选择器详解<br>元素选择器<br>最常见的选择器就是元素选择器，文档的元素就是最基本的选择器 例如：h1{ } a{ }</p>
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>对齐</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+   <p>hello</p>
+</body>
+</html>
+
+
+<p>p{<br>    color: cadetblue;     <!--根据HTML中P标签 在CSS中选择P选择器--><br>}</p>
+<p>选择器分组<br>1.例子  h1{ } h2{ }<br>2.通配符*{ }</p>
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>对齐</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+   <h1>标题1</h1>
+   <h2>标题2</h2>
+   <p>hello</p>
+</body>
+</html>
+
+
+<p>*{<br>   color: #ffb5f5;       <!-- 除了自己定义外，全都要用这个样式--><br>    margin: 0px;<br>    padding: 0px;<br>}<br>h1,h2{                  <!--h1,h2一起改--><br>    color: #3659ff;<br>}</p>
+<p>类选择器详解<br>类选择器允许以一种独立与文档元素的方式来指定样式  例如 .class{ }<br>结合元素选择器：例如 a.class{ }<br>多类选择器 例如：.class.class{ }</p>
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>对齐</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+   <p class="p1">this is hello</p>
+   <p class="p1">this is hello</p>
+   <p class="p1 p2">this is hello</p>
+</body>
+</html>
+
+<p>.p1{<br>    color: #0000FF;<br>}<br>.P2{<br>    font-size: medium;<br>}<br>.p1.p2{<br>    font-weight: revert;   <!--多类选择器--><br>}</p>
+<p>ID选择器详解<br>ID选择器类似于类选择器，不过也有一些重要差别   例如#id{ }<br>类选择器和id选择器区别：id只能在文档中使用一次，而类可以多次使用<br>                                      id选择器不能结合使用<br>                                      当使用js时候，需要用到id<br>属性选择器详解<br>简单属性选择：例如[title]{}<br>根据具体属性值选择：除了选择拥有某些的元素，还可以进一步缩小选择范围，只选择有特定属性值的元素。例如：a[ herf&#x3D;”http&#x2F;&#x2F;www,jikexueyuan.com”]{}<br>属性和属性值必须完全匹配<br>根据部分属性值选择</p>
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>对齐</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        [title]{
+            color: #ff475b;
+        }
+        [href="http://www.jikexueyuan.com"]{
+            font-size: 30px;
+        }
+        [title~=title]{     <!--模糊-->
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+   <p title="tit">this is hello</p>
+   <p title="title">this is hello</p>
+   <p title="t">this is hello</p>
+   <p title="title hello">this is hello</p>
+   <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="http://www.jikexueyuan.com" >极客学院</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>
+</body>
+</html>
+
+<p>后代选择器<br> 后代选择器可以选择作为某元素后代的元素</p>
+<p>this is my<strong>web<i>hello</i></strong> page</p>
+
+<p>p strong i{<br>    color: #ff475b;<br>}</p>
+<p>子元素选择器<br>与后代选择器相比，子元素选择器只能选择作为某元素子元素的元素  h1&gt;strong{ };</p>
+<p>this is my<strong>web<i>hello</i></strong> page</p>
+
+<p>p&gt;strong&gt;i{          <!--不可以隔代--><br>    color: #ffb731;<br>    font-size: 20px;<br>}</p>
+<p>相邻兄弟选择器<br>可选择紧接在另一个元素后的元素，而且二者有相同的父元素  例如h1+p{}</p>
+<div>
+    <ul>
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+    </ul>
+    <ol>
+        <li>444</li>
+        <li>555</li>
+        <li>666</li>
+    </ol>
+</div>
+
+<p>li+li{<br>    color: #ff78f4;<br>    font-size: 50px;<br>} 只有222  333    444   555 有效果</p>
+<p>CSS动画<br>2D,3D转换</p>
+<ol>
+<li>通过css3转换，我们能够对元素进行移动，缩放，转动，拉长或拉伸转换时使元素改变形状，尺寸和位置的一种效果。可以使用2D,3D来转换元素</li>
+<li>2D转换方法：translate(), rotate(),scale(),skew(),matrix()</li>
+<li>3D转换方法：rotateX（）,rotateY()<!DOCTYPE html>
+<head>
+ <meta charset="UTF-8">
+ <title>动画</title>
+ <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div>这是一个初始效果</div>
+<br/>
+<div class="div2">改变后的效果</div>
+</body>
+</html></li>
+</ol>
+<p>div{<br>    width: 100px;<br>    height: 100px;<br>    background-color: #daffc6;<br>}<br>.div2{<br>    transform:translate(200px,100px);  <!--移动--><br>    -webkit-transform: translate(200px,100px);&#x2F;<em>safari chrome</em>&#x2F;<br>    -ms-transform:translate(200px,100px);&#x2F;<em>ie</em>&#x2F;<br>    -o-transform: translate(200px,100px);&#x2F;<em>opera</em>&#x2F;<br>    -moz-transform: translate(200px,100px);&#x2F;<em>Firefox</em>&#x2F;</p>
+<p>}<br>.div2{<br>    transform: rotate(200deg);  <!--旋转--><br>    -webkit-transform: rotate(200deg);<br>    -ms-transform:rotate(200deg);<br>    -o-transform: rotate(200deg);<br>    -moz-transform: rotate(200deg);<br>}<br>.div2{<br>    margin-top: 200px;<br>    transform: scale(1,2); <!--缩放--><br>    -webkit-transform: scale(1,2);<br>    -ms-transform:scale(1,2);<br>    -o-transform: scale(1,2);<br>    -moz-transform: scale(1,2);<br>}<br>.div2{<br>    transform:skew(50deg,50deg);  <!--偏移--><br>    -webkit-transform:skew(50deg,50deg);<br>    -ms-transform:skew(50deg,50deg);<br>    -o-transform: skew(50deg,50deg);<br>    -moz-transform: skew(50deg,50deg);<br>}<br>.div2{<br>    transform:rotateX(120deg);  <!--3D--><br>    -webkit-transform:rotateY(120deg);<br>}</p>
+<p>过渡</p>
+<ol>
+<li>通过使用css3，可以给元素添加一些效果</li>
+<li>css3过渡是元素从一种样式转换成另一种样式  动画效果的css 和动画执行的时间</li>
+<li>属性    transition                                 设置四个过渡属性<br>        transition-property                  过渡的名称<br>        transition-duration                  过渡效果花费的时间<br>        transition-timing-function        过渡效果的时间曲线<br>        transition-delay                        过渡效果开始时间</li>
+</ol>
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>动画</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+   <div>效果展示</div>
+</body>
+</html>
+
+
+<p>div{<br>    width: 100px;<br>    height: 100px;<br>    background-color: #ff836b;<br>    -webkit-transition: width 2s,height 2s,-webkit-transform 2s;<br>    transition: width 2s,height 2s,transform 2s;<br>    transition-delay: 2s;    <!--延迟--></p>
+<p>}<br>div:hover{<br>    width: 200px;<br>    height: 200px;<br>    transform: rotate(360deg);<br>    -webkit-transform: rotate(360deg);<br>}</p>
+<p>动画</p>
+<ol>
+<li>通过css3，也可以进行创建动画</li>
+<li>css3的动画需要遵循@keyframes规则     规定动画的时长和规定动画的名称<!DOCTYPE html>
+<head>
+ <meta charset="UTF-8">
+ <title>动画</title>
+ <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div>动画效果</div>
+</body>
+</html></li>
+</ol>
+<p>div{<br>    width: 100px;<br>    height: 100px;<br>    background-color: #ff836b;<br>    position: relative;<br>    animation: anim 5s;<br>    -webkit-animation: anim 5s;<br>}<br>@keyframes anim {<br>    0%{background: #0f00f0;left:0px;top: 0px;}<br>    25%{background: #000f0f;left:200px;top: 0px;}<br>    50%{background: #0ffff0;left:200px;top: 200px;}<br>    75%{background: #f00f00;left:0px;top: 200px;}<br>    100%{background:#000ff0;left:0px;top: 0px;}<br>}<br>@-webkit-keyframes anim {<br>            0%{background: #0f00f0;left:0px;top: 0px;}<br>            25%{background: #000f0f;left:200px;top: 0px;}<br>            50%{background: #0ffff0;left:200px;top: 200px;}<br>            75%{background: #f00f00;left:0px;top: 200px;}<br>            100%{background:#000ff0;left:0px;top: 0px;}<br>        }</p>
+<p>多列</p>
+<ol>
+<li>在css中，可以创建多列来对文本或者区域进行布局</li>
+<li>属性;column-count       column-gap          column-rule<br>.div1{<br> column-count: 4;<br> -webkit-column-count: 4;<br> -webkit-column-gap: 30px;<br> column-gap: 30px;<br> column-rule: 5px outset #ff0000;<br> -webkit-column-rule: 5px outset #ff0000;<br>}</li>
+</ol>
+<p>CSS瀑布流效果</p>
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>动画</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+   <div   class="container">
+       <div><img src="01.jpg">
+           <p>风景图</p></div>
+       <div><img src="02.jpg"></div>
+       <div><img src="03.jpg">
+           <p>风景图</p></div>
+       <div><img src="04.jpg"></div>
+       <div><img src="05.jpg"></div>
+       <div><img src="06.jpg"></div>
+       <div><img src="07.jpg"></div>
+       <div><img src="01.jpg">
+           <p>风景图</p></div>
+       <div><img src="02.jpg"></div>
+       <div><img src="03.jpg"></div>
+       <div><img src="04.jpg"></div>
+       <div><img src="05.jpg">
+           <p>风景图</p></div>
+       <div><img src="06.jpg"></div>
+       <div><img src="07.jpg"></div>
+       <div><img src="01.jpg"></div>
+       <div><img src="02.jpg">
+           <p>风景图</p></div>
+       <div><img src="03.jpg"></div>
+       <div><img src="04.jpg"></div>
+       <div><img src="05.jpg"></div>
+       <div><img src="06.jpg"></div>
+       <div><img src="07.jpg"></div>
+   </div>
+</body>
+</html>
+
+
+<p>.container{<br>    column-width: 250px;<br>    -webkit-column-width:250px;<br>    -webkit-column-gap: 5px;<br>    column-gap: 5px;<br>}<br>.container div{<br>   width:250px;<br>    margin: 5px 0;<br>}<br>.container p{<br>    text-align: center;<br>}</p>
+<p>HTML和CSS简单页面效果实例</p>
+<p>补充内容<br>inline和inline-block的区别</p>
+<ol>
+<li>block和inline这两个概念是简略的说法，完整确切的说应该是 block-level elements (块级元素) 和 inline elements (内联元素)。block元素通常被现实为独立的一块，会单独换一行；inline元素则前后不会产生换行，一系列inline元素都在一行内显示，直到该行排满。</li>
+<li>大体来说HTML元素各有其自身的布局级别（block元素还是inline元素）：常见的块级元素有 DIV, FORM, TABLE, P, PRE, H1~H6, DL, OL, UL 等。常见的内联元素有 SPAN, A, STRONG, EM, LABEL, INPUT, SELECT, TEXTAREA, IMG, BR 等。</li>
+<li>block元素可以包含block元素和inline元素；但inline元素只能包含inline元素。要注意的是这个是个大概的说法，每个特定的元素能包含的元素也是特定的，所以具体到个别元素上，这条规律是不适用的。比如 P 元素，只能包含inline元素，而不能包含block元素。一般来说，可以通过display:inline和display:block的设置，改变元素的布局级别。<br>block，inline和inlinke-block细节对比<br>● display:block<br>  a. block元素会独占一行，多个block元素会各自新起一行。默认情况下，block元素宽度自动填满其父元素宽度。<br>  b. block元素可以设置width,height属性。块级元素即使设置了宽度,仍然是独占一行。<br>  c. block元素可以设置margin和padding属性。<br>● display:inline<br>  a. inline元素不会独占一行，多个相邻的行内元素会排列在同一行里，直到一行排列不下，才会新换一行，其宽度随元素的内容而变化。<br>  b. inline元素设置width,height属性无效。<br>  c. inline元素的margin和padding属性，水平方向的padding-left, padding-right, margin-left, margin-right都产生边距效果；但竖直方向的padding-top, padding-bottom, margin-top, margin-bottom不会产生边距效果。<br>● display:inline-block<br>  a. 简单来说就是将对象呈现为inline对象，但是对象的内容作为block对象呈现。之后的内联对象会被排列在同一行内。比如我们可以给一个link（a元素）inline-block属性值，使其既具有block的宽度高度特性又具有inline的同行特性。<br>补充说明<br>● 一般我们会用display:block，display:inline或者display:inline-block来调整元素的布局级别，其实display的参数远远不止这三种，仅仅是比较常用而已。<br>● IE（低版本IE）本来是不支持inline-block的，所以在IE中对内联元素使用display:inline-block，理论上IE是不识别的，但使用display:inline-block在IE下会触发layout，从而使内联元素拥有了display:inline-block属性的表象。<br>标签: CSS</li>
+</ol>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="http://example.com">圆圆</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="http://example.com/2022/03/07/CSS3/">http://example.com/2022/03/07/CSS3/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://example.com/tags/web/">web</a></span></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2022/03/09/web%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">web基础知识</span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-text">
+          介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="toc-text">
+          CSS基础语法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95"><span class="toc-text">
+          CSS高级语法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS%E6%B4%BE%E7%94%9F%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">
+          CSS派生选择器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">标题1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text">标题2</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/assets/tx.jpg" alt="avatar"></div></div><div class="sidebar-ov-social"></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">1</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">1</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2022</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>圆圆</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>

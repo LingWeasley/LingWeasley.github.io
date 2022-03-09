@@ -1,0 +1,221 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="介绍       Javascript是最流行的脚本语言：是一种轻量级的编程语言；可以插入html的编程代码；插入html页面之后可以由任何浏览器打开。                     准备工作       用Javascript编写代码必须要通过HTML和XHTML文档才能执行，有三种方法可以做到这一点：第一种方法是把Javascript放到hea">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Javascript">
+<meta property="og:url" content="http://example.com/2022/03/09/Javascript/index.html">
+<meta property="og:site_name" content="圆圆的乐园">
+<meta property="og:description" content="介绍       Javascript是最流行的脚本语言：是一种轻量级的编程语言；可以插入html的编程代码；插入html页面之后可以由任何浏览器打开。                     准备工作       用Javascript编写代码必须要通过HTML和XHTML文档才能执行，有三种方法可以做到这一点：第一种方法是把Javascript放到hea">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-03-09T07:25:07.353Z">
+<meta property="article:modified_time" content="2022-03-09T07:51:56.898Z">
+<meta property="article:author" content="圆圆">
+<meta property="article:tag" content="web">
+<meta name="twitter:card" content="summary"><title>Javascript | 圆圆的乐园</title><link ref="canonical" href="http://example.com/2022/03/09/Javascript/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.0.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">圆圆的乐园</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">Javascript</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-03-09</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-03-09</span></span></div></header><div class="post-body">
+        <h2 id="介绍"   >
+          <a href="#介绍" class="heading-link"><i class="fas fa-link"></i></a><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2>
+      <p>Javascript是最流行的脚本语言：是一种轻量级的编程语言；可以插入html的编程代码；插入html页面之后可以由任何浏览器打开。</p>
+
+        <h2 id="准备工作"   >
+          <a href="#准备工作" class="heading-link"><i class="fas fa-link"></i></a><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2>
+      <p>用Javascript编写代码必须要通过HTML和XHTML文档才能执行，有三种方法可以做到这一点：<br>第一种方法是把Javascript放到head中script标签中：<br>&lt;.!DOCTYPE html&gt;<br>&lt;.html lang&#x3D;”en”&gt;<br>&lt;.head&gt;<br>  &lt;.meta charset&#x3D;”utf-8”&#x2F;&gt;<br>  &lt;.title&gt;element&lt;.&#x2F;title&gt;<br>  &lt;.script&gt; javascript&lt;.&#x2F;script&gt;<br>&lt;.&#x2F;head&gt;<br>&lt;.body&gt;<br>&lt;.&#x2F;body&gt;<br>第二种方法是将Javascript代码存为一个扩展名为.js的独立文件，然后在script中src属性中引用<br>&lt;.!DOCTYPE html&gt;<br>&lt;.html lang&#x3D;”en”&gt;<br>&lt;.head&gt;<br>  &lt;.meta charset&#x3D;”utf-8”&#x2F;&gt;<br>  &lt;.title&gt;element&lt;.&#x2F;title&gt;<br>  &lt;.script src&#x3D;”lw03.js”&gt; &lt;.&#x2F;script&gt;<br>&lt;.&#x2F;head&gt;<br>&lt;.body&gt;<br>&lt;.&#x2F;body&gt;<br>第三种方法，也是最好的一种方法是联合第二种方法将script标签放在body之前，这样可以更快的加载页面。<br>&lt;.!DOCTYPE html&gt;<br>&lt;.html lang&#x3D;”en”&gt;<br>&lt;.head&gt;<br>  &lt;.meta charset&#x3D;”utf-8”&#x2F;&gt;<br>  &lt;.title&gt;element&lt;.&#x2F;title&gt;<br>&lt;.&#x2F;head&gt;<br>&lt;.body&gt;<br>&lt;.script src&#x3D;”lw03.js”&gt;&lt;.&#x2F;script&gt;<br>&lt;.&#x2F;body&gt;<br>程序语言分为编译型和解释型。java和C++等语言需要一个编译器，编译器是一种程序，能够把java等高级语言编写出来的源代码翻译为可以直接在计算机上执行的文件。解释型程序设计语言不需要编译器，它们仅需要解释器。对于javascript语言，web浏览器负责完成有关的解释和和执行工作。浏览器中的javascript解释器将直接读入源代码并执行。浏览器中没有编译器，将无法执行。<br>用编译型语言编写的代码有错误，在编译阶段就可以发现。而解释型语言代码中的错误只能呢个等到解释器执行到有关代码才可以被发现。<br>编译型语言比解释型语言速度更快，可移植性更好，但是比较难学。</p>
+
+        <h2 id="语法"   >
+          <a href="#语法" class="heading-link"><i class="fas fa-link"></i></a><a href="#语法" class="headerlink" title="语法"></a>语法</h2>
+      
+        <h3 id="语句-statement"   >
+          <a href="#语句-statement" class="heading-link"><i class="fas fa-link"></i></a><a href="#语句-statement" class="headerlink" title="语句(statement)"></a>语句(statement)</h3>
+      <p>用JavaScript编写脚本，与其他语言编写出来的脚本一样，都由一系列指令构成，这些指令叫语句。<br>JavaScript只需要简单的把各条语句放在不同行上就可以分隔它们，或者在同一行的花用逗号分隔，最后要加上分号结尾。</p>
+
+        <h3 id="注释-comment"   >
+          <a href="#注释-comment" class="heading-link"><i class="fas fa-link"></i></a><a href="#注释-comment" class="headerlink" title="注释(comment)"></a>注释(comment)</h3>
+      <p>&#x2F;&#x2F;单行注释  &lt;!–<br>&#x2F;**&#x2F;多行注释</p>
+
+        <h3 id="变量（variable"   >
+          <a href="#变量（variable" class="heading-link"><i class="fas fa-link"></i></a><a href="#变量（variable" class="headerlink" title="变量（variable)"></a>变量（variable)</h3>
+      <p>var 是变量的关键字<br>var mood&#x3D;”happy”   &#x2F;&#x2F;声明+赋值  var 是变量的关键字  mood是变量名  happy是值<br>var age&#x3D;20,mood&#x3D;”happy” &#x2F;&#x2F;最有效的做法<br>JavaScript语法不允许变量名中包含空格或标点符号，但美元符号$除外；<br>javascript变量名可以含有字母，下划线，数字和美元符号，但第一个字谜不能是数字<br>驼峰格式的myMood通常是函数名，方法名和对象属性命名的首选格式</p>
+
+        <h3 id="数据类型"   >
+          <a href="#数据类型" class="heading-link"><i class="fas fa-link"></i></a><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3>
+      <p>在声明变量名的同时还要声明变量名的类型称为强类型</p>
+<ol>
+<li>字符串<br>字符串由零个或多个字符组成。字符包括（但不限于）字母，数字，标点符号和空格，字符串必须包含在引号里，单引号和双引号都可以。选择引号的时候最好根据字符串所包含的字符来选择。最好和字符串中的引号区别使用，要不然就要字符串中的引号进行转义，通过反斜杠\。例如：var &#x3D;”don&#39;t  ask”.另外最好保持一个脚本中的引号是一致的。</li>
+<li>数值<br>数值不限制，可以是整数也可以是小数（浮点数），可以是正数也可以是负数。</li>
+<li>布尔值（Boolean）<br>布尔数据只有两个可选值—–true或false，重要的是两个中只能取一个。布尔值不是字符串，千万不能加引号。
+        <h3 id="数组（array）"   >
+          <a href="#数组（array）" class="heading-link"><i class="fas fa-link"></i></a><a href="#数组（array）" class="headerlink" title="数组（array）"></a>数组（array）</h3>
+      字符串，数值和布尔值都是标量（scalar）。如果想用一个变量来储存一组值，就需要数组，数组可以用Arrary来声明，声明的同时还可以指定数组初始元素个数，也就是这个数组的长度（length）。<br>var Beatles &#x3D; Arrary(length);<br>向数组中添加元素的操作称为填充（populating），在填充时不仅要各处新元素的值，还需要给出新元素在数组中存放的位置，这个位置就是这个元素的下标（index），下标必须用方括号括起来：<br>Arrary[index]&#x3D;element;</li>
+</ol>
+<p>数组的各种写法：<br>这是一个相当强大的储存方式<br>var Beatles &#x3D; Arrary(4);<br>Beatles[0]&#x3D;”John”;<br>Beatles[1]&#x3D;”Gaul”;<br>Beatles[2]&#x3D;”George”;<br>Beatles[3]&#x3D;”George”;</p>
+<p>var Beatles &#x3D; Arrary(“John”,”Gaul”,”George”,”George”);<br>&#x2F;&#x2F;声明的同时填充<br>var lennon &#x3D; [“John”,1940,fales];<br>&#x2F;&#x2F;数组里面可以放字符串，数字，布尔值<br>var name &#x3D; “John”;<br>beatles[0]&#x3D;name;<br>&#x2F;&#x2F;数组可以是一个变量<br>var names &#x3D; Arrary(“John”,”Gaul”,”George”,”George”);<br>beatles[1] &#x3D; names[3];<br>&#x2F;&#x2F;数组元素的值还可以是另一个数组的元素<br>var lennon &#x3D; [“John”,1940,fales];<br>var beatles &#x3D;[];<br>beatles[0] &#x3D; lennon;<br>&#x2F;&#x2F;beatles数组的一个元素就是一个数组<br>4. 关联数组<br>Beatles是一个传统的数组，关联数组则不是一个传统的数组。区别在于，传统的数组下标是整数，而关联数组下标则可以是其他，比如字符串。这样使代码更有可读性。<br>var lennon &#x3D; Arrary();<br>lennon[“name”] &#x3D; “John”;<br>lennon[“year”] &#x3D; 1940;<br>lennon[“living”] &#x3D; fales;</p>
+
+        <h3 id="对象"   >
+          <a href="#对象" class="heading-link"><i class="fas fa-link"></i></a><a href="#对象" class="headerlink" title="对象"></a>对象</h3>
+      <p>与数组类似，对象也是使用一个名字来表示一组值。对象的每个值都是对象的属性。用点来获取<br>var lennon &#x3D; object();<br>lennon.name &#x3D; “name”;<br>lennon.year &#x3D; 1940;<br>lennon.living &#x3D; fales;</p>
+<p>创建对象的各种方法：<br>{propertyName:value,propertyName:value}<br>var lennon &#x3D; {name:”John”,year:1940,living:fales};</p>
+
+        <h2 id="操作"   >
+          <a href="#操作" class="heading-link"><i class="fas fa-link"></i></a><a href="#操作" class="headerlink" title="操作"></a>操作</h2>
+      <p>+-*&#x2F; ++  &#x3D;&#x3D;&#x3D; +&#x3D;(加法和赋值)<br>++可以拼接字符串和数值<br>注意区别</p>
+
+        <h2 id="条件语句"   >
+          <a href="#条件语句" class="heading-link"><i class="fas fa-link"></i></a><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h2>
+      
+        <h3 id="if"   >
+          <a href="#if" class="heading-link"><i class="fas fa-link"></i></a><a href="#if" class="headerlink" title="if"></a>if</h3>
+      <p>条件必须放在if后面的圆括号中。条件的求职结果永远是一个布尔值，只能是true或fales。花括号中的语句，不管他们有多少条，只有在给定条件的求值结果是true的情况下才会执行。</p>
+<p>if(1&gt;2){<br>  alert(“The world has gone mad!”)<br>} eles{<br>  alert(“All is well with the world”)<br>}<br>花括号并不是必不可少的<br>if(1&gt;2) alert(“The world has gone mad!”)</p>
+
+        <h3 id="比较操作符"   >
+          <a href="#比较操作符" class="heading-link"><i class="fas fa-link"></i></a><a href="#比较操作符" class="headerlink" title="比较操作符"></a>比较操作符</h3>
+      <p>大于&gt;，小于&lt;，大于或等于&gt;&#x3D;，小于或等于 &lt;&#x3D;，等于 &#x3D;&#x3D; ，不等于!&#x3D; ，严格相等 &#x3D;&#x3D;&#x3D;，严格不等!&#x3D;&#x3D; </p>
+
+        <h3 id="逻辑操作符"   >
+          <a href="#逻辑操作符" class="heading-link"><i class="fas fa-link"></i></a><a href="#逻辑操作符" class="headerlink" title="逻辑操作符"></a>逻辑操作符</h3>
+      <p>&amp;&amp;（逻辑与） 逻辑操作符的操作对象是布尔值，每个逻辑操作数返回一个布尔值true或者是fales。逻辑与操作只有在它的两个操作数都是true时才会是true。<br>||（逻辑或）只要他的操作数中有一个是true，逻辑或就将是true。如果它的两个操作数都是true，逻辑或操作也将是true，只有当它的两个操作数都是fales时，逻辑或才会是fales。<br>！（逻辑非）只能作用于单个操作数，其结果是把那个逻辑操作数所返回的布尔值取反。如果那个逻辑操作数所返回的值是true，那么逻辑非操作符将把它取反为fales。</p>
+
+        <h2 id="循环语句"   >
+          <a href="#循环语句" class="heading-link"><i class="fas fa-link"></i></a><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h2>
+      
+        <h3 id="while"   >
+          <a href="#while" class="heading-link"><i class="fas fa-link"></i></a><a href="#while" class="headerlink" title="while"></a>while</h3>
+      <ol>
+<li>while循环和if循环唯一的区别是：只要给定条件的求值结果是true，包含在花括号里的代码就讲反复地执行下去<br>var count &#x3D; 1;<br>while (count&lt;11){<br>  alert(count);<br>  count++;<br>}</li>
+<li>do…while<br>对循环控制条件的求值发生在每次循环结束之后。因此花括号里的语句至少被执行一次<br>do{<br>  statement;<br>}while(cindition);
+        <h3 id="for"   >
+          <a href="#for" class="heading-link"><i class="fas fa-link"></i></a><a href="#for" class="headerlink" title="for"></a>for</h3>
+      类似于while，for循环只是while循环的一种变体，变得更紧凑。用for循环来重复执行一些代码的好处是循环控制结构更加清晰。最常见的用途之一是对某个数组里的全体元素进行遍历处理。<br>initionlize;<br>while (condition){<br>  statements;<br>  increment;<br>}</li>
+</ol>
+<p>for(initial condition;test condition;alter condition){<br>  statement;<br>}<br>for（conut&#x3D;1;count&lt;11;count++）{<br>  alert(count);<br>}</p>
+
+        <h2 id="函数（founction）"   >
+          <a href="#函数（founction）" class="heading-link"><i class="fas fa-link"></i></a><a href="#函数（founction）" class="headerlink" title="函数（founction）"></a>函数（founction）</h2>
+      <p>如果需要多次使用同一段代码，可以把它们封装成一个函数。函数就是一组允许在你的代码里随时调用的语句.<br>founction shout(){<br>  var Beatles &#x3D; Arrary(“John”,”Gaul”,”George”,”George”);<br>  for(var count &#x3D; 0;count&lt;bearles.length;count++){<br>    alert(beatles[count]);<br>  }<br>}<br>函数不仅能够（以参数的形式）接受数据，还能够返回数据。用到return语句<br>function multiply(num1,num2){<br>  var total &#x3D; num1*num2;<br>  return total;<br>}<br>函数的真正价值体现在，我们可以把它们当做一种数据类型来使用，这意味着可以把一个函数的调用结果赋给一个变量：<br>var temp_fahrenheit &#x3D; 95;<br>var temp_celsius &#x3D; converToCelsius(temp_fahrenheit);<br>alert(temp_Celsius)；<br>驼峰命名法可以区分变量名和函数</p>
+
+        <h3 id="变量的作用域"   >
+          <a href="#变量的作用域" class="heading-link"><i class="fas fa-link"></i></a><a href="#变量的作用域" class="headerlink" title="变量的作用域"></a>变量的作用域</h3>
+      <p>全局变量可以在脚本中的任何位置被引用。<br>局部变量只存在于声明它的那个函数内部。<br>如果在某个函数中使用了var，那个变量就讲被视为一个局部变量，它只存在于这个函数的上下文中；反之，如果没有使用var，那个变量就讲被视为一个全局变量，如果脚本里已经存在一个与同名的全局变量，这个函数就会改变那个全局变量的值。<br>在定义一个函数时，我们一定要把它内部的变量全都明确地声明为局部变量。</p>
+
+        <h2 id="对象-1"   >
+          <a href="#对象-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#对象-1" class="headerlink" title="对象"></a>对象</h2>
+      <p>对象是自包含的数据集合，包含在对象里的数据可以通过两种形式访问——属性（property）和方法（method）<br>属性是隶属于某个特定对象的变量。方法是只有某个特定对象才能调用的函数。对象就是由一些属性和方法构成的一个数据实体。</p>
+<ol>
+<li>内建对象<br>内建在JavaScript语言里的对象，如Arrary,Math,Date等。</li>
+<li>宿主对象<br>由流浪器提供的预定义对象被称为宿主对象
+        <h2 id="DOM"   >
+          <a href="#DOM" class="heading-link"><i class="fas fa-link"></i></a><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h2>
+      文档DOM中D—-document<br>对象DOM中O—-object<br>模型DOM中M—-Model<br>DOM代表着加载到浏览器窗口的当前网页。浏览器提供了网页的地图（或者说模型），而我们可以通过JavaScript去读取这张地图。<br>DOM把一份文档表示为一棵家谱树，并使用parent，child,sibling等记号来表明家族成员之间的关系。
+        <h2 id="节点（node）"   >
+          <a href="#节点（node）" class="heading-link"><i class="fas fa-link"></i></a><a href="#节点（node）" class="headerlink" title="节点（node）"></a>节点（node）</h2>
+      使用节点比使用家谱树更为准确。它表示网络中的一个连接点，一个网络就是由一些节点构成的集合。
+        <h3 id="元素节点"   >
+          <a href="#元素节点" class="heading-link"><i class="fas fa-link"></i></a><a href="#元素节点" class="headerlink" title="元素节点"></a>元素节点</h3>
+      标签的名字就是元素的名字。HTML是根元素
+        <h3 id="文本节点"   >
+          <a href="#文本节点" class="heading-link"><i class="fas fa-link"></i></a><a href="#文本节点" class="headerlink" title="文本节点"></a>文本节点</h3>
+      在XHTML文档中，文本节点总是被包含在元素节点的内部。
+        <h3 id="属性节点"   >
+          <a href="#属性节点" class="heading-link"><i class="fas fa-link"></i></a><a href="#属性节点" class="headerlink" title="属性节点"></a>属性节点</h3>
+      属性节点用来对元素做出更具体的描述。在DOM中，title &#x3D; “a gentle reminder”是一个属性节点，属性节点总是被包含在起始标签内，所以属性节点总是被包含在元素节点中。并非所有的元素都包含着属性，但所有的属性都被元素包含着。
+        <h3 id="CSS"   >
+          <a href="#CSS" class="heading-link"><i class="fas fa-link"></i></a><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3>
+      DOM并不是与网页结构打交道的唯一技术。我们还可以通过css告诉浏览器应该如何显示一份文档。<br>继承（inheritance）是CSS技术中的一项强大功能。类似于DOM，CSS也把文档的内容视为一颗节点树。节点树上的各个元素将继承其父元素的样式属性。<br>为了把某一个或某几个元素与其他内院区别开来，需要使用class和ID属性。</li>
+<li>class<br>可以在所有元素上任意应用class属性</li>
+<li>ID<br>ID属性的用途是给网页里的某个元素加上一个独一无二的标识符
+        <h3 id="获取元素"   >
+          <a href="#获取元素" class="heading-link"><i class="fas fa-link"></i></a><a href="#获取元素" class="headerlink" title="获取元素"></a>获取元素</h3>
+      有3种DOM方法可获取元素节点，分别是通过元素ID，通过标签名字和通过类名字来获取。</li>
+<li>getElementById<br>这个将返回一个与那个有着给定ID属性值的元素节点对应的对象。<br>docunment.getElementById(id)<br>&#x2F;&#x2F;通用<br>&lt;.!DOCTYPE html&gt;<br>&lt;.html lang&#x3D;”en”&gt;<br>&lt;.head&gt;<br> &lt;.meta charset&#x3D;”utf-8”&#x2F;&gt;<br> &lt;.title&gt;Shopping list</title><br>&lt;.&#x2F;head&gt;<br>&lt;.body&gt;<br> &lt;.h1&gt;What to buy&lt;.&#x2F;h1&gt;<br> &lt;.p title&#x3D;”a gentle reminder”&gt;Don’t forget to buy this stuff.&lt;.&#x2F;p&gt;<br> &lt;.ul&gt;<br>  &lt;.li&gt;A tin of beans&lt;.&#x2F;li&gt;<br>  &lt;.li class&#x3D;”sale”&gt;Cheese&lt;.&#x2F;li&gt;<br>  &lt;.li class&#x3D;”sale”&gt;Milk&lt;.&#x2F;li&gt;<br> &lt;.&#x2F;ul&gt;<br> &lt;.script&gt;<br>  alert(typeof document.getElementById(“purchass”))<br> &lt;.&#x2F;script&gt;<br>&lt;.&#x2F;body&gt;<br>&lt;.&#x2F;html&gt;</li>
+<li>getElementByTagName<br>返回一个对象数组，每个对象分别对应着文档里有着给定标签的一个元素<br>document.getElementByTagName(“li”)</li>
+<li>getElementByClassName<br>返回一个数组<br>document.getElementByClassName(“class”)</li>
+</ol>
+<p>&lt;.script&gt;<br>   function getElementsClassName (node,classname){<br>       if(node.getElementsByClassName){<br>           &#x2F;&#x2F;使用现有方法<br>           return node.getElementsByClassName(classname);&lt;<br>       }else{<br>           var results &#x3D; new Arrary();<br>           var elems &#x3D; node.getElementsByClassName(“*”);<br>             for (var i&#x3D;0;i&lt;elems.length;i++ ){<br>                 if(elems[i].className.indexOf(classname) !&#x3D; -1){<br>                     results[results.length]&#x3D;elems[i];<br>                 }<br>             }<br>             return results;<br>       }<br>   }</p>
+
+        <h2 id="获取和设置属性"   >
+          <a href="#获取和设置属性" class="heading-link"><i class="fas fa-link"></i></a><a href="#获取和设置属性" class="headerlink" title="获取和设置属性"></a>获取和设置属性</h2>
+      
+        <h3 id="getAttribute"   >
+          <a href="#getAttribute" class="heading-link"><i class="fas fa-link"></i></a><a href="#getAttribute" class="headerlink" title="getAttribute"></a>getAttribute</h3>
+      <p>只有一个参数—-你打算查询的属性的名字<br>object.getAttribute(attribute)</p>
+<p>var paras &#x3D; document.getElementsByTagName(“p”);<br>for(var i&#x3D;0;i&lt;.paras.length;i++ ){<br>  var title_text &#x3D; paras[i].getAttribute(“title”);<br>  if (title_text !&#x3D;null) {<br>    alert(title_text);<br>  }</p>
+<p>}</p>
+
+        <h3 id="setAttrubute"   >
+          <a href="#setAttrubute" class="heading-link"><i class="fas fa-link"></i></a><a href="#setAttrubute" class="headerlink" title="setAttrubute"></a>setAttrubute</h3>
+      <p>允许我们对属性节点的值做出修改<br>object.setAttribute(attribute,value)</p>
+<p>var shopping &#x3D; document.getElementById(“purchases”);<br>alert(shopping.getAttribute(“title”));<br>shopping.setAttribute(“title”,”a list of goods”);<br>alert(shopping.getAttribute(“title”));</p>
+
+        <h2 id="图片库"   >
+          <a href="#图片库" class="heading-link"><i class="fas fa-link"></i></a><a href="#图片库" class="headerlink" title="图片库"></a>图片库</h2>
+      <p>完整的代码块<br>function showPic(whichpic) {<br>    var source &#x3D; whichpic.getAttribute(“href”);<br>    var placeholder &#x3D; document.getElementById(“placeholder”);<br>    placeholder.setAttribute(“src”,source);<br>    var text &#x3D; whichpic.getAttribute(“title”);<br>    var description &#x3D; document.getElementById(“description”);<br>    description.firstChild.nodeValue &#x3D; text;<br>}<br>function countBodyChildren() {<br>    var body_elelment &#x3D; document.getElementsByTagName(“body”)[0];<br>    alert(body_elelment.nodeType);<br>}<br>window.onload &#x3D; countBodyChildren;</p>
+
+        <h3 id="如何插入一个占位符？"   >
+          <a href="#如何插入一个占位符？" class="heading-link"><i class="fas fa-link"></i></a><a href="#如何插入一个占位符？" class="headerlink" title="如何插入一个占位符？"></a>如何插入一个占位符？</h3>
+      <p>&lt;.img id&#x3D;”placeholder” src&#x3D;”图片的路径” alt&#x3D;”图片的显示”&gt;<br>问题1：alt和title的区别？</p>
+<p>alt属性将在图片无法显示时，替代图片显示文本。<br>title属性规定标签元素以外的信息。</p>
+
+        <h3 id="如何让图片代替占位符并且显示在当页？"   >
+          <a href="#如何让图片代替占位符并且显示在当页？" class="heading-link"><i class="fas fa-link"></i></a><a href="#如何让图片代替占位符并且显示在当页？" class="headerlink" title="如何让图片代替占位符并且显示在当页？"></a>如何让图片代替占位符并且显示在当页？</h3>
+      <p>function showPic(whichpic) {<br>    var source &#x3D; whichpic.getAttribute(“href”);<br>    var placeholder &#x3D; document.getElementById(“placeholder”);<br>    placeholder.setAttribute(“src”,source);<br>}</p>
+<ol>
+<li>事件处理函数(作用是在特定事件发生时调用特定的JavaScript代码）<br>onmouseover：鼠标指正悬停在某个元素上市触发一个动作。<br>onmouseout：鼠标指针离开某个元素时触发一个动作。<br>onclick：鼠标点击某个链接是触发一个动作。<br>&lt;.li&gt;<br>  &lt;.a href&#x3D;”lw&#x2F;d.jpg” onclick&#x3D;”showPic(this); return false” title &#x3D; “Family portraits”&gt;全家福&lt;.&#x2F;a&gt;<br>&lt;.&#x2F;li&gt;<br>此处的this指待&lt;.a&gt;</li>
+<li>childNodes属性<br>是用来获取某个元素的所有子元素的属性。但首先要确定这个元素。<br>element.childNodes</li>
+<li>nodeType属性<br>是用来确定当前打交道的节点是哪一种节点。但是nodeType属性是用数值来显示的，共有12种，常用为以下三种：<br>元素节点的nodeType属性值是1；<br>属性节点的nodeType属性值是2；<br>文本节点的nodeType属性值是3.</li>
+<li>nodeValue属性<br>是用来改变文本节点的值，也就是本次案例中改变图片的描述值。<br>alert（description.childNodes[0].nodeValue）; &#x2F;&#x2F;打印description的文本。<br>var text &#x3D; whichpic.getAttribute(“title”);&#x2F;&#x2F;改变文本值<br> var description &#x3D; document.getElementById(“description”);<br> description.firstChild.nodeValue &#x3D; text;<br>childNodes[0]的同义词firstchild<br>lastchild是childNodes的最后一个子元素</li>
+</ol>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="http://example.com">圆圆</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="http://example.com/2022/03/09/Javascript/">http://example.com/2022/03/09/Javascript/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://example.com/tags/web/">web</a></span></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2022/03/09/HTML5/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">HTML5</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2022/03/09/web%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"><span class="paginator-prev__text">web基础知识</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-text">
+          介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-text">
+          准备工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95"><span class="toc-text">
+          语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%AD%E5%8F%A5-statement"><span class="toc-text">
+          语句(statement)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A-comment"><span class="toc-text">
+          注释(comment)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%EF%BC%88variable"><span class="toc-text">
+          变量（variable)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">
+          数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%EF%BC%88array%EF%BC%89"><span class="toc-text">
+          数组（array）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1"><span class="toc-text">
+          对象</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C"><span class="toc-text">
+          操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5"><span class="toc-text">
+          条件语句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#if"><span class="toc-text">
+          if</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AF%94%E8%BE%83%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="toc-text">
+          比较操作符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="toc-text">
+          逻辑操作符</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5"><span class="toc-text">
+          循环语句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#while"><span class="toc-text">
+          while</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#for"><span class="toc-text">
+          for</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%EF%BC%88founction%EF%BC%89"><span class="toc-text">
+          函数（founction）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-text">
+          变量的作用域</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1-1"><span class="toc-text">
+          对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DOM"><span class="toc-text">
+          DOM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8A%82%E7%82%B9%EF%BC%88node%EF%BC%89"><span class="toc-text">
+          节点（node）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E8%8A%82%E7%82%B9"><span class="toc-text">
+          元素节点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E8%8A%82%E7%82%B9"><span class="toc-text">
+          文本节点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7%E8%8A%82%E7%82%B9"><span class="toc-text">
+          属性节点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS"><span class="toc-text">
+          CSS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E5%85%83%E7%B4%A0"><span class="toc-text">
+          获取元素</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E5%92%8C%E8%AE%BE%E7%BD%AE%E5%B1%9E%E6%80%A7"><span class="toc-text">
+          获取和设置属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#getAttribute"><span class="toc-text">
+          getAttribute</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setAttrubute"><span class="toc-text">
+          setAttrubute</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%89%87%E5%BA%93"><span class="toc-text">
+          图片库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E6%8F%92%E5%85%A5%E4%B8%80%E4%B8%AA%E5%8D%A0%E4%BD%8D%E7%AC%A6%EF%BC%9F"><span class="toc-text">
+          如何插入一个占位符？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E8%AE%A9%E5%9B%BE%E7%89%87%E4%BB%A3%E6%9B%BF%E5%8D%A0%E4%BD%8D%E7%AC%A6%E5%B9%B6%E4%B8%94%E6%98%BE%E7%A4%BA%E5%9C%A8%E5%BD%93%E9%A1%B5%EF%BC%9F"><span class="toc-text">
+          如何让图片代替占位符并且显示在当页？</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/assets/tx.jpg" alt="avatar"></div></div><div class="sidebar-ov-social"></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">1</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">1</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2022</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>圆圆</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>
